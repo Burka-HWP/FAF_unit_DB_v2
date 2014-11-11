@@ -1,13 +1,31 @@
-<div class="content-wrapper-show">
-    <h1>unit stuffs</h1>
-    
-    <p>Blueprint: {blueprint_id}</p>
-    <p>icon: <img src="../../assets/images/strategic/{icon}" /></p>
-    <p>avatar: <img src="../../assets/images/units/{avatar}" /></p>
-    <p>arena: <img src="../../assets/images/arenas/{arena}" /></p>
-    <p>portrait: <img src="../../assets/images/portraits/{portrait}" /></p>
-    <p>{class}{name}{race_name}{tier}{health}{mass}{energy}{build_time}</p>
-    
+<div class="content-wrapper-show {race}-view">
+	<div class="table-block">
+	<!-- basic info partial -->
+		{basic_info}
+
+		<br />
+		<div class="row-fluid">
+			<div class="span4">
+				<!-- unit-specific attributes partial -->
+				{unit_spec_info}
+			</div>
+			<div class="span8">
+			    <!-- veterancy info partial-->
+				{veterancy}
+			</div>
+		</div>
+
+
+	
+	<!-- attacks partial -->
+	{attacks}
+
+	<!-- defenses partial -->
+	{defenses}
+
+	<!-- upgrades partial -->
+	{upgrades}
+	</div>
 </div>
 
 

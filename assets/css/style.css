@@ -14,6 +14,11 @@ body {
     padding: 0px;
 }
 
+h5 {
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
 a:link {
     color: #AAA;
 }
@@ -55,7 +60,9 @@ img.line-item-icon {
     border-style: solid;
     border-width: 0px;
     border-bottom-width: 1px;
-    border-color: #FFF;
+    border-color: #AAA;
+    z-index: 100;
+    box-shadow: 0px 5px 10px #000000;
 }
 
 .aeon-text {
@@ -150,7 +157,7 @@ img.line-item-icon {
 }
 
 .content-wrapper-show {
-    background: rgba(0, 0, 0, .4);
+    /*background: rgba(0, 0, 0, .4);*/
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -381,4 +388,215 @@ p {
     margin: 0px;
     padding: 0px;
     z-index: -1;
+}
+
+.aeon-view {
+    background: rgba(10, 157, 47, .20);
+    /*margin: 0px;*/
+    padding: 0px;
+    color: #CCCCCC;
+}
+.aeon-view hr {
+    color: #0A9D2F;
+    background-color: #0A9D2F;
+    height: 5px;
+    margin: 5px;
+    margin-top: 3px;    
+    border-style: none;
+}
+.aeon-view h4 {
+    color: #FFFFFF;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+.aeon-view h4.aeon {
+    color: #0A9D2F;
+}
+
+.cybran-view {
+    background: rgba(223, 45, 14, .20);
+    /*margin: 0px;*/
+    padding: 0px;
+    color: #CCCCCC;
+}
+.cybran-view hr {
+    color: #DF2D0E;
+    background-color: #DF2D0E;
+    height: 5px;
+    margin: 5px;
+    margin-top: 3px;    
+    border-style: none;
+}
+.cybran-view h4 {
+    color: #FFFFFF;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+.cybran-view h4.cybran {
+    color: #DF2D0E;
+}
+
+.uef-view {
+    background: rgba(45, 120, 178, .20);
+    /*margin: 0px;*/
+    padding: 0px;
+    color: #CCCCCC;
+}
+.uef-view hr {
+    color: #2D78B2;
+    background-color: #2D78B2;
+    height: 5px;
+    margin: 5px;
+    margin-top: 3px;    
+    border-style: none;
+}
+.uef-view h4 {
+    color: #FFFFFF;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+.uef-view h4.uef {
+    color: #2D78B2;
+}
+
+.seraphim-view {
+    background: rgba(241, 194, 64, .20);
+    /*margin: 0px;*/
+    padding: 0px;
+    color: #CCCCCC;
+}
+.seraphim-view hr {
+    color: #F1C240;
+    background-color: #F1C240;
+    height: 5px;
+    margin: 5px;
+    margin-top: 3px;    
+    border-style: none;
+}
+.seraphim-view h4 {
+    color: #FFFFFF;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+.seraphim-view h4.seraphim {
+    color: #F1C240;
+}
+
+.table-block {
+    margin: 15px;
+    background-color: #000;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    padding: 10px;
+}
+
+.info-avatar {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin: 5px;
+    padding: 0px;
+}
+
+.amph {
+    background-image: url("../images/arenas/amph_up.png");
+}
+.air {
+    background-image: url("../images/arenas/air_up.png");
+}
+.land {
+    background-image: url("../images/arenas/land_up.png");
+}
+.sea {
+    background-image: url("../images/arenas/sea_up.png");
+}
+
+.strat_icon {
+    position: relative;
+    left: 42px;
+    top: -25px;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+.center {
+    text-align: center;
+}
+
+.info-tier {
+    float: right;
+    text-align: left;
+    padding: 5px;
+}
+
+.info-title {    
+    float: left; 
+    text-align: left;
+    padding: 5px;
+}
+.info-title h4 {
+    font-family: 'Electrolize', sans-serif;
+}
+
+.attribute {
+    color: #666;
+}
+
+.veterancy {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.veterancy th {
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    background-color: #111;
+}
+.veterancy td {
+    font-size: 10pt;
+    font-weight: normal;
+    text-align: center;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #111;
+    padding: 5px;
+}
+.level-header {
+    width: 100px;
+}
+.kp-header {
+    width: 75px;
+}
+
+.aeon-header {
+    color: #0A9D2F;
+    border-color: #0A9D2F;
+}
+.cybran-header {
+    color: #DF2D0E;
+    border-color: #DF2D0E;
+}
+.uef-header {
+    color: #2D78B2;
+    border-color: #2D78B2;
+}
+.seraphim-header {
+    color: #F1C240;
+    border-color: #F1C240;
 }

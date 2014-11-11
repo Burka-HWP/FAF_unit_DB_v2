@@ -17,6 +17,7 @@ if (!defined('APPPATH'))
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
         <link href="/assets/js/jquery-1.11.1.min.js" type="text/javascript"/>
         <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
         <link rel="icon" href="/assets/images/favicon/faf_fav2.png" type="image/gif">
     </head>

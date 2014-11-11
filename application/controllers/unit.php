@@ -106,27 +106,34 @@ class Unit extends Application {
         $unit = $this->units->getOne($blueprint_id);
         $race_title = $this->units->getRace($unit['unit_race']);
         $race = strtolower($race_title);
-        
+        $unit['race'] = $race;
+        $unit['race_name'] = $race_title;
+
+                
         $this->data['race'] = $race;
         $this->data['race-logo'] = $race . '_splash.png';
         $this->data['race-bg'] = $race . '-bg';
         $this->data['title'] = 'Forged Alliance Forever - Unit Database - ' . $race_title;
         $this->data['pagebody'] = 'show';       
-        
-        $this->data['blueprint_id'] = $blueprint_id;
-        $this->data['icon'] = $unit['unit_icon'];
-        $this->data['class'] = $unit['unit_class'];
-        $this->data['name'] = $unit['unit_name'];
-        $this->data['race_name'] = $race_title;
-        $this->data['tier'] = $unit['unit_tier'];
-        $this->data['health'] = $unit['unit_health'];
-        $this->data['mass'] = $unit['unit_mass_cost'];
-        $this->data['energy'] = $unit['unit_energy_cost'];
-        $this->data['build_time'] = $unit['unit_build_time'];
-        $this->data['arena'] = $unit['unit_arena'] . '_up.png';
-        $this->data['avatar'] = $blueprint_id . '.png';
-        $this->data['portrait'] = $blueprint_id . '.png';
-       
+    
+        // load the unit basic info    
+        $this->data['basic_info'] = $this->_buildPartial('_show_basic_info', $unit);
+
+        // load unit-specific info
+        $this->data['unit_spec_info'] = $this->_buildPartial('_show_unit_spec_info', $unit);
+
+        // load veterancy
+        $this->data['veterancy'] = $this->_buildPartial('_show_veterancy', $unit);
+
+        // load attack data
+        $this->data['attacks'] = $this->_buildPartial('_show_attacks', $unit);
+
+        // load defense data
+        $this->data['defenses'] = $this->_buildPartial('_show_defenses', $unit);
+
+        // load upgrade data
+        $this->data['upgrades'] = $this->_buildPartial('_show_upgrades', $unit);
+
         $this->render();
     }
     
@@ -138,13 +145,16 @@ class Unit extends Application {
         $this->render();
     }
     
-    
-    
+    private function _buildPartial($partial, $unit) {
+        $output = $this->parser->parse($partial, $unit, TRUE);
+        return $output;
+    }
+
     private function _buildLineItemsByRaceCategory($race_id, $unit_category) {
         $group_data = $this->units->getByRaceCategory_array($race_id, $unit_category);
         $output = '';
         for($i = 0; $i < sizeof($group_data); $i++) {
-            $output .= $this->parser->parse('_line_items_all', $group_data[$i], TRUE);
+            $output .= $this->parser->parse('_all_line_items', $group_data[$i], TRUE);
         }
         return $output;
     }
@@ -153,7 +163,7 @@ class Unit extends Application {
          $group_data = $this->units->getByRaceCategoryTier_array($race_id, $unit_category, $unit_tier);
         $output = '';
         for($i = 0; $i < sizeof($group_data); $i++) {
-            $output .= $this->parser->parse('_line_items_all', $group_data[$i], TRUE);
+            $output .= $this->parser->parse('_all_line_items', $group_data[$i], TRUE);
         }
         return $output;
     }
@@ -170,7 +180,7 @@ class Unit extends Application {
             "row_split" => $include_row_splitter
             );
         
-        $output = $this->parser->parse('_category_row_all', $row_data, TRUE);
+        $output = $this->parser->parse('_all_category_row', $row_data, TRUE);
         return $output;
     }
     

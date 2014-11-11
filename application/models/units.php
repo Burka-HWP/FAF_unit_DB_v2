@@ -50,11 +50,14 @@ class Units extends _Mymodel {
         $this->db->where('blueprint_id', $blueprint_id);
         $query = $this->db->get($this->_tableName);
         $query_row = $query->row_array();
+        $query_row['w_hp'] = number_format($query_row['unit_health'] * 0.9);
+        $query_row['w_mass'] = number_format($query_row['unit_mass_cost'] * 0.9);
         $query_row['unit_health'] = number_format($query_row['unit_health']);
         $query_row['unit_mass_cost'] = number_format($query_row['unit_mass_cost']);
         $query_row['unit_energy_cost'] = number_format($query_row['unit_energy_cost']);
         $query_row['unit_build_time'] = number_format($query_row['unit_build_time']);
         $query_row['avatar'] = strtoupper($query_row['blueprint_id']) . '.png';
+        $query_row['portrait'] = $query_row['blueprint_id'] . '.png';
         return $query_row;       
     }
     
