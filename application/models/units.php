@@ -57,7 +57,7 @@ class Units extends _Mymodel {
         $query_row['unit_energy_cost'] = number_format($query_row['unit_energy_cost']);
         $query_row['unit_build_time'] = number_format($query_row['unit_build_time']);
         $query_row['avatar'] = strtoupper($query_row['blueprint_id']) . '.png';
-        $query_row['portrait'] = $query_row['blueprint_id'] . '.png';
+        $query_row['portrait'] = 'portrait' . $query_row['unit_race'] . '.png';
         return $query_row;       
     }
     

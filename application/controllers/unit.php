@@ -108,6 +108,15 @@ class Unit extends Application {
         $race = strtolower($race_title);
         $unit['race'] = $race;
         $unit['race_name'] = $race_title;
+        $shield = $this->shields->getOne($blueprint_id);
+        if($shield != null) {
+            $unit['sh_health'] = $shield['sh_health'];
+            $unit['sh_regen'] = $shield['sh_regen'];
+            $unit['shield_info'] = $this->_buildPartial('_show_shields', $unit);
+        } else {
+            $unit['shield_info'] = '';
+        }
+        
 
                 
         $this->data['race'] = $race;
@@ -116,6 +125,8 @@ class Unit extends Application {
         $this->data['title'] = 'Forged Alliance Forever - Unit Database - ' . $race_title;
         $this->data['pagebody'] = 'show';       
     
+       
+        
         // load the unit basic info    
         $this->data['basic_info'] = $this->_buildPartial('_show_basic_info', $unit);
 

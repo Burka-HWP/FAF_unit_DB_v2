@@ -77,7 +77,7 @@
         	</div>
         	<div class="span5">
         		<!-- General attribute stats loaded here -->
-        		<h4 class="{race}">Shield</h4>                        
+<!--        		<h4 class="{race}">Shield</h4>                        
 				<div class="row-fluid">
         			<div class="span2">
         				<img  src="../assets/images/attributes/health.png" />
@@ -86,8 +86,9 @@
         				<h5>{sh_health}</h5>
         			</div>
         		</div>						
-				<h5><span class="attribute">Regen Rate:</span> {sh_regen}</h5>
-				<br />
+				<h5><span class="attribute">Regen Rate:</span> +{sh_regen} hp/sec</h5>
+				<br />-->
+                        {shield_info}
         		<h4 class="{race}">Basic Attributes</h4>
         		<h5><span class="attribute">Max Speed:</span> {max_speed}</h5>
         		<h5><span class="attribute">Turn Rate:</span> {turn_rate}</h5>
