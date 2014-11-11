@@ -110,9 +110,8 @@ class Unit extends Application {
         $unit['race_name'] = $race_title;
         $shield = $this->shields->getOne($blueprint_id);
         if($shield != null) {
-            $unit['sh_health'] = $shield['sh_health'];
-            $unit['sh_regen'] = $shield['sh_regen'];
-            $unit['shield_info'] = $this->_buildPartial('_show_shields', $unit);
+            $shield['race'] = $race;
+            $unit['shield_info'] = $this->_buildPartial('_show_shields', $shield);
         } else {
             $unit['shield_info'] = '';
         }
