@@ -17,7 +17,7 @@
 		<!-- data -->
 		<div class="row-fluid">
 			<!-- <div class="span1"></div> -->
-			<div class="span3">
+                    <div class="span3">
         		<h4 class="{race}">Build Cost</h4>
         		<div class="row-fluid">
         			<div class="span3 ">
@@ -42,10 +42,9 @@
         			<div class="span9 ">
         				<h5>{unit_build_time}</h5>
         			</div>
-        		</div>	
-        		
-        	</div>
-        	<div class="span4">
+        		</div>	        		
+                    </div>
+                    <div class="span4">
         		<h4 class="{race}">Health</h4>
         		<div class="row-fluid">
         			<div class="span2 ">
@@ -55,7 +54,7 @@
         				<h5>{unit_health}</h5>
         			</div>
         		</div>
-                <h5><span class="attribute">Regen Rate:</span> {regen}</h5>
+                        <h5><span class="attribute">Regen:</span> +{unit_regen} hp/sec</h5>
         		<br />
         		<h4 class="{race}">Wreakage</h4>
         		<div class="row-fluid">
@@ -74,36 +73,24 @@
         				<h5>{w_mass}</h5>
         			</div>
         		</div>
-        	</div>
-        	<div class="span5">
-        		<!-- General attribute stats loaded here -->
-<!--        		<h4 class="{race}">Shield</h4>                        
-				<div class="row-fluid">
-        			<div class="span2">
-        				<img  src="../assets/images/attributes/health.png" />
-        			</div>
-        			<div class="span10 ">
-        				<h5>{sh_health}</h5>
-        			</div>
-        		</div>						
-				<h5><span class="attribute">Regen Rate:</span> +{sh_regen} hp/sec</h5>
-				<br />-->
+                    </div>
+                    <div class="span5">
+        		
                         {shield_info}
-        		<h4 class="{race}">Basic Attributes</h4>
-        		<h5><span class="attribute">Max Speed:</span> {max_speed}</h5>
-        		<h5><span class="attribute">Turn Rate:</span> {turn_rate}</h5>
-        		<h5><span class="attribute">Vision Radius:</span> {v_rad}</h5>
-	       	</div>
+        		{abilities_info}
+                        {economy_info}
+                    </div>
 		</div>
 		<div class="row-fluid">
 			<!-- <div class="span1"></div> -->
 			<div class="span11">
 				<h4 class="{race}">Description</h4>
-				<p>{description}</p>
+				<p>{unit_description}</p>
 			</div>
 			<div class="span1"></div>
 
 		</div>
+                
 	</div>
 	<div class="span5">
 		<!-- avatar -->
@@ -117,8 +104,7 @@
         <div class="row-fluid">
             <div class="span12">
                 <br />
-                <h4 class="{race}">Abilities</h4>
-                <p>ability1, ability2, ability3, ability4, etc.</p>
+                
             </div>
         </div>
 	</div>	

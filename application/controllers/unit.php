@@ -108,6 +108,21 @@ class Unit extends Application {
         $race = strtolower($race_title);
         $unit['race'] = $race;
         $unit['race_name'] = $race_title;
+        
+        $economy = $this->economy->getOne($blueprint_id);
+        if($economy != null) {
+            $economy['race'] = $race;
+            $unit['economy_info'] = $this->_buildPartial('_show_economy', $economy);
+        } else {
+            $unit['economy_info'] = '';
+        }
+        
+        if($unit['unit_abilities'] != null) {
+            $unit['abilities_info'] = $this->_buildPartial('_show_abilities', $unit);
+        } else {
+            $unit['abilities_info'] = '';
+        }
+        
         $shield = $this->shields->getOne($blueprint_id);
         if($shield != null) {
             $shield['race'] = $race;
@@ -116,8 +131,54 @@ class Unit extends Application {
             $unit['shield_info'] = '';
         }
         
-
-                
+        $veterancy = $this->veterancy->getOne($blueprint_id);
+        if($veterancy != null) {
+            $veterancy = $this->_buildVeterancyVariable($veterancy, $unit['unit_health_int'], $unit['unit_regen'], $race);
+            $this->data['veterancy'] = $this->_buildPartial('_show_veterancy', $veterancy);
+        } else {
+            $this->data['veterancy'] = '';
+        }
+        
+        $attributes = $this->attributes->getOne($blueprint_id);
+        if($attributes != null) {
+            $attributes = $this->_buildAttributeVariable($attributes);
+            if($this->_hasEcoAttributes($attributes)) {
+                $attributes['att_build_power'] = $this->_buildPartial('_show_build_power', $attributes);
+            } else {
+                $attributes['att_build_power'] = '';
+            }
+            if($this->_hasDetectionAttributes($attributes)) {
+                $attributes['att_detection'] = $this->_buildPartial('_show_detection', $attributes);
+            } else {
+                $attributes['att_detection'] = '';
+            }
+            if($this->_hasMovementAttributes($attributes)) {
+                $attributes['att_movement'] = $this->_buildPartial('_show_movement', $attributes);
+            } else {
+                $attributes['att_movement'] = '';
+            }
+        } else {
+            $attributes = null;
+        }
+        
+//        if($this->_hasEcoAttributes($attributes)) {
+//            $attributes['att_build_power'] = $this->_buildPartial('_show_build_power', $attributes);
+//        } else {
+//            $attributes['att_build_power'] = '';
+//        }
+//        
+//        if($this->_hasDetectionAttributes($attributes)) {
+//            $attributes['att_detection'] = $this->_buildPartial('_show_detection', $attributes);
+//        } else {
+//            $attributes['att_detection'] = '';
+//        }
+        
+        if($attributes != null) {
+            $this->data['unit_spec_info'] = $this->_buildPartial('_show_unit_spec_info', $attributes);
+        } else {
+            $this->data['unit_spec_info'] = '';
+        }
+        
         $this->data['race'] = $race;
         $this->data['race-logo'] = $race . '_splash.png';
         $this->data['race-bg'] = $race . '-bg';
@@ -130,10 +191,7 @@ class Unit extends Application {
         $this->data['basic_info'] = $this->_buildPartial('_show_basic_info', $unit);
 
         // load unit-specific info
-        $this->data['unit_spec_info'] = $this->_buildPartial('_show_unit_spec_info', $unit);
-
-        // load veterancy
-        $this->data['veterancy'] = $this->_buildPartial('_show_veterancy', $unit);
+        //$this->data['unit_spec_info'] = $this->_buildPartial('_show_unit_spec_info', $attributes);
 
         // load attack data
         $this->data['attacks'] = $this->_buildPartial('_show_attacks', $unit);
@@ -153,6 +211,113 @@ class Unit extends Application {
         $this->data['race-bg'] = 'welcome-bg';
         $this->data['race-logo'] = 'compare_splash.png';
         $this->render();
+    }
+    
+    private function _buildVeterancyVariable($veterancy, $base_hp, $base_regen, $race) {
+        
+        $veterancy['race'] = $race;
+        
+        $veterancy['vet_lvl_1_hp_boost'] = $base_hp * 0.1;
+        $veterancy['vet_lvl_2_hp_boost'] = $base_hp * 0.2;
+        $veterancy['vet_lvl_3_hp_boost'] = $base_hp * 0.3;
+        $veterancy['vet_lvl_4_hp_boost'] = $base_hp * 0.4;
+        $veterancy['vet_lvl_5_hp_boost'] = $base_hp * 0.5;
+        
+        $veterancy['vet_lvl_1_new_hp'] = $base_hp + $veterancy['vet_lvl_1_hp_boost'];
+        $veterancy['vet_lvl_2_new_hp'] = $base_hp + $veterancy['vet_lvl_2_hp_boost'];
+        $veterancy['vet_lvl_3_new_hp'] = $base_hp + $veterancy['vet_lvl_3_hp_boost'];
+        $veterancy['vet_lvl_4_new_hp'] = $base_hp + $veterancy['vet_lvl_4_hp_boost'];
+        $veterancy['vet_lvl_5_new_hp'] = $base_hp + $veterancy['vet_lvl_5_hp_boost'];
+        
+        $veterancy['vet_lvl_1_hp_boost'] = number_format($veterancy['vet_lvl_1_hp_boost']);
+        $veterancy['vet_lvl_2_hp_boost'] = number_format($veterancy['vet_lvl_2_hp_boost']);
+        $veterancy['vet_lvl_3_hp_boost'] = number_format($veterancy['vet_lvl_3_hp_boost']);
+        $veterancy['vet_lvl_4_hp_boost'] = number_format($veterancy['vet_lvl_4_hp_boost']);
+        $veterancy['vet_lvl_5_hp_boost'] = number_format($veterancy['vet_lvl_5_hp_boost']);
+        
+        $veterancy['vet_lvl_1_new_hp'] = number_format($veterancy['vet_lvl_1_new_hp']);
+        $veterancy['vet_lvl_2_new_hp'] = number_format($veterancy['vet_lvl_2_new_hp']);
+        $veterancy['vet_lvl_3_new_hp'] = number_format($veterancy['vet_lvl_3_new_hp']);
+        $veterancy['vet_lvl_4_new_hp'] = number_format($veterancy['vet_lvl_4_new_hp']);
+        $veterancy['vet_lvl_5_new_hp'] = number_format($veterancy['vet_lvl_5_new_hp']);
+        
+        $veterancy['vet_lvl_1_new_regen'] = $base_regen + $veterancy['vet_lvl_1_regen'];
+        $veterancy['vet_lvl_2_new_regen'] = $base_regen + $veterancy['vet_lvl_2_regen'];
+        $veterancy['vet_lvl_3_new_regen'] = $base_regen + $veterancy['vet_lvl_3_regen'];
+        $veterancy['vet_lvl_4_new_regen'] = $base_regen + $veterancy['vet_lvl_4_regen'];
+        $veterancy['vet_lvl_5_new_regen'] = $base_regen + $veterancy['vet_lvl_5_regen'];
+        
+        return $veterancy;
+    }
+    
+    private function _buildAttributePartial($attributes, $key, $title) {
+        $data = array();        
+        if($attributes[$key] != null) {
+            $data['attribute'] = $title;
+            $data['value'] = $attributes[$key];
+            $output = $this->parser->parse('_show_build_attribute', $data, TRUE);
+        } else {
+            $output = '';
+        }        
+        return $output;            
+    }
+    
+    private function _buildAttributeVariable($attributes) {
+        
+        $attributes['att_build_rate'] = $this->_buildAttributePartial($attributes, 'att_build_rate', 'Build Rate');
+        $attributes['att_build_radius'] = $this->_buildAttributePartial($attributes, 'att_build_radius', 'Build Radius');
+        $attributes['att_vision_radius'] = $this->_buildAttributePartial($attributes, 'att_vision_radius', 'Vision Radius');
+        $attributes['att_water_vision_radius'] = $this->_buildAttributePartial($attributes, 'att_water_vision_radius', 'Water Vision Radius');
+        $attributes['att_radar_radius'] = $this->_buildAttributePartial($attributes, 'att_radar_radius', 'Radar Radius');
+        $attributes['att_omni_radius'] = $this->_buildAttributePartial($attributes, 'att_omni_radius', 'Omni Radius');
+        $attributes['att_sonar_radius'] = $this->_buildAttributePartial($attributes, 'att_sonar_radius', 'Sonar Radius');
+        $attributes['att_combat_turn_speed'] = $this->_buildAttributePartial($attributes, 'att_combat_turn_speed', 'Combat Turn Speed');
+        $attributes['att_max_speed'] = $this->_buildAttributePartial($attributes, 'att_max_speed', 'Max Speed');
+        $attributes['att_turn_rate'] = $this->_buildAttributePartial($attributes, 'att_turn_rate', 'Turn Rate');
+        $attributes['att_air_speed'] = $this->_buildAttributePartial($attributes, 'att_air_speed', 'Air Speed');
+        $attributes['att_elevation'] = $this->_buildAttributePartial($attributes, 'att_elevation', 'Elevation');
+        $attributes['att_engage_distance'] = $this->_buildAttributePartial($attributes, 'att_engage_distance', 'Engage Distance');
+        $attributes['att_air_turn_speed'] = $this->_buildAttributePartial($attributes, 'att_air_turn_speed', 'Air Turn Speed');
+        $attributes['att_fuel_use_time'] = $this->_buildAttributePartial($attributes, 'att_fuel_use_time', 'Fuel Use Time');
+        $attributes['att_fuel_recharge'] = $this->_buildAttributePartial($attributes, 'att_fuel_recharge', 'Fuel Recharge');
+        
+        return $attributes;
+    }
+    
+    private function _hasEcoAttributes($attributes) {
+        if($attributes['att_build_rate'] != '') {
+            return true;
+        }
+        if($attributes['att_build_radius'] != '') {
+            return true;
+        }
+        return false;
+    }
+    
+    private function _hasDetectionAttributes($attributes) {
+        if(($attributes['att_vision_radius'] != '') || 
+                ($attributes['att_water_vision_radius'] != '') || 
+                ($attributes['att_radar_radius'] != '') ||
+                ($attributes['att_omni_radius'] != '') ||
+                ($attributes['att_sonar_radius'] != '')) {
+            return true;
+        }           
+        return false;        
+    }
+    
+    private function _hasMovementAttributes($attributes) {
+        if(($attributes['att_combat_turn_speed'] != '') ||
+                ($attributes['att_max_speed'] != '') || 
+                ($attributes['att_turn_rate'] != '') || 
+                ($attributes['att_air_speed'] != '') || 
+                ($attributes['att_elevation'] != '') || 
+                ($attributes['att_engage_distance'] != '') || 
+                ($attributes['att_air_turn_speed'] != '') || 
+                ($attributes['att_fuel_use_time'] != '') || 
+                ($attributes['att_fuel_recharge'] != '')) {
+            return true;
+        }
+        return false;
     }
     
     private function _buildPartial($partial, $unit) {

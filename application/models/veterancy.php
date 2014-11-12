@@ -7,16 +7,16 @@
  */
 
 /**
- * Description of shields
+ * Description of veterancy
  *
  * @author burka
  */
-class Shields extends _Mymodel {
+class Veterancy extends _Mymodel {
     
     // Constructor
     function __construct() {
         parent::__construct();
-        $this->setTable('shields', 'blueprint_id');
+        $this->setTable('veterancy', 'blueprint_id');
     }
     
     function getOne($blueprint_id) {
@@ -26,15 +26,7 @@ class Shields extends _Mymodel {
         if (count($query_row) == 0) {
             return null;
         } else {
-            $query_row['sh_recharge_rate'] = number_format($query_row['sh_health'] / $query_row['sh_recharge_time']);
-            $query_row['sh_health'] = number_format($query_row['sh_health']);
-            
             return $query_row;
         }
     }
-    
-    
-    // Race-specific methods
-    
-    
 }

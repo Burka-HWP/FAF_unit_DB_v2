@@ -52,6 +52,7 @@ class Units extends _Mymodel {
         $query_row = $query->row_array();
         $query_row['w_hp'] = number_format($query_row['unit_health'] * 0.9);
         $query_row['w_mass'] = number_format($query_row['unit_mass_cost'] * 0.9);
+        $query_row['unit_health_int'] = $query_row['unit_health'];
         $query_row['unit_health'] = number_format($query_row['unit_health']);
         $query_row['unit_mass_cost'] = number_format($query_row['unit_mass_cost']);
         $query_row['unit_energy_cost'] = number_format($query_row['unit_energy_cost']);

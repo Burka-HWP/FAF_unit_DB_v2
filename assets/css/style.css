@@ -22,6 +22,9 @@ h5 {
 a:link {
     color: #AAA;
 }
+a:visited {
+    color: #AAA;
+}
 
 #body-wrapper {
     min-height: 100%;
@@ -415,6 +418,9 @@ p.blueprint {
 .aeon-view h4.aeon {
     color: #0A9D2F;
 }
+.aeon-view h5.aeon {
+    color: #0A9D2F;
+}
 
 .cybran-view {
     background: rgba(223, 45, 14, .20);
@@ -438,6 +444,9 @@ p.blueprint {
     margin-bottom: 5px;
 }
 .cybran-view h4.cybran {
+    color: #DF2D0E;
+}
+.cybran-view h5.cybran {
     color: #DF2D0E;
 }
 
@@ -465,6 +474,9 @@ p.blueprint {
 .uef-view h4.uef {
     color: #2D78B2;
 }
+.uef-view h5.uef {
+    color: #2D78B2;
+}
 
 .seraphim-view {
     background: rgba(241, 194, 64, .20);
@@ -488,6 +500,9 @@ p.blueprint {
     margin-bottom: 5px;
 }
 .seraphim-view h4.seraphim {
+    color: #F1C240;
+}
+.seraphim-view h5.seraphim {
     color: #F1C240;
 }
 

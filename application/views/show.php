@@ -5,26 +5,26 @@
 
 		<br />
 		<div class="row-fluid">
-			<div class="span4">
+			<div class="span5">
 				<!-- unit-specific attributes partial -->
 				{unit_spec_info}
 			</div>
-			<div class="span8">
+			<div class="span7">
 			    <!-- veterancy info partial-->
 				{veterancy}
 			</div>
 		</div>
 
 
-	
-	<!-- attacks partial -->
+<!--	
+	 attacks partial 
 	{attacks}
 
-	<!-- defenses partial -->
+	 defenses partial 
 	{defenses}
 
-	<!-- upgrades partial -->
-	{upgrades}
+	 upgrades partial 
+	{upgrades}-->
 	</div>
 </div>
 
