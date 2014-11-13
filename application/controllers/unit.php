@@ -209,7 +209,20 @@ class Unit extends Application {
         $this->data['defenses'] = $this->_buildPartial('_show_defenses', $unit);
 
         // load upgrade data
-        $this->data['upgrades'] = $this->_buildPartial('_show_upgrades', $unit);
+        
+        $LCH = $this->enhancements->getEnhancementsByLocation($blueprint_id, 'LCH');
+        $RCH = $this->enhancements->getEnhancementsByLocation($blueprint_id, 'RCH');
+        $Back = $this->enhancements->getEnhancementsByLocation($blueprint_id, 'Back');
+        if($LCH != null) {
+            $enhancement_data['race'] = $race;
+            $enhancement_data['LCH'] = $LCH;
+            $enhancement_data['RCH'] = $RCH;
+            $enhancement_data['Back'] = $Back;
+            $this->data['enhancements'] = $this->_buildPartial('_show_enhancements', $enhancement_data);
+        } else {
+            $this->data['enhancements'] = '';
+        }
+        //$this->data['enhancements'] = $this->_buildPartial('_show_upgrades', $unit);
 
         $this->render();
     }

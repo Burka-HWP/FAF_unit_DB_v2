@@ -21,10 +21,10 @@
 	{attacks}
 <!--
 	 defenses partial 
-	{defenses}
+	{defenses}-->
 
-	 upgrades partial 
-	{upgrades}-->
+	 
+	{enhancements}
 	</div>
 </div>
 
