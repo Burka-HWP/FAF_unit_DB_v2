@@ -16,10 +16,10 @@
 		</div>
 
 
-<!--	
-	 attacks partial 
+	
+	 
 	{attacks}
-
+<!--
 	 defenses partial 
 	{defenses}
 

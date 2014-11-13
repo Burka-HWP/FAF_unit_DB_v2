@@ -194,7 +194,16 @@ class Unit extends Application {
         //$this->data['unit_spec_info'] = $this->_buildPartial('_show_unit_spec_info', $attributes);
 
         // load attack data
-        $this->data['attacks'] = $this->_buildPartial('_show_attacks', $unit);
+        $attacks = $this->attacks->getAllAttacks($blueprint_id);
+        if($attacks != null) {
+            $attack_data['race'] = $race;
+            $attack_data['attacks'] = $attacks;
+            $this->data['attacks'] = $this->_buildPartial('_show_attacks', $attack_data);
+        } else {
+            $this->data['attacks'] = '';
+        }
+        
+        //$this->data['attacks'] = $this->_buildPartial('_show_attacks', $unit);
 
         // load defense data
         $this->data['defenses'] = $this->_buildPartial('_show_defenses', $unit);

@@ -616,3 +616,11 @@ p.blueprint {
     color: #F1C240;
     border-color: #F1C240;
 }
+
+.no-margin {
+    margin: 0px;
+}
+
+.attack-spacing {
+    margin-bottom: 25px;
+}
