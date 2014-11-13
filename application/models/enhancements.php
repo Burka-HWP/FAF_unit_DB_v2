@@ -28,6 +28,14 @@ class Enhancements extends _Mymodel{
         } else {
             foreach($query_array as $key => $record) {
                 $query_array[$key]['en_energy_cost'] = number_format($record['en_energy_cost']);
+                $query_array[$key]['en_mass_cost'] = number_format($record['en_mass_cost']);
+                $query_array[$key]['en_build_time'] = number_format($record['en_build_time']);
+                if($query_array[$key]['en_energy_eco'] != null) {
+                    $query_array[$key]['en_energy_eco'] = '(' . number_format($record['en_energy_eco']) . ')';
+                }
+                if($query_array[$key]['en_mass_eco'] != null) {
+                    $query_array[$key]['en_mass_eco'] = '(' . number_format($record['en_mass_eco']) . ')';
+                }
                 
             }
             return $query_array;
