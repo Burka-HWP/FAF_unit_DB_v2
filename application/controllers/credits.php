@@ -22,7 +22,7 @@ class Credits extends Application {
         $this->data['title'] = 'Forged Alliance Forever - Unit Database - Credits';
         $this->data['pagebody'] = 'credits';
         $this->data['race-bg'] = 'welcome-bg';
-        $this->data['race-logo'] = 'all_splash.png';
+        $this->data['race-logo'] = 'compare_splash.png';
         $this->render();
     }
     

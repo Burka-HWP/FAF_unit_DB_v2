@@ -17,7 +17,7 @@
         <div class="columns">
             <div class="row-fluid">
                 <div class="category">
-                    <h3>Command</h3>
+                    <h3 class="electrolize">Command</h3>
                 </div>            
             </div>
             <div class="row-fluid">
@@ -38,7 +38,7 @@
 
             <div class="row-fluid">
                 <div class="category">
-                    <h3>Engineering</h3>
+                    <h3 class="electrolize">Engineering</h3>
                 </div>            
             </div>
             {engineering-1}
@@ -48,7 +48,7 @@
 
             <div class="row-fluid">
                 <div class="category">
-                    <h3>Factories</h3>
+                    <h3 class="electrolize">Factories</h3>
                 </div>            
             </div>
             {factory-1}
@@ -58,7 +58,7 @@
 
             <div class="row-fluid">
                 <div class="category">
-                    <h3>Economy</h3>
+                    <h3 class="electrolize">Economy</h3>
                 </div>            
             </div>
             {economy-1}
@@ -69,7 +69,7 @@
 
             <div class="row-fluid">
                 <div class="category">
-                    <h3>Buildings - Attack</h3>
+                    <h3 class="electrolize">Buildings - Attack</h3>
                 </div>            
             </div>
             {attack-1}
@@ -80,7 +80,7 @@
 
             <div class="row-fluid">
                 <div class="category">
-                    <h3>Buildings - Defense</h3>
+                    <h3 class="electrolize">Buildings - Defense</h3>
                 </div>            
             </div> 
             {defense-2}
@@ -89,7 +89,7 @@
 
             <div class="row-fluid">
                 <div class="category">
-                    <h3>Buildings - Sensor</h3>
+                    <h3 class="electrolize">Buildings - Sensor</h3>
                 </div>            
             </div>
             {sensor-1}
@@ -99,7 +99,7 @@
 
             <div class="row-fluid">
                 <div class="category">
-                    <h3>Aircraft</h3>
+                    <h3 class="electrolize">Aircraft</h3>
                 </div>            
             </div>
             {aircraft-1}
@@ -110,7 +110,7 @@
 
             <div class="row-fluid">
                 <div class="category">
-                    <h3>Vehicles</h3>
+                    <h3 class="electrolize">Vehicles</h3>
                 </div>            
             </div>
             {vehicle-1}
@@ -121,7 +121,7 @@
 
             <div class="row-fluid">
                 <div class="category">
-                    <h3>Navy</h3>
+                    <h3 class="electrolize">Navy</h3>
                 </div>            
             </div>
             {naval-1}
@@ -132,7 +132,7 @@
 
             <div class="row-fluid">
                 <div class="category">
-                    <h3>Support</h3>
+                    <h3 class="electrolize">Support</h3>
                 </div>            
             </div>
             {support-1}
