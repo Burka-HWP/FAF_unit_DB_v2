@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "unit";
 $route['404_override'] = '';
 
 $route['aeon'] = 'unit/oneRace/1';
@@ -46,7 +46,6 @@ $route['cybran'] = 'unit/oneRace/2';
 $route['uef'] = 'unit/oneRace/3';
 $route['seraphim'] = 'unit/oneRace/4';
 $route['compare'] = 'unit/compare';
-$route['all'] = 'unit/index';
 $route['unit/(:any)'] = 'unit/show/$1';
 
 

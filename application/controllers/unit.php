@@ -107,8 +107,29 @@ class Unit extends Application {
         $factory_units = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Factory');   
         $this->data['factory-units'] = $this->_buildRaceCategory($factory_units);
         
+        $economy_units = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Economy');
+        $this->data['economy-units'] = $this->_buildRaceCategory($economy_units);
         
+        $attack_buildings = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Attack');
+        $this->data['attack-buildings'] = $this->_buildRaceCategory($attack_buildings);
         
+        $defense_buildings = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Defense');
+        $this->data['defense-buildings'] = $this->_buildRaceCategory($defense_buildings);
+        
+        $sensor_buildings = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Sensor');
+        $this->data['sensor-buildings'] = $this->_buildRaceCategory($sensor_buildings);
+        
+        $aircraft = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Aircraft');
+        $this->data['aircraft'] = $this->_buildRaceCategory($aircraft);
+        
+        $vehicles = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Vehicle');
+        $this->data['vehicles'] = $this->_buildRaceCategory($vehicles);
+        
+        $naval = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Naval');
+        $this->data['naval'] = $this->_buildRaceCategory($naval);
+        
+        $support = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Support');
+        $this->data['support'] = $this->_buildRaceCategory($support);
         
         $this->render();
     }

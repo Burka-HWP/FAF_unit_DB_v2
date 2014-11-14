@@ -16,8 +16,8 @@ class Units extends _Mymodel {
     function getByRaceCategoryForOneRace_array($race, $category) {
         $this->db->where('unit_race', $race);
         $this->db->where('unit_category', $category);        
-        $this->db->order_by('unit_type', 'desc');
         $this->db->order_by('unit_tier', 'asc');
+        $this->db->order_by('unit_type', 'desc');        
         $this->db->order_by('blueprint_id', 'asc');
         
         $query = $this->db->get($this->_tableName)->result_array();             

@@ -19,6 +19,13 @@ h5 {
     margin-bottom: 8px;
 }
 
+.credits a:link {
+    color: #f00;
+}
+.credits a:visited {
+    color: #f00;
+}
+
 a:link {
     color: #AAA;
 }

@@ -28,7 +28,8 @@ if (!defined('APPPATH'))
                     <div class="banner-bg">
                         <div class="banner">
                             <div class="menu-block-left">
-                                <a href="/" class="faf-title-link"></a>
+                                <!-- <a href="/" class="faf-title-link"></a>-->
+                                <img src="/assets/images/layout/faf_title_hover.png"/>
                             </div>                            
                             <div class="menu-block-right menu-choice">                        
                                 <a href="/compare" class="compare-menu-link"></a>
@@ -46,7 +47,7 @@ if (!defined('APPPATH'))
                                 <a href="/aeon" class="aeon-menu-link"></a>
                             </div>
                             <div class="menu-block-right menu-choice">                        
-                                <a href="/all" class="all-menu-link"></a>
+                                <a href="/" class="all-menu-link"></a>
                             </div>
                         </div>                        
                     </div>
@@ -56,9 +57,9 @@ if (!defined('APPPATH'))
                         {content}
                     </div>
                 </div>
-                <div class="footer-bg {race-bg}">
+                <div class="footer-bg {race-bg} credits">
                     <div class="footer">
-                        <p>Built by Burka for the Forged Alliance Forever community</p>
+                        <p>Built by Burka for the Forged Alliance Forever community - <a href="/credits">More Credits!</a></p>
                         <p>Patch 1.5.3634</p>
                         
                     </div>
