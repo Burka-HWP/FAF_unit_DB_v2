@@ -8,7 +8,7 @@ body {
     background-color: #666666;
     background-image: url("../images/layout/background.jpg");
     background-attachment: fixed;
-    font-size: 1.0em;
+    font-size: 10pt;
     color: #AAA;
     margin: 0px;
     padding: 0px;
@@ -188,6 +188,16 @@ img.line-item-icon {
 .line-item-all:hover {
     background: rgba(255, 255, 255, .10);
 }
+
+.line-item-race {
+    background: rgba(0, 0, 0, .25);
+    padding: 0px;    
+    margin: 5px;
+}
+.line-item-race:hover {
+    background: rgba(255, 255, 255, .10);
+}
+
 .line-item-all h5 {
     margin: 0px;
     padding: 0px;
@@ -229,6 +239,11 @@ img.line-item-icon {
 
 p.blueprint {
     font-size: 10pt;
+}
+
+.padding-tb-five {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .test {
@@ -395,7 +410,7 @@ p.blueprint {
 }
 
 .aeon-view {
-    background: rgba(10, 157, 47, .20);
+    background: rgba(10, 157, 47, .30);
     /*margin: 0px;*/
     padding: 0px;
     color: #CCCCCC;
@@ -423,7 +438,7 @@ p.blueprint {
 }
 
 .cybran-view {
-    background: rgba(223, 45, 14, .20);
+    background: rgba(223, 45, 14, .30);
     /*margin: 0px;*/
     padding: 0px;
     color: #CCCCCC;
@@ -451,7 +466,7 @@ p.blueprint {
 }
 
 .uef-view {
-    background: rgba(45, 120, 178, .20);
+    background: rgba(45, 120, 178, .30);
     /*margin: 0px;*/
     padding: 0px;
     color: #CCCCCC;
@@ -479,7 +494,7 @@ p.blueprint {
 }
 
 .seraphim-view {
-    background: rgba(241, 194, 64, .20);
+    background: rgba(241, 194, 64, .30);
     /*margin: 0px;*/
     padding: 0px;
     color: #CCCCCC;
@@ -514,6 +529,16 @@ p.blueprint {
     border-color: #FFFFFF;
     padding: 10px;
 }
+
+.race-table-block {
+    margin: 15px;
+    background: rgba(0, 0, 0, .80);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    padding: 10px;
+}
+
 
 .info-avatar {
     width: 64px;
@@ -623,4 +648,22 @@ p.blueprint {
 
 .attack-spacing {
     margin-bottom: 25px;
+}
+
+.enhancement-item {
+    padding: 5px;
+    border: 0px;
+    border-left: 2px;
+    border-top: 2px;
+    border-color: #111111;
+    border-style: solid;
+    margin-bottom: 20px;
+}
+
+.race-line-attr-padding {
+    padding-top: 25px;
+}
+.race-line-tier-padding {
+    padding-top: 8px;
+    padding-right: 10px;
 }

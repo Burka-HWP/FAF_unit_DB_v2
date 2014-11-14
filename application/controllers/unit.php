@@ -92,11 +92,23 @@ class Unit extends Application {
         $race_lower = strtolower($race); 
         $race_bg = $race_lower . '-bg';
         
-        $this->data['race'] = $race;
+        $this->data['race'] = $race_lower;
         $this->data['race-logo'] = $race_lower . '_splash.png';
         $this->data['race-bg'] = $race_bg;
         $this->data['title'] = 'Forged Alliance Forever - Unit Database - ' . $race;
         $this->data['pagebody'] = 'race';
+        
+        $command_units = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Command');   
+        $this->data['command-units'] = $this->_buildRaceCategory($command_units);
+        
+        $engineering_units = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Engineering');   
+        $this->data['engineering-units'] = $this->_buildRaceCategory($engineering_units);
+        
+        $factory_units = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Factory');   
+        $this->data['factory-units'] = $this->_buildRaceCategory($factory_units);
+        
+        
+        
         
         $this->render();
     }
@@ -381,5 +393,20 @@ class Unit extends Application {
         return $output;
     }
     
+    private function _buildRaceLineItem($unit) {
+        $output = $this->parser->parse('_race_line_item', $unit, TRUE);
+        return $output;
+    }
+    
+    private function _buildRaceCategory($units) {
+        $output = '';
+        for($i = 0; $i < sizeof($units); $i++) {
+            $units[$i]['unit_health'] = number_format($units[$i]['unit_health']);
+            $units[$i]['unit_mass_cost'] = number_format($units[$i]['unit_mass_cost']);
+            $units[$i]['unit_energy_cost'] = number_format($units[$i]['unit_energy_cost']);
+            $output .= $this->_buildRaceLineItem($units[$i]);
+        }
+        return $output;
+    }
 
 }
