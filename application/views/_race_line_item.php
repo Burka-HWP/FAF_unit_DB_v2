@@ -22,6 +22,7 @@
         				<h5>{unit_health}</h5>
         			</div>
         		</div>
+                    {shield_data}
                 </div>
                 <div class="span1 race-line-attr-padding">
                     <div class="row-fluid">

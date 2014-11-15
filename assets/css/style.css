@@ -119,11 +119,11 @@ img.line-item-icon {
 .category {
     text-align: center;
     background-color: #000;
-    border-style: none;
+/*    border-style: none;
     border-top-style: solid;
     border-bottom-style: solid;
     border-color: #FFF;
-    border-width: 1px;
+    border-width: 1px;*/
 }
 .category h3 {
     margin: 0px;
@@ -160,7 +160,8 @@ img.line-item-icon {
 .content-wrapper-inner {
     background: rgba(170, 170, 170, .4);
     border-style: solid;
-    border-color: #FFF;
+    border-radius: 10px;
+    border-color: rgba(170, 170, 170, .01);
     border-width: 1px;
     padding: 5px;
     margin-bottom: 60px;
@@ -172,7 +173,8 @@ img.line-item-icon {
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
-    border-color: #FFF;
+    border-radius: 10px;
+    border-color: rgba(170, 170, 170, .01);
     border-width: 1px;
     padding: 5px;
     margin-bottom: 60px;
@@ -181,7 +183,8 @@ img.line-item-icon {
 .content-block {
     background: rgba(0, 0, 0, .75);
     border-style: solid;
-    border-color: #FFF;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, .01);
     border-width: 1px;
     padding: 0px;
     margin: 5px;
@@ -532,8 +535,9 @@ p.blueprint {
     margin: 15px;
     background-color: #000;
     border-style: solid;
+    border-radius: 10px;
     border-width: 1px;
-    border-color: #FFFFFF;
+    border-color: rgba(170, 170, 170, .01);
     padding: 10px;
 }
 
@@ -709,7 +713,7 @@ p.blueprint {
 }
 
 .compare-select {
-    width: 400px;
+    width: 90%;
     background-color: #333;
     color: #AAA;
     border-color: #666;
@@ -734,4 +738,20 @@ p.blueprint {
 }
 .compare-row-spacing {
     margin: 5px;
+}
+
+.white {
+    color: #FFF;
+}
+.right-align {
+    text-align: right;
+}
+
+.compare-gap-top {
+    margin-bottom: 20px;
+}
+
+.brighter-bg {
+    background: rgba(128, 128, 128, .3);
+    margin: 10px;
 }

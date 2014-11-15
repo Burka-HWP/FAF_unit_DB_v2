@@ -62,7 +62,11 @@ class Units extends _Mymodel {
         $this->db->order_by('unit_type', 'desc');
         $this->db->order_by('blueprint_id', 'asc');
         
-        $query = $this->db->get($this->_tableName)->result_array();             
+        $query = $this->db->get($this->_tableName)->result_array();  
+        
+        if(count($query) < 1){
+            return null;
+        }
         
         foreach($query as $key => $row) {            
             $query[$key]['race'] = strtolower($this->getRace($race));
@@ -76,6 +80,9 @@ class Units extends _Mymodel {
         $this->db->where('blueprint_id', $blueprint_id);
         $query = $this->db->get($this->_tableName);
         $query_row = $query->row_array();
+        if(count($query_row) < 1) {
+            return null;
+        }
         $query_row['w_hp'] = number_format($query_row['unit_health'] * 0.9);
         $query_row['w_mass'] = number_format($query_row['unit_mass_cost'] * 0.9);
         $query_row['unit_health_int'] = $query_row['unit_health'];

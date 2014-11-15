@@ -15,19 +15,11 @@
             <br />
             <div class="row-fluid">
                 <div class="span4"></div>
-                <div id="step5" class="span4 compare-unit center" style="visibility: hidden;">
-                    <!-- <h4><span class="electrolize">Step 5: </span> Compare, muthafucka!</h4> -->
-                    <button class="compare-button" type="submit" text="Submit">Compare!</button>
-                    <!-- <h2 onclick="test()">Test</h2> -->
+                <div id="step5" class="span4 compare-unit center" style="visibility: hidden;">                    
+                    <button class="compare-button" type="submit" text="Submit">Compare!</button>                  
                 </div>
-                <div class="span4"></div>
-                
-            </div>
-            
-            
-            
+                <div class="span4"></div>                
+            </div>           
         </form>        
     </div>
 </div>
-
-{script}

@@ -19,7 +19,7 @@ if (!defined('APPPATH'))
         <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
-        <link href="/assets/js/faf_unit_db.js" type="text/javascript"/>
+        
         <link rel="icon" href="/assets/images/favicon/faf_fav2.png" type="image/gif">
     </head>
     <body>
@@ -75,5 +75,6 @@ if (!defined('APPPATH'))
         </div>
         <script src="/assets/js/jquery-1.11.1.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/faf_unit_db.js"></script>
     </body>
 </html>

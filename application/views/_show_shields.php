@@ -1,7 +1,7 @@
 <h4 class="{race}">Shield</h4>                        
 <div class="row-fluid">
     <div class="span2">
-            <img  src="../assets/images/attributes/health.png" />
+            <img  src="../assets/images/attributes/shield.png" />
     </div>
     <div class="span10 ">
             <h5>{sh_health}</h5>

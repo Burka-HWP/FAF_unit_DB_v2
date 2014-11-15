@@ -68,11 +68,19 @@
 <div id="{unit}_step4" class="compare-row-spacing" style="visibility: hidden;">
     <!-- <h4><span class="electrolize">Step 4: </span> Choose a unit</h4> -->
     <div class="row-fluid">
-        <div class="span12 center">
-            <select id="{unit}_select" class="compare-select" name="{unit}_bp">
-                {options}
-            </select>       
+        <div class="span2 center">
+            <h4 class="electrolize">Unit:</h4>
         </div>
+        <div class="span10">
+            <div class="row-fluid">
+                <div class="span12 center">
+                    <select id="{unit}_select" class="compare-select" name="{unit}_bp">
+                        {options}
+                    </select>       
+                </div>
+            </div>
+        </div>
+        
     </div>
 </div>
 

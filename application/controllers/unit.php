@@ -137,6 +137,9 @@ class Unit extends Application {
     function show($blueprint_id) {
         // variables:
         $unit = $this->units->getOne($blueprint_id);
+        if($unit == null) {
+            redirect('/');
+        }
         $race_title = $this->units->getRace($unit['unit_race']);
         $race = strtolower($race_title);
         $unit['race'] = $race;
@@ -392,14 +395,15 @@ class Unit extends Application {
     
     private function _buildCategoryRow($unit_category, $unit_tier) {      
         
-        $include_row_splitter = ($unit_tier > 1 ? "tier-splitter" : "");       
-        
+        $include_row_splitter = ($unit_tier > 1 ? "tier-splitter" : "");
+        $doesTier1Exist = $this->units->getByRaceCategoryTier_array(1, $unit_category, 1);
+                
         $row_data = array(
             "aeon_data" => $this->_buildLineItemsByRaceCategoryTier(1, $unit_category, $unit_tier),
             "cybran_data" => $this->_buildLineItemsByRaceCategoryTier(2, $unit_category, $unit_tier),
             "uef_data" => $this->_buildLineItemsByRaceCategoryTier(3, $unit_category, $unit_tier),
             "seraphim_data" => $this->_buildLineItemsByRaceCategoryTier(4, $unit_category, $unit_tier),
-            "row_split" => $include_row_splitter
+            "row_split" => (($unit_tier == 2 && $doesTier1Exist == null) ? '' : $include_row_splitter)
             );
         
         $output = $this->parser->parse('_all_category_row', $row_data, TRUE);
@@ -413,7 +417,15 @@ class Unit extends Application {
     
     private function _buildRaceCategory($units) {
         $output = '';
+        $shield = null;
+        
         for($i = 0; $i < sizeof($units); $i++) {
+            $shield = $this->shields->getOne($units[$i]['blueprint_id']);
+            if($shield == null) {
+                $units[$i]['shield_data'] = '';
+            } else {
+                $units[$i]['shield_data'] = $this->_buildPartial('_race_shield', $shield);
+            }
             $units[$i]['unit_health'] = number_format($units[$i]['unit_health']);
             $units[$i]['unit_mass_cost'] = number_format($units[$i]['unit_mass_cost']);
             $units[$i]['unit_energy_cost'] = number_format($units[$i]['unit_energy_cost']);
