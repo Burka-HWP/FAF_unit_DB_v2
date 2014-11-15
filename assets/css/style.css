@@ -682,22 +682,55 @@ p.blueprint {
 .compare-unit {
     background: rgba(0, 0, 0, .60);
     padding: 10px;
+    border-radius: 10px;
 }
 
 .compare-unselected {
-    background-color: #666;
+/*    background-color: #666;*/
     border-radius: 10px;
     border-size: 3px;
-    border-color: #FFF;
-    border-style: solid;    
+    border-color: #000;
+    border-style: solid; 
+    padding: 5px;
 }
 .compare-unselected:hover {
-    background-color: #AAA;
+    background-color: #CCC;
 }
 .compare-selected {
-    background-color: #FFF;
+    background-color: #999;
     border-radius: 10px;
     border-size: 3px;
     border-color: #FFF;
     border-style: solid;  
+    padding: 5px;
+}
+.compare-selected:hover {
+    background-color: #CCC;
+}
+
+.compare-select {
+    width: 400px;
+    background-color: #333;
+    color: #AAA;
+    border-color: #666;
+    border-width: 2px;
+}
+.compare-select:hover {
+   
+    border-color: #AAA;
+}
+
+
+.compare-button {
+  border-radius: 10px;
+  font-family: 'Electrolize', sans-serif;
+  color: #AAA;
+  font-size: 34px;
+  background: #333;
+  padding: 15px 20px 15px 20px;
+  border: solid #666 5px;
+  text-decoration: none;
+}
+.compare-button:hover {
+    border-color: #AAA;
 }

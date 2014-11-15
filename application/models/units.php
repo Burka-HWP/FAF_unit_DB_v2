@@ -13,6 +13,16 @@ class Units extends _Mymodel {
         $this->setTable('units', 'blueprint_id');
     }
     
+    function getByRaceTierType_array($race, $tier, $type) {
+        $this->db->where('unit_race', $race);
+        $this->db->where('unit_tier', $tier);
+        $this->db->where('unit_type', $type);  
+        $this->db->order_by('unit_category', 'asc');
+        $this->db->order_by('blueprint_id', 'asc');
+        
+        return $this->db->get($this->_tableName)->result_array();
+    }
+    
     function getByRaceCategoryForOneRace_array($race, $category) {
         $this->db->where('unit_race', $race);
         $this->db->where('unit_category', $category);        

@@ -67,10 +67,10 @@ if (!defined('APPPATH'))
                 </div>                
             </div>
             <div class="layout-race-logo-left">
-                <img src="../assets/images/layout/{race-logo}" />
+                <img src="/assets/images/layout/{race-logo}" />
             </div>
             <div class="layout-faf-logo-right">
-                <img src="../assets/images/layout/faf_logo_big.png" />
+                <img src="/assets/images/layout/faf_logo_big.png" />
             </div>
         </div>
         <script src="/assets/js/jquery-1.11.1.min.js"></script>
