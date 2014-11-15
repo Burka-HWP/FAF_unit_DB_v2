@@ -20,7 +20,8 @@
     }
         
     function changeTier($unit, $tier) {
-        clearTier($unit);        
+        clearTier($unit);
+        clearType($unit);
         document.getElementById($unit + "_tier" + $tier).setAttribute("class", "compare-selected");
         $globals[$unit + "_tier"] = $tier;
         showStep3($unit);
