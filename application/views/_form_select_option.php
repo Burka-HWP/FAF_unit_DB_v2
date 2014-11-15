@@ -1,0 +1,1 @@
+<option value="{blueprint_id}">{unit_race} {unit_class} {unit_name}</option>

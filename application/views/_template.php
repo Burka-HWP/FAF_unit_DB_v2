@@ -15,10 +15,11 @@ if (!defined('APPPATH'))
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-        <link href="/assets/js/jquery-1.11.1.min.js" type="text/javascript"/>
+        <link href="/assets/js/jquery-1.11.1.min.js" type="text/javascript"/>        
         <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+        <link href="/assets/js/faf_unit_db.js" type="text/javascript"/>
         <link rel="icon" href="/assets/images/favicon/faf_fav2.png" type="image/gif">
     </head>
     <body>

@@ -260,14 +260,6 @@ class Unit extends Application {
         $this->render();
     }
     
-    function compare() {
-        $this->data['title'] = 'Forged Alliance Forever - Unit Database - Compare Units';
-        $this->data['pagebody'] = 'compare';
-        $this->data['race-bg'] = 'welcome-bg';
-        $this->data['race-logo'] = 'compare_splash.png';
-        $this->render();
-    }
-    
     private function _buildVeterancyVariable($veterancy, $base_hp, $base_regen, $race) {
         
         $veterancy['race'] = $race;

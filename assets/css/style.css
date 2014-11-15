@@ -678,3 +678,26 @@ p.blueprint {
     padding-top: 8px;
     padding-right: 10px;
 }
+
+.compare-unit {
+    background: rgba(0, 0, 0, .60);
+    padding: 10px;
+}
+
+.compare-unselected {
+    background-color: #666;
+    border-radius: 10px;
+    border-size: 3px;
+    border-color: #FFF;
+    border-style: solid;    
+}
+.compare-unselected:hover {
+    background-color: #AAA;
+}
+.compare-selected {
+    background-color: #FFF;
+    border-radius: 10px;
+    border-size: 3px;
+    border-color: #FFF;
+    border-style: solid;  
+}

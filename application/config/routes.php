@@ -45,7 +45,6 @@ $route['aeon'] = 'unit/oneRace/1';
 $route['cybran'] = 'unit/oneRace/2';
 $route['uef'] = 'unit/oneRace/3';
 $route['seraphim'] = 'unit/oneRace/4';
-$route['compare'] = 'unit/compare';
 $route['unit/(:any)'] = 'unit/show/$1';
 
 
