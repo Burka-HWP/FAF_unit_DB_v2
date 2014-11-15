@@ -48,10 +48,14 @@ class Compare extends Application {
         $unit1 = $this->units->getOne($bp1);
         $unit2 = $this->units->getOne($bp2);        
         
-        
+        $root_dir = "fafunitdb.local/";
+        $hard_link = $root_dir . "compare/twoUnits/" . $bp1 . "/" . $bp2;
+
+
         $this->data['unit1_bp'] = $unit1['blueprint_id'];
         $this->data['unit2_bp'] = $unit2['blueprint_id'];
-        
+        $this->data['hard_link'] = $hard_link;
+
         $this->data['title'] = 'Forged Alliance Forever - Unit Database - Compare 2 Units';
         $this->data['pagebody'] = 'compare_display';
         $this->data['race-bg'] = 'welcome-bg';

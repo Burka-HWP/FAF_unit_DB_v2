@@ -719,8 +719,6 @@ p.blueprint {
    
     border-color: #AAA;
 }
-
-
 .compare-button {
   border-radius: 10px;
   font-family: 'Electrolize', sans-serif;
@@ -733,4 +731,7 @@ p.blueprint {
 }
 .compare-button:hover {
     border-color: #AAA;
+}
+.compare-row-spacing {
+    margin: 5px;
 }

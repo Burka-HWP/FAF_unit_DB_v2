@@ -14,13 +14,13 @@
             </div>
             <br />
             <div class="row-fluid">
-                <div class="span3"></div>
-                <div id="step5" class="span6 compare-unit center" style="visibility: hidden;">
-                    <h4><span class="electrolize">Step 5: </span> Compare, muthafucka!</h4>
+                <div class="span4"></div>
+                <div id="step5" class="span4 compare-unit center" style="visibility: hidden;">
+                    <!-- <h4><span class="electrolize">Step 5: </span> Compare, muthafucka!</h4> -->
                     <button class="compare-button" type="submit" text="Submit">Compare!</button>
-                    <h2 onclick="test()">Test</h2>
+                    <!-- <h2 onclick="test()">Test</h2> -->
                 </div>
-                <div class="span3"></div>
+                <div class="span4"></div>
                 
             </div>
             
