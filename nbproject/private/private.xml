@@ -4,16 +4,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/controllers/compare.php</file>
-            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/_compare_select_data.php</file>
+            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/_compare_single_unit.php</file>
             <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/_form_build_unit_block.php</file>
-            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/_script.php</file>
-            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/_form_select_option.php</file>
+            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/assets/js/faf_unit_db.js</file>
             <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/assets/css/style.css</file>
-            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/_template.php</file>
             <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/compare_display.php</file>
             <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/compare.php</file>
-            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/models/units.php</file>
         </group>
     </open-files>
 </project-private>

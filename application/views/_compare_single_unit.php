@@ -1,18 +1,25 @@
 <div class="content-wrapper-show {race}-view compare-gap-top">
     <div class="table-block">
-        <div class="info-avatar {unit_arena}">
-            <img src="/assets/images/units/{avatar}" />
-            <img src="/assets/images/strategic/{unit_icon}" class="strat_icon" />
-        </div>
-        <div class="info-title">
-            <h4 class="white">{race_name} {unit_class}</h4>
-            <h4 class="{race}">{unit_name}</h4>
-            <p class="blueprint">Blueprint ID: {blueprint_id}</p>
-        </div>
-        <div class="info-tier">
-            <img src="/assets/images/tiers/{unit_tier}.png" />
-        </div> 
-        <div class="clear"></div>
+        <a href="/unit/{blueprint_id}">
+            <div class="row-fluid">
+                <div class="span2">
+                    <div class="info-avatar {unit_arena}">
+                        <img src="/assets/images/units/{avatar}" />
+                        <img src="/assets/images/strategic/{unit_icon}" class="strat_icon" />
+                    </div>
+                </div>
+                <div class="span8">
+                    <h4 class="white electrolize">{race_name} {unit_class}</h4>
+                    <h4 class="{race} electrolize">{unit_name}</h4>
+                    <p class="blueprint">Blueprint ID: {blueprint_id}</p>
+                </div>
+                <div class="span2">
+                    <div class="info-tier">
+                        <img src="/assets/images/tiers/{unit_tier}.png" />
+                    </div> 
+                </div>
+            </div>
+        </a>
         <hr style="margin-bottom: 20px;"/>
         <div class="row-fluid">
 	<div class="span12">
@@ -93,8 +100,10 @@
 
 		</div>
                 
-	</div>
-</div>
+            </div>
+        </div>
+        {veterancy}
+        {attacks}
     </div>
 </div>
 

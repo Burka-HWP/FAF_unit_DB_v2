@@ -9,12 +9,12 @@
         <ol>
             <li>deviantART user CB260
                 <ul>
-                    <li>Images for the icons, etc. that I re-scaled for use.
+                    <li>Images for the race icons, etc. that I re-scaled for use.
                     <li><a href="http://cb260.deviantart.com/">http://cb260.deviantart.com/</a>
                 </ul>
             <li>GitHub user Spooky
                 <ul>
-                    <li>Usage of his unitdb repository to get all the unit avatars, strategic icons, various other small icons, background image, and others I'm sure for use.
+                    <li>Usage of his unitdb repository to get all the unit avatars, strategic icons, attribute icons, background image, and others I'm sure for use. I know it's all open-source on GitHub yadda yadda yadda but a big thank you! The effort to collect all the avatars, icons, etc. is just enormous!
                     <li><a href="https://github.com/spooky/unitdb">https://github.com/spooky/unitdb</a>
                 </ul>
             <li>FAForever Forums user Navras

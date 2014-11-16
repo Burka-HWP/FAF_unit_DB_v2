@@ -175,6 +175,8 @@ class Unit extends Application {
             $this->data['veterancy'] = '';
         }
         
+        //var_dump($veterancy);
+        
         $attributes = $this->attributes->getOne($blueprint_id);
         if($attributes != null) {
             $attributes = $this->_buildAttributeVariable($attributes);

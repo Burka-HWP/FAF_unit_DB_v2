@@ -11,7 +11,7 @@
                             <th class="{race}-header">New Regen<br />Rate</th>
 			</tr>
 			<tr>
-                            <td><img  src="../assets/images/veterancy/{race}_vet.png" /></td>
+                            <td><img  src="/assets/images/veterancy/{race}_vet.png" /></td>
                             <td>{vet_lvl_1_kp}</td>
                             <td>+{vet_lvl_1_hp_boost}</td>
                             <td>{vet_lvl_1_new_hp}</td>
@@ -20,8 +20,8 @@
 			</tr>
 			<tr>
                             <td>
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
                             </td>
                             <td>{vet_lvl_2_kp}</td>
                             <td>+{vet_lvl_2_hp_boost}</td>
@@ -31,9 +31,9 @@
 			</tr>
 			<tr>
                             <td>
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
                             </td>
                             <td>{vet_lvl_3_kp}</td>
                             <td>+{vet_lvl_3_hp_boost}</td>
@@ -43,10 +43,10 @@
 			</tr>
 			<tr>
                             <td>
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
                             </td>
                             <td>{vet_lvl_4_kp}</td>
                             <td>+{vet_lvl_4_hp_boost}</td>
@@ -56,11 +56,11 @@
 			</tr>
 			<tr>
                             <td>
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
-                                <img  src="../assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
+                                <img  src="/assets/images/veterancy/{race}_vet.png" />
                             </td>
                             <td>{vet_lvl_5_kp}</td>
                             <td>+{vet_lvl_5_hp_boost}</td>

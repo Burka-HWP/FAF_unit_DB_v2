@@ -3,6 +3,7 @@
         <div class="row-fluid">
             <div class="span5">
                 <h2 class="electrolize">Comparing 2 units!</h2>
+                <p>Priority information only for purpose of easy comparison.</p>
             </div>
             <div class="span7">
                 <h4>Share this comparison:</h4>
@@ -31,7 +32,6 @@
                 </a>
                 <!--<h2 class="electrolize">Compare Again!</h2>-->
             </div>
-            
         </div>
     </div>
 </div>     

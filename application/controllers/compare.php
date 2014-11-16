@@ -43,7 +43,7 @@ class Compare extends Application {
         if($unit2_bp == null || $unit1_bp == null) {
             redirect('/compare');
         } else {
-            redirect('/compare/twoUnits/' . $unit1_bp . '/' . $unit2_bp);
+            redirect('/compare/' . $unit1_bp . '/' . $unit2_bp);
         }
         
         
@@ -77,24 +77,36 @@ class Compare extends Application {
         $this->render();
     }
     
+    
+    
+    
     private function _buildUnitData($unit) {
         $vet = $this->veterancy->getOne($unit['blueprint_id']);
         $eco = $this->economy->getOne($unit['blueprint_id']);
         $shield = $this->shields->getOne($unit['blueprint_id']);
         $race = $this->units->getRace($unit['unit_race']);
+        $attacks = $this->attacks->getAllAttacks($unit['blueprint_id']);
         $unit['race'] = strtolower($race);
         $unit['race_name'] = $race;
         if($vet != null) {
-            $unit = array_merge($unit, $vet);
-        }
-        if($eco != null) {
-            $unit = array_merge($unit, $eco);
-            $unit['economy_info'] = $this->parser->parse('_show_economy', $unit, TRUE);
+            $veterancy_data = $this->_buildVeterancyVariable($vet, $unit['unit_health'], $unit['unit_regen'], $race);
+            $unit['veterancy'] = $this->parser->parse('_show_veterancy', $veterancy_data, TRUE);
         } else {
-            $unit['economy_info'] = '';
+            $unit['veterancy'] = '';
         }
+        if($attacks != null) {
+            $attack_data['race'] = strtolower($race);
+            $attack_data['attacks'] = $attacks;
+            $unit['attacks'] = $this->parser->parse('_compare_attacks', $attack_data, TRUE);
+        } else {
+            $unit['attacks'] = '';
+        }
+        
         $unit['abilities_info'] = $this->parser->parse('_show_abilities', $unit, TRUE);
-        //$unit['economy_info'] = $this->parser->parse('_show_economy', $unit, TRUE);
+                
+        //$unit['attacks'] = $this->parser->parse('_show_attacks', null, TRUE);
+        //$unit = $this->_assignAttribute($unit, $vet, 'veterancy', '_show_veterancy');
+        $unit = $this->_assignAttribute($unit, $eco, 'economy_info', '_show_economy');
         $unit = $this->_assignAttribute($unit, $shield, 'shield_info', '_show_shields');
         
         return $unit;
@@ -133,6 +145,43 @@ class Compare extends Application {
         $data['output'] = $this->_buildAllOptionItems($units);        
         //var_dump($this->data['output']);
         $this->load->view('_compare_select_data', $data);        
+    }
+    
+    private function _buildVeterancyVariable($veterancy, $base_hp, $base_regen, $race) {
+        
+        $veterancy['race'] = strtolower($race);
+        
+        $veterancy['vet_lvl_1_hp_boost'] = $base_hp * 0.1;
+        $veterancy['vet_lvl_2_hp_boost'] = $base_hp * 0.2;
+        $veterancy['vet_lvl_3_hp_boost'] = $base_hp * 0.3;
+        $veterancy['vet_lvl_4_hp_boost'] = $base_hp * 0.4;
+        $veterancy['vet_lvl_5_hp_boost'] = $base_hp * 0.5;
+        
+        $veterancy['vet_lvl_1_new_hp'] = $base_hp + $veterancy['vet_lvl_1_hp_boost'];
+        $veterancy['vet_lvl_2_new_hp'] = $base_hp + $veterancy['vet_lvl_2_hp_boost'];
+        $veterancy['vet_lvl_3_new_hp'] = $base_hp + $veterancy['vet_lvl_3_hp_boost'];
+        $veterancy['vet_lvl_4_new_hp'] = $base_hp + $veterancy['vet_lvl_4_hp_boost'];
+        $veterancy['vet_lvl_5_new_hp'] = $base_hp + $veterancy['vet_lvl_5_hp_boost'];
+        
+        $veterancy['vet_lvl_1_hp_boost'] = number_format($veterancy['vet_lvl_1_hp_boost']);
+        $veterancy['vet_lvl_2_hp_boost'] = number_format($veterancy['vet_lvl_2_hp_boost']);
+        $veterancy['vet_lvl_3_hp_boost'] = number_format($veterancy['vet_lvl_3_hp_boost']);
+        $veterancy['vet_lvl_4_hp_boost'] = number_format($veterancy['vet_lvl_4_hp_boost']);
+        $veterancy['vet_lvl_5_hp_boost'] = number_format($veterancy['vet_lvl_5_hp_boost']);
+        
+        $veterancy['vet_lvl_1_new_hp'] = number_format($veterancy['vet_lvl_1_new_hp']);
+        $veterancy['vet_lvl_2_new_hp'] = number_format($veterancy['vet_lvl_2_new_hp']);
+        $veterancy['vet_lvl_3_new_hp'] = number_format($veterancy['vet_lvl_3_new_hp']);
+        $veterancy['vet_lvl_4_new_hp'] = number_format($veterancy['vet_lvl_4_new_hp']);
+        $veterancy['vet_lvl_5_new_hp'] = number_format($veterancy['vet_lvl_5_new_hp']);
+        
+        $veterancy['vet_lvl_1_new_regen'] = $base_regen + $veterancy['vet_lvl_1_regen'];
+        $veterancy['vet_lvl_2_new_regen'] = $base_regen + $veterancy['vet_lvl_2_regen'];
+        $veterancy['vet_lvl_3_new_regen'] = $base_regen + $veterancy['vet_lvl_3_regen'];
+        $veterancy['vet_lvl_4_new_regen'] = $base_regen + $veterancy['vet_lvl_4_regen'];
+        $veterancy['vet_lvl_5_new_regen'] = $base_regen + $veterancy['vet_lvl_5_regen'];
+        
+        return $veterancy;
     }
     
 }
