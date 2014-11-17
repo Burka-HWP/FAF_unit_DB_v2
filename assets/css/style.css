@@ -6,7 +6,7 @@ html, body {
 body {
     font-family: 'Muli', sans-serif;
     background-color: #333333;
-    background-image: url("../images/layout/background.jpg");
+    background-image: url("../images/layout/noise_bg.png");
     background-attachment: fixed;
     font-size: 10pt;
     color: #AAA;
@@ -150,7 +150,7 @@ img.line-item-icon {
 
 .content-wrapper {
     padding-top: 100px;
-    padding-bottom: 10px;
+    padding-bottom: 70px;
     width: 100%;
     max-width: 1150px;
     margin-left: auto;
@@ -164,7 +164,7 @@ img.line-item-icon {
     border-color: rgba(170, 170, 170, .01);
     border-width: 1px;
     padding: 5px;
-    margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
 }
 
 .content-wrapper-show {
@@ -177,7 +177,7 @@ img.line-item-icon {
     border-color: rgba(170, 170, 170, .01);
     border-width: 1px;
     padding: 5px;
-    margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
 }
 
 .content-block {
