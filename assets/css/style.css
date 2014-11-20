@@ -120,11 +120,11 @@ img.line-item-icon {
 .category {
     text-align: center;
     /*background-color: #000;*/
-/*    border-style: none;
+    border-style: none;
     border-top-style: solid;
     border-bottom-style: solid;
-    border-color: #FFF;
-    border-width: 1px;*/
+    border-color: #333;
+    border-width: 1px;
 }
 .category h3 {
     margin: 0px;
@@ -778,12 +778,40 @@ p.blueprint {
 
 .black-bg {
     background-color: #000;
-
 }
+.black-bg:hover {
+    background-color: #666;
+}
+
+
 .compare-title:hover{
     background: rgba(255, 255, 255, 0.2);
 }
 
 .align-right {
     text-align: right;
+}
+
+.collapse-button {
+    border-radius: 5px;
+    font-family: 'Electrolize', sans-serif;
+    color: #AAA;
+    font-size: 16px;
+    font-weight: bold;
+    background: #333;
+    padding: 1px 10px 1px 10px;
+    border: solid #666 2px;
+    text-decoration: none;   
+}
+.collapse-button:hover {
+    border-color: #AAA;
+    background: #666;
+}
+
+
+
+.collapse-link-spacing {
+    padding-top: 6px;
+    padding-left: 20px;
+    text-align: left;
 }
