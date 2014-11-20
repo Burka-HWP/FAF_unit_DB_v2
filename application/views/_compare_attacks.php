@@ -1,5 +1,5 @@
 <br />
-<h4 class="{race}">Attacks</h4>
+<!--<h4 class="{race}">Attacks</h4>
 <div class="row-fluid">
     
     
@@ -32,12 +32,12 @@
                         </h5>
                         <h5 class="no-margin">
                             <span class="attribute">Muzzle Velocity:</span> {attack_muzzle_velocity}
-<!--                            <span class="attribute">, Lifetime:</span> {attack_lifetime}-->
+                            <span class="attribute">, Lifetime:</span> {attack_lifetime}
                         </h5>
                         <h5 class="no-margin">
-                            <span class="attribute">Fire Cycle:</span> {attack_num_of_projectile_per_cycle} projectile(s) every {attack_seconds_per_cycle} second(s)<!--, {attack_cycle_total_damage} damage/cycle -->
+                            <span class="attribute">Fire Cycle:</span> {attack_num_of_projectile_per_cycle} projectile(s) every {attack_seconds_per_cycle} second(s), {attack_cycle_total_damage} damage/cycle 
                         </h5>
-<!--                        <h5 class="no-margin">
+                        <h5 class="no-margin">
                             <span class="attribute">Turret Pitch:</span> {attack_turret_pitch}&deg; &plusmn; {attack_turret_pitch_plus_minus}&deg; ({attack_turret_pitch_rate_of_change}&deg;/sec)
                             <span class="attribute">, Turret Yaw:</span> {attack_turret_yaw}&deg; &plusmn; {attack_turret_yaw_plus_minus}&deg; ({attack_turret_yaw_rate_of_change}&deg;/sec)
                         </h5>
@@ -46,11 +46,11 @@
                             <span class="attribute">, Firing Randomness:</span> {attack_firing_randomness}
                             <span class="attribute">, Area of Effect:</span> {attack_area_of_effect}
                             <span class="attribute">, Energy Required:</span> {attack_energy_req}
-                        </h5>-->
+                        </h5>
                     </div>
                 </div>
                 
-<!--                {attack_muzzle_velocity} {attack_dps} {total_dps}-->
+                {attack_muzzle_velocity} {attack_dps} {total_dps}
             </div>
             <div class="span3 center">
                 <h5 class="no-margin attribute">Overall DPS</h5>
@@ -63,4 +63,4 @@
         {/attacks}
     </div>
     
-</div>
+</div>-->

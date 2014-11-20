@@ -93,29 +93,46 @@ img.line-item-icon {
     background-color: #0A9D2F;
 }
 .aeon-bg-trans {
+    background: rgba(10, 157, 47, .1);    
+}
+.aeon-bg-trans:hover {
     background: rgba(10, 157, 47, .3);    
 }
 .cybran-bg {
     background-color: #DF2D0E;
 }
 .cybran-bg-trans {
+    background: rgba(223, 45, 14, .1);
+}
+.cybran-bg-trans:hover {
     background: rgba(223, 45, 14, .3);
 }
 .uef-bg {
     background-color: #2D78B2;
 }
 .uef-bg-trans {
+    background: rgba(45, 120, 178, .1);
+}
+.uef-bg-trans:hover {
     background: rgba(45, 120, 178, .3);
 }
 .seraphim-bg {
     background-color: #F1C240;
 }
 .seraphim-bg-trans {
+    background: rgba(241, 194, 64, .1);
+}
+.seraphim-bg-trans:hover {
     background: rgba(241, 194, 64, .3);
 }
 .welcome-bg {
     background-color: #AAA;
 }
+
+/*#command-link a:link {
+    z-index: 10;
+}*/
+
 
 .category {
     text-align: center;
@@ -129,6 +146,17 @@ img.line-item-icon {
 .category h3 {
     margin: 0px;
 }
+.collapse-link a:link {
+    color: #AAA;
+}
+.collapse-link a:visited {
+    color: #AAA;
+}
+.collapse-link a:hover {
+    color: #AAA;
+}
+
+
 
 .columns {
     background-image: url("../images/all/columns_bg.png");

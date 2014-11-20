@@ -109,15 +109,18 @@ function hideCompareButton() {
 function collapse($category) {
     document.getElementById($category + "-btn").innerHTML = "+";
     var $newfunc = "expand('" + $category + "')";
-    document.getElementById($category + "-btn").setAttribute("onclick", $newfunc);
+    //document.getElementById($category + "-btn").setAttribute("onclick", $newfunc);
     document.getElementById($category + "-data").setAttribute("style", "display: none;");
+    document.getElementById($category + "-link").setAttribute("onclick", $newfunc);
+    
 }
 
 function expand($category) {
     document.getElementById($category + "-btn").innerHTML = "-";
     var $newfunc = "collapse('" + $category + "')";
-    document.getElementById($category + "-btn").setAttribute("onclick", $newfunc);    
+    //document.getElementById($category + "-btn").setAttribute("onclick", $newfunc);    
     document.getElementById($category + "-data").setAttribute("style", " ");
+    document.getElementById($category + "-link").setAttribute("onclick", $newfunc);
 }
 
 
