@@ -1,7 +1,7 @@
 <div class="content-wrapper-show {race}-view compare-gap-top">
     <div class="table-block">
         <a href="/unit/{blueprint_id}">
-            <div class="row-fluid">
+            <div class="row-fluid compare-title">
                 <div class="span2">
                     <div class="info-avatar {unit_arena}">
                         <img src="/assets/images/units/{avatar}" />

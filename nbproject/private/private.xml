@@ -4,8 +4,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/models/attacks.php</file>
+            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/_compare_single_unit.php</file>
+            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/_show_attacks.php</file>
+            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/controllers/unit.php</file>
+            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/attacks/_attacks_name.php</file>
             <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/assets/css/style.css</file>
             <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/_template.php</file>
+            <file>file:/C:/xampp/htdocs/FAF_unit_DB_v2/application/views/attacks/_build_one_attack.php</file>
         </group>
     </open-files>
 </project-private>

@@ -15,26 +15,34 @@ class Attacks extends _Mymodel{
     //put your code here
     function __construct() {
         parent::__construct();
-        $this->setTable('attacks', 'blueprint_id');
+        $this->setTable('weapon_stats', 'blueprint_id');
     }
     
     function getAllAttacks($blueprint_id) {
-        $this->db->where('blueprint_id', $blueprint_id);        
-        $query = $this->db->get($this->_tableName);
+             
+        $query = $this->db->query(
+                'select *, count(display_name) as "multiplier" '
+                . 'from weapon_stats '
+                . 'where blueprint_id = \'' . $blueprint_id . '\' '
+                . 'group by display_name, blueprint_id '
+                . 'order by blueprint_id asc;');
         $query_array = $query->result_array();
         if (count($query_array) == 0) {
             return null;
         } else {
             foreach($query_array as $key => $record) {
-                $query_array[$key]['total_dps'] = number_format($record['attack_cannon_count'] 
-                                            * $record['attack_damage_per_projectile'] 
-                                            * $record['attack_num_of_projectile_per_cycle']
-                                            / $record['attack_seconds_per_cycle'], 2);
-                $query_array[$key]['attack_dps'] = number_format($record['attack_damage_per_projectile'] 
-                                            * $record['attack_num_of_projectile_per_cycle']
-                                            / $record['attack_seconds_per_cycle'], 2);
-                $query_array[$key]['attack_cycle_total_damage'] = number_format($record['attack_damage_per_projectile'] 
-                                            * $record['attack_num_of_projectile_per_cycle'], 2);
+                $query_array[$key]['total_dps'] = number_format($record['damage'] 
+                                            * $record['rate_of_fire']
+                                            * $record['muzzle_salvo_size']
+                                            * $record['multiplier'], 2);
+                $query_array[$key]['attack_dps'] = number_format($record['damage'] 
+                                            * $record['rate_of_fire']
+                                            * $record['muzzle_salvo_size'], 2);
+                $query_array[$key]['cycle_damage'] = number_format($record['damage'] 
+                                            * $record['muzzle_salvo_size'], 2);
+                $query_array[$key]['seconds_per_cycle'] = number_format(1 / $record['rate_of_fire'], 2);
+                $query_array[$key]['cycle_total_damage'] = number_format($record['muzzle_salvo_size']
+                                            * $record['damage'], 2);
             }
             return $query_array;
         }

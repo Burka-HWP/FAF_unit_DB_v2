@@ -237,7 +237,7 @@ class Unit extends Application {
         if($attacks != null) {
             $attack_data['race'] = $race;
             $attack_data['attacks'] = $attacks;
-            $this->data['attacks'] = $this->_buildPartial('_show_attacks', $attack_data);
+            $this->data['attacks'] = $this->_buildAttacksPartial('_show_attacks', $attack_data);
         } else {
             $this->data['attacks'] = '';
         }
@@ -456,6 +456,27 @@ class Unit extends Application {
             $output = $this->parser->parse('_show_abilities', $data, TRUE);
         }
         return $output;
+    }
+    
+    private function _buildAttacksPartial($partial, $attack_data) {
+        $output = '';
+        $attacks_output = '';
+        foreach($attack_data['attacks'] as $attack) {
+            $attack['race'] = $attack_data['race'];
+            $attacks_output .= $this->_buildOneAttackItemPartial('attacks/_build_one_attack', $attack);
+        }
+        
+        
+        $attack_data['all_attacks'] = $attacks_output;
+        $output .= $this->_buildPartial($partial, $attack_data, TRUE);
+        
+        return $output;
+    }
+    
+    private function _buildOneAttackItemPartial($partial, $attack) {
+        
+        return $this->parser->parse($partial, $attack, TRUE);
+        
     }
 
 }
