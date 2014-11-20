@@ -1,5 +1,5 @@
 <br />
-<h4 class="{race}">Attacks</h4>
+<h4 class="{race}">Weapons</h4>
 <div class="row-fluid">
     
     <div class="span1"></div>

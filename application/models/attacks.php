@@ -40,9 +40,22 @@ class Attacks extends _Mymodel{
                                             * $record['muzzle_salvo_size'], 2);
                 $query_array[$key]['cycle_damage'] = number_format($record['damage'] 
                                             * $record['muzzle_salvo_size'], 2);
-                $query_array[$key]['seconds_per_cycle'] = number_format(1 / $record['rate_of_fire'], 2);
+                if($record['rate_of_fire'] == 0) {
+                    $query_array[$key]['seconds_per_cycle'] = null;
+                } else {
+                    $query_array[$key]['seconds_per_cycle'] = number_format(1 / $record['rate_of_fire'], 2);
+                }
+                
                 $query_array[$key]['cycle_total_damage'] = number_format($record['muzzle_salvo_size']
                                             * $record['damage'], 2);
+                
+                
+                
+                // format single values after use:
+                $query_array[$key]['nuke_inner_ring_damage'] = number_format($record['nuke_inner_ring_damage']);
+                $query_array[$key]['nuke_outer_ring_damage'] = number_format($record['nuke_outer_ring_damage']);
+                $query_array[$key]['damage'] = number_format($record['damage']);
+                $query_array[$key]['max_radius'] = number_format($record['max_radius']);
             }
             return $query_array;
         }

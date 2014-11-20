@@ -3,7 +3,7 @@
     <img src="../assets/images/strategic/{unit_icon}" class="strat_icon" />
 </div>
 <div class="info-title">
-    <h4 class="white">{race_name} {unit_class}</h4>
+    <h4 class="white">{race_name} {tech} {unit_class}</h4>
     <h4 class="{race}">{unit_name}</h4>
     <p class="blueprint">Blueprint ID: {blueprint_id}</p>
 </div>

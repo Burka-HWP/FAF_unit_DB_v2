@@ -463,10 +463,38 @@ class Unit extends Application {
         $attacks_output = '';
         foreach($attack_data['attacks'] as $attack) {
             $attack['race'] = $attack_data['race'];
-            $attacks_output .= $this->_buildOneAttackItemPartial('attacks/_build_one_attack', $attack);
+            
+            if($attack['total_dps'] < 0.1) {
+                $attack['show_overall_dps'] = '';
+            } else {
+                $attack['show_overall_dps'] = $this->_buildPartial('attacks/_overall_dps', $attack, TRUE);
+            }
+            
+            
+            if($attack['display_name'] == 'Death Nuke') {
+                $attacks_output .= $this->_buildOneAttackItemPartial('attacks/_build_one_death_nuke', $attack);
+            } else if($attack['display_name'] == 'Death Weapon') {
+                $attacks_output .= $this->_buildOneAttackItemPartial('attacks/_build_one_death_weapon', $attack);
+            } else if($attack['display_name'] == 'Teleport in') {
+                $attacks_output .= $this->_buildOneAttackItemPartial('attacks/_build_one_teleport_in', $attack);
+            } else if($attack['is_nuke_missile'] == 'y') {
+                $attacks_output .= $this->_buildOneAttackItemPartial('attacks/_build_one_strat_missile', $attack);
+            }
+            
+            
+            
+            else {
+                $attacks_output .= $this->_buildOneAttackItemPartial('attacks/_build_one_attack', $attack);
+            }
+            
+            
+            
+            
+            
+            
+            
         }
-        
-        
+                
         $attack_data['all_attacks'] = $attacks_output;
         $output .= $this->_buildPartial($partial, $attack_data, TRUE);
         
