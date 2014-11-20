@@ -9,7 +9,7 @@
                     </div>
                 </div>
                 <div class="span6 padding-tb-five info-title">
-                    <h4 class="white">{unit_class}</h4>
+                    <h4 class="white">{tech} {unit_class}</h4>
                     <h4 class="{race}">{unit_name}</h4>
                     <p class="blueprint">Blueprint ID: {blueprint_id}</p>
                 </div>

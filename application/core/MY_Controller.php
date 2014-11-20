@@ -38,7 +38,7 @@ class Application extends CI_Controller {
         $this->data['data'] = &$this->data;
         $this->parser->parse('_template', $this->data);
     }
-
+    
 }
 
 /* End of file MY_Controller.php */

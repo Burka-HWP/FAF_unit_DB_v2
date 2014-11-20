@@ -50,6 +50,9 @@ if (!defined('APPPATH'))
                             <div class="menu-block-right menu-choice">                        
                                 <a href="/" class="all-menu-link"></a>
                             </div>
+                            <div class="menu-block-right menu-choice">                        
+                                <a href="/search" class="search-menu-link"></a>
+                            </div>
                         </div>                        
                     </div>
                 </div>                     

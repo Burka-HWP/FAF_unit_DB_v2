@@ -7,7 +7,7 @@
     </div>                    
     <div class="menu-block-left">
         <div class="line-item-data">
-            <h5>{unit_class}</h5>
+            <h5>{tech} {unit_class}</h5>
             <h5 class="{race}-text">{unit_name}</h5>
         </div>
     </div>

@@ -20,7 +20,12 @@ class Units extends _Mymodel {
         $this->db->order_by('unit_category', 'asc');
         $this->db->order_by('blueprint_id', 'asc');
         
-        return $this->db->get($this->_tableName)->result_array();
+        $query = $this->db->get($this->_tableName)->result_array();
+        foreach($query as $key => $row) {           
+            
+            $query[$key]['tech'] = $this->_buildTierPrefix($query[$key]['unit_tier'], $query[$key]['unit_class']);
+        } 
+        return $query;
     }
     
     function getByRaceCategoryForOneRace_array($race, $category) {
@@ -34,6 +39,7 @@ class Units extends _Mymodel {
         
         foreach($query as $key => $row) {            
             $query[$key]['race'] = strtolower($this->getRace($race));
+            $query[$key]['tech'] = $this->_buildTierPrefix($query[$key]['unit_tier'], $query[$key]['unit_class']);
         }       
         return $query;
     }
@@ -50,6 +56,7 @@ class Units extends _Mymodel {
         
         foreach($query as $key => $row) {            
             $query[$key]['race'] = strtolower($this->getRace($race));
+            $query[$key]['tech'] = $this->_buildTierPrefix($query[$key]['unit_tier'], $query[$key]['unit_class']);
         }       
         return $query;
     }
@@ -70,6 +77,7 @@ class Units extends _Mymodel {
         
         foreach($query as $key => $row) {            
             $query[$key]['race'] = strtolower($this->getRace($race));
+            $query[$key]['tech'] = $this->_buildTierPrefix($query[$key]['unit_tier'], $query[$key]['unit_class']);
         }       
         return $query;       
     }
@@ -91,6 +99,7 @@ class Units extends _Mymodel {
         $query_row['unit_energy_cost'] = number_format($query_row['unit_energy_cost']);
         $query_row['unit_build_time'] = number_format($query_row['unit_build_time']);
         $query_row['avatar'] = strtoupper($query_row['blueprint_id']) . '.png';
+        $query_row['tech'] = $this->_buildTierPrefix($query_row['unit_tier'], $query_row['unit_class']);
         if($query_row['unit_has_portrait'] == 'no') {
             $query_row['portrait'] = 'portrait' . $query_row['unit_race'] . '.png';
         } else {
@@ -110,7 +119,13 @@ class Units extends _Mymodel {
     function getAllByRace_array($race_id) {
         $this->db->where('unit_race_id', $race_id);
         $query = $this->db->get($this->_tableName);
-        return $query->result_array();
+        
+        $query_array = $query->result_array();
+        foreach($query_array as $record) {
+            $record['tech'] = $this->_buildTierPrefix($record['unit_tier'], $record['unit_class']);
+        }
+        //return $query->result_array();
+        return $query_array;
     }
     
     function getByRaceAndClass_array($race_id, $unit_class) {
@@ -123,9 +138,20 @@ class Units extends _Mymodel {
         
         $query_array = $query->result_array();
         foreach($query_array as $record) {
-            $record['tech'] = ($record['unit_tier'] == 0 ? '' : 'T' . $record['unit_tier']);
+            $record['tech'] = $this->_buildTierPrefix($record['unit_tier'], $record['unit_class']);
         }
         //return $query->result_array();
         return $query_array;
+    }    
+    
+    private function _buildTierPrefix($tier, $class) {
+        $output = '';
+        
+        if( $class == 'Armored Command Unit' || $tier == 4 ) {
+            return $output;
+        } else {
+            $output .= 'T' . $tier;
+        }
+        return $output;
     }
 }

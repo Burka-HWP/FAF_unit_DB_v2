@@ -89,7 +89,7 @@ class Compare extends Application {
         $unit['race'] = strtolower($race);
         $unit['race_name'] = $race;
         if($vet != null) {
-            $veterancy_data = $this->_buildVeterancyVariable($vet, $unit['unit_health'], $unit['unit_regen'], $race);
+            $veterancy_data = $this->_buildVeterancyVariable($vet, $unit['unit_health_int'], $unit['unit_regen'], $race);
             $unit['veterancy'] = $this->parser->parse('_show_veterancy', $veterancy_data, TRUE);
         } else {
             $unit['veterancy'] = '';
@@ -102,7 +102,7 @@ class Compare extends Application {
             $unit['attacks'] = '';
         }
         
-        $unit['abilities_info'] = $this->parser->parse('_show_abilities', $unit, TRUE);
+        $unit['abilities_info'] = $this->_buildAbilities($unit, $unit['race']);
                 
         //$unit['attacks'] = $this->parser->parse('_show_attacks', null, TRUE);
         //$unit = $this->_assignAttribute($unit, $vet, 'veterancy', '_show_veterancy');
@@ -184,4 +184,24 @@ class Compare extends Application {
         return $veterancy;
     }
     
+    private function _buildAbilities($unit, $race) {
+        $output = '';
+        $abilities = $this->abilities->getAllForOneUnit($unit['blueprint_id']);
+        $ability_string = '';
+        $data = array();
+        if($abilities == null) {
+            return $output;
+        } else {
+            for($i = 0; $i < count($abilities); $i++) {
+                $ability_string .= $abilities[$i]['ability'];
+                if ($i < count($abilities) - 1) {
+                    $ability_string .= ', ';
+                }
+            }
+            $data['race'] = $race;
+            $data['unit_abilities'] = $ability_string;
+            $output = $this->parser->parse('_show_abilities', $data, TRUE);
+        }
+        return $output;
+    }
 }

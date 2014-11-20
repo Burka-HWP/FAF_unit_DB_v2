@@ -9,7 +9,7 @@
                     </div>
                 </div>
                 <div class="span8">
-                    <h4 class="white electrolize">{race_name} {unit_class}</h4>
+                    <h4 class="white electrolize">{race_name} {tech} {unit_class}</h4>
                     <h4 class="{race} electrolize">{unit_name}</h4>
                     <p class="blueprint">Blueprint ID: {blueprint_id}</p>
                 </div>

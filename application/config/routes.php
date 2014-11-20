@@ -39,14 +39,15 @@
 */
 
 $route['default_controller'] = "unit";
-$route['404_override'] = '';
+$route['404_override'] = 'my404';
 
 $route['aeon'] = 'unit/oneRace/1';
 $route['cybran'] = 'unit/oneRace/2';
 $route['uef'] = 'unit/oneRace/3';
 $route['seraphim'] = 'unit/oneRace/4';
-$route['unit/([a-z]{3}[0-9]{4})'] = 'unit/show/$1';
-$route['compare/([a-z]{3}[0-9]{4})/([a-z]{3}[0-9]{4})'] = 'compare/twoUnits/$1/$2';
+$route['unit/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})'] = 'unit/show/$1';
+$route['compare/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})'] = 'compare/twoUnits/$1/$2';
+
 
 
 /* End of file routes.php */

@@ -153,11 +153,12 @@ class Unit extends Application {
             $unit['economy_info'] = '';
         }
         
-        if($unit['unit_abilities'] != null) {
-            $unit['abilities_info'] = $this->_buildPartial('_show_abilities', $unit);
-        } else {
-            $unit['abilities_info'] = '';
-        }
+//        if($unit['unit_abilities'] != null) {
+//            $unit['abilities_info'] = $this->_buildPartial('_show_abilities', $unit);
+//        } else {
+//            $unit['abilities_info'] = '';
+//        }
+        $unit['abilities_info'] = $this->_buildAbilities($unit, $race);
         
         $shield = $this->shields->getOne($blueprint_id);
         if($shield != null) {
@@ -432,6 +433,27 @@ class Unit extends Application {
             $units[$i]['unit_mass_cost'] = number_format($units[$i]['unit_mass_cost']);
             $units[$i]['unit_energy_cost'] = number_format($units[$i]['unit_energy_cost']);
             $output .= $this->_buildRaceLineItem($units[$i]);
+        }
+        return $output;
+    }
+    
+    private function _buildAbilities($unit, $race) {
+        $output = '';
+        $abilities = $this->abilities->getAllForOneUnit($unit['blueprint_id']);
+        $ability_string = '';
+        $data = array();
+        if($abilities == null) {
+            return $output;
+        } else {
+            for($i = 0; $i < count($abilities); $i++) {
+                $ability_string .= $abilities[$i]['ability'];
+                if ($i < count($abilities) - 1) {
+                    $ability_string .= ', ';
+                }
+            }
+            $data['race'] = $race;
+            $data['unit_abilities'] = $ability_string;
+            $output = $this->parser->parse('_show_abilities', $data, TRUE);
         }
         return $output;
     }

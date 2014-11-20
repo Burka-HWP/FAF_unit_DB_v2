@@ -6,7 +6,8 @@ html, body {
 body {
     font-family: 'Muli', sans-serif;
     background-color: #333333;
-    background-image: url("../images/layout/background.jpg");
+    background-image: url("../images/layout/noise_bg.png");
+    /*background-repeat: repeat;*/
     background-attachment: fixed;
     font-size: 10pt;
     color: #AAA;
@@ -276,7 +277,7 @@ p.blueprint {
     text-align: left;    
 }
 .menu-choice {
-    padding-top: 15px;
+    padding-top: 0px;
 }
 
 .info-icon {
@@ -327,8 +328,8 @@ p.blueprint {
     background: url('../images/layout/faf_title_hover.png');
 }
 .all-menu-link {
-    height: 48px;
-    width: 72px;
+    height: 79px;
+    width: 80px;
     margin: 0px;
     display: block;
     background: url('../images/layout/all_small_grey.png');
@@ -336,9 +337,10 @@ p.blueprint {
 .all-menu-link:hover {
     background: url('../images/layout/all_small_hover.png');
 }
+
 .aeon-menu-link {
-    height: 48px;
-    width: 71px;
+    height: 79px;
+    width: 80px;
     margin: 0px;
     display: block;
     background: url('../images/layout/aeon_small_grey.png');
@@ -347,8 +349,8 @@ p.blueprint {
     background: url('../images/layout/aeon_small_hover.png');
 }
 .cybran-menu-link {
-    height: 48px;
-    width: 93px;
+    height: 79px;
+    width: 80px;
     margin: 0px;
     display: block;
     background: url('../images/layout/cybran_small_grey.png');
@@ -357,8 +359,8 @@ p.blueprint {
     background: url('../images/layout/cybran_small_hover.png');
 }
 .uef-menu-link {
-    height: 48px;
-    width: 71px;
+    height: 79px;
+    width: 80px;
     margin: 0px;
     display: block;
     background: url('../images/layout/uef_small_grey.png');
@@ -367,8 +369,8 @@ p.blueprint {
     background: url('../images/layout/uef_small_hover.png');
 }
 .seraphim-menu-link {
-    height: 48px;
-    width: 101px;
+    height: 79px;
+    width: 80px;
     margin: 0px;
     display: block;
     background: url('../images/layout/seraphim_small_grey.png');
@@ -377,8 +379,8 @@ p.blueprint {
     background: url('../images/layout/seraphim_small_hover.png');
 }
 .compare-menu-link {
-    height: 48px;
-    width: 103px;
+    height: 79px;
+    width: 80px;
     margin: 0px;
     display: block;
     background: url('../images/layout/compare_small_grey.png');
@@ -386,9 +388,21 @@ p.blueprint {
 .compare-menu-link:hover {
     background: url('../images/layout/compare_small_hover.png');
 }
+.search-menu-link {
+    height: 79px;
+    width: 80px;
+    margin: 0px;
+    display: block;
+    background: url('../images/layout/search_small_grey.png');
+}
+.search-menu-link:hover {
+    background: url('../images/layout/search_small_hover.png');
+}
+
 
 .layout-race-logo-left {
-    position: absolute;
+    position: fixed;
+    /*position: absolute;*/
     top: 100px;
     left: 10px;
     width: 225px;
