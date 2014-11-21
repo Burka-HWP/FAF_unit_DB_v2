@@ -1,0 +1,1 @@
+<h5><span class="attribute">Projectile: </span>{new_damage} damage</h5>

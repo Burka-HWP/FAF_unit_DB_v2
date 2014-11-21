@@ -1,0 +1,1 @@
+<h5><span class="attribute">Hit Point Boost: </span>+{health_boost}</h5>

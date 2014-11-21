@@ -1,0 +1,1 @@
+<h5><span class="attribute">Omni Radius: </span>{new_omni_radius}</h5>

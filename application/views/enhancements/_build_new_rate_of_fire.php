@@ -1,0 +1,1 @@
+<h5><span class="attribute">Rate of Fire: </span>{new_rate_of_fire}</h5>

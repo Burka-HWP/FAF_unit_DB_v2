@@ -1,0 +1,1 @@
+<h5><span class="attribute">Area of Effect: </span>{new_damage_radius}</h5>

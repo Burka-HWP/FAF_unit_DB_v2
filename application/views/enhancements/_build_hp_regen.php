@@ -1,0 +1,1 @@
+<h5><span class="attribute">Regen Boost: </span>{regen_rate_boost}</h5>

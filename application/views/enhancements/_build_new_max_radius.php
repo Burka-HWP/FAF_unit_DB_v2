@@ -1,0 +1,1 @@
+<h5><span class="attribute">Attack Range: </span>{new_max_radius}</h5>

@@ -1,0 +1,1 @@
+<span class="consumption">({consumption_per_second_energy})</span>

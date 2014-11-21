@@ -257,7 +257,7 @@ class Unit extends Application {
             $enhancement_data['LCH'] = $LCH;
             $enhancement_data['RCH'] = $RCH;
             $enhancement_data['Back'] = $Back;
-            $this->data['enhancements'] = $this->_buildPartial('_show_enhancements', $enhancement_data);
+            $this->data['enhancements'] = $this->_buildEnhancementsPartial('_show_enhancements', $enhancement_data);
         } else {
             $this->data['enhancements'] = '';
         }
@@ -505,6 +505,109 @@ class Unit extends Application {
         
         return $this->parser->parse($partial, $attack, TRUE);
         
+    }
+    
+    private function _buildEnhancementsPartial($partial, $data) {
+        $output = '';
+        $lch = '';
+        $back = '';
+        $new_data = array();
+        $new_data['race'] = $data['race'];
+        $new_data['LCH'] = $new_data['Back'] = $new_data['RCH'] = '';
+        
+        foreach($data['LCH'] as $key => $record) {
+            $record['race'] = $data['race'];
+            $new_data['LCH'] .= $this->_buildEnhancementsItem($record);            
+        }                
+        foreach($data['Back'] as $key => $record) {
+            $record['race'] = $data['race'];
+            $new_data['Back'] .= $this->_buildEnhancementsItem($record);
+        } 
+        foreach($data['RCH'] as $key => $record) {
+            $record['race'] = $data['race'];
+            $new_data['RCH'] .= $this->_buildEnhancementsItem($record);            
+        }
+        
+        
+        $output .= $this->parser->parse('_show_enhancements', $new_data, TRUE);
+        
+        return $output;
+    }
+    
+    private function _buildEnhancementsItem($record) {
+        $output = '';
+        $data;
+        if($record['shield_recharge_time'] != null) {
+            $record['shield'] = $this->parser->parse('enhancements/_build_shield', $record, TRUE);
+        } else {
+            $record['shield'] = '';
+        }
+        
+        if($record['consumption_per_second_energy'] != null) {
+            $record['consumption'] = $this->parser->parse('enhancements/_build_consumption', $record, TRUE);
+        } else {
+            $record['consumption'] = '';
+        }
+        if($record['production_per_second_energy'] != null) {
+            $record['production_e'] = $this->parser->parse('enhancements/_build_production_energy', $record, TRUE);
+        } else {
+            $record['production_e'] = '';
+        }
+        if($record['production_per_second_mass'] != null) {
+            $record['production_m'] = $this->parser->parse('enhancements/_build_production_mass', $record, TRUE);
+        } else {
+            $record['production_m'] = '';
+        }
+        if($record['regen_rate_boost'] != null) {
+            $record['b_new_regen'] = $this->parser->parse('enhancements/_build_hp_regen', $record, TRUE);
+        } else {
+            $record['b_new_regen'] = '';
+        }
+        if($record['health_boost'] != null) {
+            $record['b_health'] = $this->parser->parse('enhancements/_build_hp_boost', $record, TRUE);
+        } else {
+            $record['b_health'] = '';
+        }
+        if($record['new_build_rate'] != null) {
+            $record['b_new_build_rate'] = $this->parser->parse('enhancements/_build_new_build_rate', $record, TRUE);
+        } else {
+            $record['b_new_build_rate'] = '';
+        }
+        if($record['new_rate_of_fire'] != null) {
+            $record['b_new_rate_of_fire'] = $this->parser->parse('enhancements/_build_new_rate_of_fire', $record, TRUE);
+        } else {
+            $record['b_new_rate_of_fire'] = '';
+        }
+        if($record['new_omni_radius'] != null) {
+            $record['b_new_omni_radius'] = $this->parser->parse('enhancements/_build_new_omni_radius', $record, TRUE);
+        } else {
+            $record['b_new_omni_radius'] = '';
+        }
+        if($record['new_max_radius'] != null) {
+            $record['b_new_max_radius'] = $this->parser->parse('enhancements/_build_new_max_radius', $record, TRUE);
+        } else {
+            $record['b_new_max_radius'] = '';
+        }
+        if($record['new_vision_radius'] != null) {
+            $record['b_new_vision_radius'] = $this->parser->parse('enhancements/_build_new_vision_radius', $record, TRUE);
+        } else {
+            $record['b_new_vision_radius'] = '';
+        }
+        if($record['new_damage'] != null) {
+            $record['b_new_damage'] = $this->parser->parse('enhancements/_build_new_damage', $record, TRUE);
+        } else {
+            $record['b_new_damage'] = '';
+        }
+        if($record['new_damage_radius'] != null) {
+            $record['b_new_damage_radius'] = $this->parser->parse('enhancements/_build_new_damage_radius', $record, TRUE);
+        } else {
+            $record['b_new_damage_radius'] = '';
+        }
+        
+        
+        $output .= $this->parser->parse('enhancements/_build_enhancement', $record, TRUE);
+        
+        return $output;
     }
 
 }

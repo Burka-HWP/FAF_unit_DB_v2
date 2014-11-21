@@ -707,12 +707,12 @@ p.blueprint {
     margin-bottom: 25px;
 }
 
+
 .enhancement-item {
     padding: 5px;
-    border: 0px;
-    border-left: 2px;
-    border-top: 2px;
-    border-color: #111111;
+    background-color: #000;
+    border: 1px;    
+    border-color: #222;
     border-style: solid;
     margin-bottom: 20px;
 }
@@ -842,4 +842,12 @@ p.blueprint {
     padding-top: 6px;
     padding-left: 20px;
     text-align: left;
+}
+
+.production {
+    color: #0F0;
+}
+
+.consumption {
+    color: #F00;
 }
