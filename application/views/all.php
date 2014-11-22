@@ -41,10 +41,10 @@
                 </div>                        
             </div>
             
-            <div id="engineering-link" onclick="expand('engineering')">
+            <div id="engineering-link" onclick="collapse('engineering')">
             <div class="row-fluid category black-bg">
                 <div class="span4 collapse-link-spacing">                    
-                    <button id="engineering-btn" class="collapse-button">+</button>
+                    <button id="engineering-btn" class="collapse-button">-</button>
                 </div>
                 <div class="span4">
                     <h3 class="electrolize">Engineering</h3>
@@ -52,16 +52,16 @@
                 <div class="span4"></div>   
             </div>
             </div>
-            <div id="engineering-data" style="display: none;">
+            <div id="engineering-data" style="">
                 {engineering-1}
                 {engineering-2}
                 {engineering-3}
             </div>
 
-            <div id="factories-link" onclick="expand('factories')">
+            <div id="factories-link" onclick="collapse('factories')">
             <div class="row-fluid category black-bg">
                 <div class="span4 collapse-link-spacing">                    
-                    <button id="factories-btn" class="collapse-button">+</button>
+                    <button id="factories-btn" class="collapse-button">-</button>
                 </div>
                 <div class="span4">
                     <h3 class="electrolize">Factories</h3>
@@ -69,16 +69,16 @@
                 <div class="span4"></div>   
             </div>
             </div>
-            <div id="factories-data" style="display: none;">
+            <div id="factories-data" style="">
                 {factory-1}
                 {factory-2}
                 {factory-3}
             </div>
 
-            <div id="economy-link" onclick="expand('economy')">
+            <div id="economy-link" onclick="collapse('economy')">
             <div class="row-fluid category black-bg">
                 <div class="span4 collapse-link-spacing">                    
-                    <button id="economy-btn" class="collapse-button">+</button>
+                    <button id="economy-btn" class="collapse-button">-</button>
                 </div>
                 <div class="span4">
                     <h3 class="electrolize">Economy</h3>
@@ -86,17 +86,17 @@
                 <div class="span4"></div>   
             </div>
             </div>
-            <div id="economy-data" style="display: none;">
+            <div id="economy-data" style="">
                 {economy-1}
                 {economy-2}
                 {economy-3}
                 {economy-4}
             </div>
 
-            <div id="bldg-attack-link" onclick="expand('bldg-attack')">
+            <div id="bldg-attack-link" onclick="collapse('bldg-attack')">
             <div class="row-fluid category black-bg">
                 <div class="span4 collapse-link-spacing">                    
-                    <button id="bldg-attack-btn" class="collapse-button">+</button>
+                    <button id="bldg-attack-btn" class="collapse-button">-</button>
                 </div>
                 <div class="span4">
                     <h3 class="electrolize">Buildings - Attack</h3>
@@ -104,7 +104,7 @@
                 <div class="span4"></div>   
             </div>
             </div>
-            <div id="bldg-attack-data" style="display: none;">
+            <div id="bldg-attack-data" style="">
                 {attack-1}
                 {attack-2}
                 {attack-3}
@@ -112,10 +112,10 @@
             </div>
 
             
-            <div id="bldg-defense-link" onclick="expand('bldg-defense')">
+            <div id="bldg-defense-link" onclick="collapse('bldg-defense')">
             <div class="row-fluid category black-bg">
                 <div class="span4 collapse-link-spacing">                    
-                    <button id="bldg-defense-btn" class="collapse-button">+</button>
+                    <button id="bldg-defense-btn" class="collapse-button">-</button>
                 </div>
                 <div class="span4">
                     <h3 class="electrolize">Buildings - Defense</h3>
@@ -123,16 +123,16 @@
                 <div class="span4"></div>   
             </div>
             </div>
-            <div id="bldg-defense-data" style="display: none;"> 
+            <div id="bldg-defense-data" style=""> 
                 {defense-2}
                 {defense-3}
             </div>
 
                 
-            <div id="bldg-sensor-link" onclick="expand('bldg-sensor')">
+            <div id="bldg-sensor-link" onclick="collapse('bldg-sensor')">
             <div class="row-fluid category black-bg">
                 <div class="span4 collapse-link-spacing">                    
-                    <button id="bldg-sensor-btn" class="collapse-button">+</button>
+                    <button id="bldg-sensor-btn" class="collapse-button">-</button>
                 </div>
                 <div class="span4">
                     <h3 class="electrolize">Buildings - Sensor</h3>
@@ -140,16 +140,16 @@
                 <div class="span4"></div>   
             </div>
             </div>
-            <div id="bldg-sensor-data" style="display: none;">
+            <div id="bldg-sensor-data" style="">
                 {sensor-1}
                 {sensor-2}
                 {sensor-3}
             </div>
 
-            <div id="air-link" onclick="expand('air')">
+            <div id="air-link" onclick="collapse('air')">
             <div class="row-fluid category black-bg">
                 <div class="span4 collapse-link-spacing">                    
-                    <button id="air-btn" class="collapse-button">+</button>
+                    <button id="air-btn" class="collapse-button">-</button>
                 </div>
                 <div class="span4">
                     <h3 class="electrolize">Aircraft</h3>
@@ -157,17 +157,17 @@
                 <div class="span4"></div>   
             </div>
             </div>
-            <div id="air-data" style="display: none;">
+            <div id="air-data" style="">
                 {aircraft-1}
                 {aircraft-2}
                 {aircraft-3}
                 {aircraft-4}
             </div>
 
-            <div id="vehicles-link" onclick="expand('vehicles')">
+            <div id="vehicles-link" onclick="collapse('vehicles')">
             <div class="row-fluid category black-bg">
                 <div class="span4 collapse-link-spacing">                    
-                    <button id="vehicles-btn" class="collapse-button">+</button>
+                    <button id="vehicles-btn" class="collapse-button">-</button>
                 </div>
                 <div class="span4">
                     <h3 class="electrolize">Vehicles</h3>
@@ -175,17 +175,17 @@
                 <div class="span4"></div>   
             </div>
             </div>
-            <div id="vehicles-data" style="display: none;">
+            <div id="vehicles-data" style="">
                 {vehicle-1}
                 {vehicle-2}
                 {vehicle-3}
                 {vehicle-4}
             </div>
 
-            <div id="naval-link" onclick="expand('naval')">
+            <div id="naval-link" onclick="collapse('naval')">
             <div class="row-fluid category black-bg">
                 <div class="span4 collapse-link-spacing">                    
-                    <button id="naval-btn" class="collapse-button">+</button>
+                    <button id="naval-btn" class="collapse-button">-</button>
                 </div>
                 <div class="span4">
                     <h3 class="electrolize">Navy</h3>
@@ -193,17 +193,17 @@
                 <div class="span4"></div>   
             </div>
             </div>
-            <div id="naval-data" style="display: none;">
+            <div id="naval-data" style="">
                 {naval-1}
                 {naval-2}
                 {naval-3}
                 {naval-4}
             </div>
 
-            <div id="support-link" onclick="expand('support')">
+            <div id="support-link" onclick="collapse('support')">
             <div class="row-fluid category black-bg">
                 <div class="span4 collapse-link-spacing">                    
-                    <button id="support-btn" class="collapse-button">+</button>
+                    <button id="support-btn" class="collapse-button">-</button>
                 </div>
                 <div class="span4">
                     <h3 class="electrolize">Support</h3>
@@ -211,7 +211,7 @@
                 <div class="span4"></div>   
             </div>
             </div>
-            <div id="support-data" style="display: none;">
+            <div id="support-data" style="">
                 {support-1}
                 {support-2}
                 {support-4}
