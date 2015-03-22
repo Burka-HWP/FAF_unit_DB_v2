@@ -1,3 +1,5 @@
+
+<div class="clear"></div>
 <div class="row-fluid">
 	<div class="span12">
 		<h4 class="{race}">Unit Attributes</h4>

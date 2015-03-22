@@ -1,17 +1,25 @@
-<div class="info-avatar {unit_arena}">
-    <img src="../assets/images/units/{avatar}" />
-    <img src="../assets/images/strategic/{unit_icon}" class="strat_icon" />
-</div>
-<div class="info-title">
-    <h4 class="white">{race_name} {tech} {unit_class}</h4>
-    <h4 class="{race}">{unit_name}</h4>
-    <p class="blueprint">Blueprint ID: {blueprint_id}</p>
-</div>
-<div class="info-tier">
-    <img src="../assets/images/tiers/{unit_tier}.png" />
-</div> 
-<div class="clear"></div>
+<img src="/assets/images/show/gen-info.png"/>
 <hr style="margin-bottom: 20px;"/>
+<div class="clear"></div>
+<div style="margin-bottom: 20px; width: 600px; float: left;">
+    <div class="info-avatar {unit_arena}">
+        <img src="../assets/images/units/{avatar}" />
+        <img src="../assets/images/strategic/{unit_icon}" class="strat_icon" />
+    </div>
+    <div class="info-title">
+        <h4 class="white">{race_name} {tech} {unit_class}</h4>
+        <h4 class="{race}">{unit_name}</h4>
+        <p class="blueprint">Blueprint ID: {blueprint_id}</p>
+    </div>
+    <div class="info-tier">
+        <img src="../assets/images/tiers/{unit_tier}.png" />
+    </div> 
+    <div class="clear"></div>
+</div>
+<div class="menu-block-right">
+    <img src="http://placehold.it/450x250"/>
+    <h4 class="{race}">Upload a screenshot!</h4>
+</div>
 <div class="row-fluid">
 	<div class="span7">
 		<!-- data -->
@@ -96,9 +104,7 @@
 		<!-- avatar -->
         <div class="row-fluid">
             <div class="span12">
-		        <div class="menu-block-left">
-                    <img src="../../assets/images/portraits/{portrait}" />
-	            </div>
+		        
             </div>
         </div>
         <div class="row-fluid">

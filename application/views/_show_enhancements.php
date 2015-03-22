@@ -1,6 +1,7 @@
-<br />
-<h4 class="{race}">Enhancements</h4>
-<br />
+</div>
+    <div class="table-block {race}-border">
+    <img src="/assets/images/show/enhancements.png"/>
+<hr style="margin-bottom: 20px;"/>
 <div class="row-fluid">
     
     <div class="span4">   

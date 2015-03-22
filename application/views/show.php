@@ -1,9 +1,11 @@
 <div class="content-wrapper-show {race}-view">
-	<div class="table-block">
+	<div class="table-block {race}-border">
 	<!-- basic info partial -->
 		{basic_info}
-
-		<br />
+	</div>
+	<div class="table-block {race}-border">
+		<img src="/assets/images/show/unit-spec.png"/>
+<hr style="margin-bottom: 20px;"/>
 		<div class="row-fluid">
 			<div class="span5">
 				<!-- unit-specific attributes partial -->
@@ -16,13 +18,13 @@
 		</div>
 
 
-	
+
 	 
 	{attacks}
 <!--
 	 defenses partial 
 	{defenses}-->
-
+	
 	 
 	{enhancements}
 	</div>

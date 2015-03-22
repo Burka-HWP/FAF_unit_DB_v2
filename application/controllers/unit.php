@@ -14,13 +14,20 @@
 class Unit extends Application {
     //put your code here
     
-    
-    
     function index() {
+        $this->data['title'] = 'Forged Alliance Forever - Unit Database';
+        $this->data['pagebody'] = 'welcome';        
+        $this->data['race-bg'] = 'welcome-bg';
+        $this->data['race-logo'] = 'home_splash.png';
+
+        $this->render();
+    }
+    
+    function all() {
         $this->data['title'] = 'Forged Alliance Forever - Unit Database';
         $this->data['pagebody'] = 'all';        
         $this->data['race-bg'] = 'welcome-bg';
-        $this->data['race-logo'] = 'compare_splash.png';        
+        $this->data['race-logo'] = 'all_splash.png';        
 
         // Command units
         $this->data['aeon-command'] = $this->_buildLineItemsByRaceCategory(1, 'Command');

@@ -41,6 +41,7 @@
 $route['default_controller'] = "unit";
 $route['404_override'] = 'my404';
 
+$route['all'] = 'unit/all';
 $route['aeon'] = 'unit/oneRace/1';
 $route['cybran'] = 'unit/oneRace/2';
 $route['uef'] = 'unit/oneRace/3';

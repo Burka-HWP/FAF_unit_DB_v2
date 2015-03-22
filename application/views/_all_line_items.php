@@ -27,7 +27,7 @@
         <div class="span11">
             <div class="line-item-data">
                 <h5>{tech} {unit_class}</h5>
-                <h5 class="{race}-text">{unit_name}</h5>
+                <h5 class="{race}-text-new">{unit_name}</h5>
             </div>
         </div>
     </div>
