@@ -125,3 +125,20 @@ function expand($category) {
 
 
 
+// FEEDBACK BUTTON
+function showFeedback() {
+    var xoff = (window.innerWidth - 600) / 2;
+    var yoff = (window.innerHeight - 420) / 2;
+    event.preventDefault();
+    document.getElementById("feedback-fade").setAttribute("style", "display: visible;");
+    document.getElementById("feedback-window").setAttribute("style", "display: visible;" + "top: " + yoff + "px;" + "left: " + xoff + "px;");
+    // document.getElementById("feedback-window").setAttribute("style", "top: " + yoff + "px;");
+    // document.getElementById("feedback-window").setAttribute("style", "left: " + xoff + "px;");
+}
+
+function hideFeedback() {
+    event.preventDefault();
+    document.getElementById("feedback-fade").setAttribute("style", "display: none;");
+    document.getElementById("feedback-window").setAttribute("style", "display: none;");
+}
+

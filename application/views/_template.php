@@ -64,7 +64,23 @@
               </a>
             </div>
           </div>
-        </div>                     
+        </div>       
+        <a href="" onclick="showFeedback()"><div class="feedback-box">
+          <h4>Feedback</h4>
+        </div></a> 
+        <div id="feedback-fade" class="feedback-fade" style="display: none;"></div>
+        <div id="feedback-window" class="feedback-window" style="display: none;">
+          <img src="/assets/images/popups/feedback.png" />
+          <a href="" onclick="hideFeedback()"><div class="feedback-close">
+            <img src="/assets/images/popups/close.png" />
+          </div></a>
+          <div class="clear"></div>
+          <p>Let us know what you think of the new site! What do you like? What don't you like? What do you want to see?</p>
+           <form>
+            <textarea name="feedback" class="feedback-textarea" placeholder="Tell us!"></textarea>
+            <input type="submit" value="Submit" class="feedback-button"/>  
+          </form> 
+        </div>             
 <div class="content-wrapper">
 <div id="content">                    
 {content}
