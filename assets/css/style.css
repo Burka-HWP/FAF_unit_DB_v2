@@ -727,11 +727,36 @@ p.blueprint {
     background: url('../images/layout/search_small_hover.png');
 }
 
+.layout-menu-left {
+    position: fixed;
+    top: 315px;
+    width: 225px;
+    background-color: rgba(17,17,17,0.95);
+    /*height: 200px;*/
+    left: 15px;
+    padding: 0px;
+}
+.layout-menu-left p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    width: 225px;
+    margin: 0px;
+    padding: 5px 0px;
+}
+.layout-menu-left p:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+.layout-menu-left a:hover {
+    text-decoration: none;
+}
+
 
 .layout-race-logo-left {
     position: fixed;
     /*position: absolute;*/
-    top: 100px;
+    top: 60px;
     left: 15px;
     width: 225px;
     height: 276px;

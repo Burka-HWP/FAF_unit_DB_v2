@@ -19,7 +19,7 @@ class Unit extends Application {
         $this->data['pagebody'] = 'welcome';        
         $this->data['race-bg'] = 'welcome-bg';
         $this->data['race-logo'] = 'home_splash.png';
-
+        $this->data['quick-nav'] = null;
         $this->render();
     }
     
@@ -27,7 +27,8 @@ class Unit extends Application {
         $this->data['title'] = 'Forged Alliance Forever - Unit Database';
         $this->data['pagebody'] = 'all';        
         $this->data['race-bg'] = 'welcome-bg';
-        $this->data['race-logo'] = 'all_splash.png';        
+        $this->data['race-logo'] = 'all_splash.png';    
+        $this->data['quick-nav'] = $this->parser->parse('_quick_nav', $this->data, TRUE);    
 
         // Command units
         $this->data['aeon-command'] = $this->_buildLineItemsByRaceCategory(1, 'Command');
@@ -104,6 +105,7 @@ class Unit extends Application {
         $this->data['race-bg'] = $race_bg;
         $this->data['title'] = 'Forged Alliance Forever - Unit Database - ' . $race;
         $this->data['pagebody'] = 'race';
+        $this->data['quick-nav'] = $this->parser->parse('_quick_nav', $this->data, TRUE);
         
         $command_units = $this->units->getByRaceCategoryForOneRace_array($race_id, 'Command');   
         $this->data['command-units'] = $this->_buildRaceCategory($command_units);

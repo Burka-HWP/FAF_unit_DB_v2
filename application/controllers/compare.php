@@ -20,6 +20,7 @@ class Compare extends Application {
         $this->data['pagebody'] = 'compare';
         $this->data['race-bg'] = 'welcome-bg';
         $this->data['race-logo'] = 'compare_splash.png';
+        $this->data['quick-nav'] = null;
         
         $units = $this->units->getAll_array();       
         
@@ -39,6 +40,7 @@ class Compare extends Application {
         
         $unit1_bp = $_POST['unit1_bp'];
         $unit2_bp = $_POST['unit2_bp']; 
+        $this->data['quick-nav'] = null;
         
         if($unit2_bp == null || $unit1_bp == null) {
             redirect('/compare');
@@ -74,6 +76,7 @@ class Compare extends Application {
         $this->data['pagebody'] = 'compare_display';
         $this->data['race-bg'] = 'welcome-bg';
         $this->data['race-logo'] = 'compare_splash.png';
+        $this->data['quick-nav'] = null;
         $this->render();
     }
     

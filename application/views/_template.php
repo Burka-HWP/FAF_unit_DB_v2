@@ -91,6 +91,8 @@
 </div>
 </div>                
 </div>
+{quick-nav}
+
 <div class="layout-race-logo-left">
 <img src="/assets/images/layout/{race-logo}" />
 </div>

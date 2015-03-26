@@ -18,7 +18,7 @@
         
         <div class="row-fluid category black-bg">            
             <div class="span12">
-                <h3 class="all-text-new" style="font-size: 30px;">command</h3>
+                <h3 id="command" class="all-text-new" style="font-size: 30px;">command</h3>
             </div>                       
         </div>
         
@@ -39,7 +39,7 @@
         
         <div class="row-fluid category black-bg">            
             <div class="span12">
-                <h3 class="all-text-new" style="font-size: 30px;">engineering</h3>
+                <h3 id="engineering" class="all-text-new" style="font-size: 30px;">engineering</h3>
             </div>                       
         </div>
 
@@ -51,7 +51,7 @@
 
         <div class="row-fluid category black-bg">            
             <div class="span12">
-                <h3 class="all-text-new" style="font-size: 30px;">factories</h3>
+                <h3 id="factories" class="all-text-new" style="font-size: 30px;">factories</h3>
             </div>                       
         </div>
         <div id="factories-data" style="">
@@ -62,7 +62,7 @@
 
         <div class="row-fluid category black-bg">            
             <div class="span12">
-                <h3 class="all-text-new" style="font-size: 30px;">economy</h3>
+                <h3 id="economy" class="all-text-new" style="font-size: 30px;">economy</h3>
             </div>                       
         </div>
         <div id="economy-data" style="">
@@ -74,7 +74,7 @@
 
         <div class="row-fluid category black-bg">            
             <div class="span12">
-                <h3 class="all-text-new" style="font-size: 30px;">buildings - attack</h3>
+                <h3 id="bldg-attack" class="all-text-new" style="font-size: 30px;">buildings - attack</h3>
             </div>                       
         </div>
         <div id="bldg-attack-data" style="">
@@ -87,7 +87,7 @@
         
         <div class="row-fluid category black-bg">            
             <div class="span12">
-                <h3 class="all-text-new" style="font-size: 30px;">buildings - defense</h3>
+                <h3 id="bldg-defense" class="all-text-new" style="font-size: 30px;">buildings - defense</h3>
             </div>                       
         </div>
         <div id="bldg-defense-data" style=""> 
@@ -98,7 +98,7 @@
             
         <div class="row-fluid category black-bg">            
             <div class="span12">
-                <h3 class="all-text-new" style="font-size: 30px;">buildings - sensor</h3>
+                <h3 id="bldg-sensor" class="all-text-new" style="font-size: 30px;">buildings - sensor</h3>
             </div>                       
         </div>
         <div id="bldg-sensor-data" style="">
@@ -109,7 +109,7 @@
 
         <div class="row-fluid category black-bg">            
             <div class="span12">
-                <h3 class="all-text-new" style="font-size: 30px;">aircraft</h3>
+                <h3 id="aircraft" class="all-text-new" style="font-size: 30px;">aircraft</h3>
             </div>                       
         </div>
         <div id="air-data" style="">
@@ -121,7 +121,7 @@
 
         <div class="row-fluid category black-bg">            
             <div class="span12">
-                <h3 class="all-text-new" style="font-size: 30px;">vehicles</h3>
+                <h3 id="vehicles" class="all-text-new" style="font-size: 30px;">vehicles</h3>
             </div>                       
         </div>
         <div id="vehicles-data" style="">
@@ -133,7 +133,7 @@
 
         <div class="row-fluid category black-bg">            
             <div class="span12">
-                <h3 class="all-text-new" style="font-size: 30px;">navy</h3>
+                <h3 id="navy" class="all-text-new" style="font-size: 30px;">navy</h3>
             </div>                       
         </div>
         <div id="naval-data" style="">
@@ -145,7 +145,7 @@
 
         <div class="row-fluid category black-bg">            
             <div class="span12">
-                <h3 class="all-text-new" style="font-size: 30px;">support</h3>
+                <h3 id="support" class="all-text-new" style="font-size: 30px;">support</h3>
             </div>                       
         </div>
         <div id="support-data" style="">
