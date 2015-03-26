@@ -68,8 +68,8 @@
         <div class="feedback-box">
           <h4>Feedback</h4>
           <div class="feedback-window">
-            <img src="/assets/images/popups/feedback.png" />
-            <p>Let us know what you think of the new site! What do you like? What don't you like? What do you want to see?</p>
+            <img src="/assets/images/popups/feedback.png" style="height: 75px; width: auto;" />
+            <p>Let us know what you think of the new site!</p>
             <form>
               <textarea name="feedback" class="feedback-textarea" placeholder="Tell us!"></textarea>
               <input type="submit" value="Submit" class="feedback-button"/>  

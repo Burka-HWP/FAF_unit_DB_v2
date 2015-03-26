@@ -2,7 +2,7 @@
 	<div class="correction-box">
           <h4>Correction</h4>
           <div class="correction-window">
-            <img src="/assets/images/popups/feedback.png" />
+            <img src="/assets/images/popups/feedback.png" style="height: 75px; width: auto;"/>
             <p>Notice something wrong with the data? Spelling error? Let us know!</p>
           </div>
         </div>

@@ -1180,7 +1180,7 @@ p.blueprint {
 
 .feedback-box {
     position: fixed;
-    top: 100px;
+    top: 75px;
     right: -610px;
     z-index: 90;
     background-color: #008800;
@@ -1214,7 +1214,7 @@ p.blueprint {
 .feedback-window {
     z-index: 111;
     width: 600px;
-    min-height: 420px;
+    height: 280px;
     position: relative;
     top: -40px;
     right: -40px;
@@ -1228,7 +1228,7 @@ p.blueprint {
     margin: 10px auto 10px auto; 
     resize: none; 
     width: 90%; 
-    height: 200px; 
+    height: 100px; 
     background-color: #000; 
     color: #ddd;
 }
@@ -1239,8 +1239,8 @@ p.blueprint {
     border: 3px solid #666; 
     color: #666; 
     font-family: 'Muli'; 
-    padding: 5px; 
-    border-radius: 3px; 
+    padding: 5px 10px 5px 10px; 
+    border-radius: 2px; 
     font-weight: bold;
 }
 .feedback-button:hover {
@@ -1282,9 +1282,9 @@ p.blueprint {
 .correction-window {
     z-index: 110;
     width: 600px;
-    min-height: 420px;
+    height: 280px;
     position: relative;
-    top: -300px;
+    top: -160px;
     right: -40px;
     background-color: #111;
     padding: 10px;    
