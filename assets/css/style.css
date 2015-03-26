@@ -20,7 +20,7 @@
 }
 @font-face {
     font-family: Aeon;
-    src: url('/assets/fonts/xenotron/xenotron.ttf');
+    src: url('/assets/fonts/xenotron/XENOTRON.TTF');
 }
 
 
@@ -521,7 +521,7 @@ p.menu-item-name:hover {
 }
 
 .line-item-race {
-    background: rgba(128, 128, 128, .1);
+    background: rgba(0, 0, 0, .25);
     padding: 0px;    
     margin: 5px;
 }
@@ -629,6 +629,11 @@ p.blueprint {
     padding-top: 10px;
     height: 100%;
 }
+.race-title-image {
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
 
 .tier-splitter {    
     border-top-style: dashed;
@@ -727,7 +732,7 @@ p.blueprint {
     position: fixed;
     /*position: absolute;*/
     top: 100px;
-    left: 10px;
+    left: 15px;
     width: 225px;
     height: 276px;
     color: #FF0000;
@@ -743,7 +748,7 @@ p.blueprint {
 .layout-faf-logo-right {
     position: absolute;
     bottom: 60px;
-    right: 5px;
+    right: 25px;
     width: 200px;
     height: 200px;
     color: #FF0000;
@@ -1176,16 +1181,18 @@ p.blueprint {
 .feedback-box {
     position: fixed;
     top: 100px;
-    right: -120px;
+    right: -610px;
     z-index: 90;
-    background-color: #008852;
+    background-color: #008800;
     color: #ffffff;
-    width: 150px;
+    width: 650px;
     height: 165px;
     border-radius: 5px;
+    transition: right 1s ease-in-out;
 }
 .feedback-box:hover {
-    background-color: #004432;
+    background-color: #00BB00;
+    right: 0px;
 }
 .feedback-box h4 {
   -webkit-transform: rotate(270deg);
@@ -1198,45 +1205,22 @@ p.blueprint {
   /*border: 1px solid #f00;*/
   position: relative;
   top: 60px;
-  left: -135px;
+  left: -65px;
   text-align: center;
-  width: 300px;
-  color: #ccc;
+  width: 165px;
+  color: #111;
 
 }
-.feedback-fade {
-    position: fixed;
-    z-index: 109;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.6);
-}
 .feedback-window {
-    z-index: 110;
+    z-index: 111;
     width: 600px;
     min-height: 420px;
-    position: fixed;
-    top: 100px;
-    left: 200px;
+    position: relative;
+    top: -40px;
+    right: -40px;
     background-color: #111;
     padding: 10px;
-}
-.feedback-close {
-    float: right;
-    display: block;
-    /*width: 25px;*/
-    /*height: 25px;*/
-    background-color: #a00;
-    font-weight: bold;
-    font-family: Consolas;
-    font-size: 15px;
-    color: #fff;
-    padding: 2px 5px 5px 5px;
-}
-.feedback-close:hover {
-    background-color: #f00;
+    font-size: 16px;
 }
 .feedback-textarea {
     font-family: Consolas; 
@@ -1261,4 +1245,48 @@ p.blueprint {
 }
 .feedback-button:hover {
     background-color: #333;
+}
+
+.correction-box {
+    position: fixed;
+    top: 375px;
+    right: -610px;
+    z-index: 90;
+    background-color: #AA0000;
+    color: #ffffff;
+    width: 650px;
+    height: 165px;
+    border-radius: 5px;
+    transition: right 1s ease-in-out;
+}
+.correction-box:hover {
+    background-color: #CC0000;
+    right: 0px;
+}
+.correction-box h4 {
+    -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(90deg);
+  font-family: 'Muli';
+  font-size: 24px;
+  /*border: 1px solid #f00;*/
+  position: relative;
+  top: 70px;
+  left: -65px;
+  text-align: center;
+  width: 165px;
+  color: #111;
+}
+.correction-window {
+    z-index: 110;
+    width: 600px;
+    min-height: 420px;
+    position: relative;
+    top: -300px;
+    right: -40px;
+    background-color: #111;
+    padding: 10px;    
+    font-size: 16px;
 }

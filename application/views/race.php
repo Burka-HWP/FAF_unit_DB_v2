@@ -2,7 +2,7 @@
 <div class="content-block">
     <div class="row-fluid">
         <div class="span12 center">
-            <img src="/assets/images/all/{race}_title.png" />
+            <img src="/assets/images/all/{race}_title.png" class="race-title-image" />
         </div>            
     </div>
 

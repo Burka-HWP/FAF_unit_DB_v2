@@ -126,19 +126,21 @@ function expand($category) {
 
 
 // FEEDBACK BUTTON
-function showFeedback() {
+function showFeedback(event) {
     var xoff = (window.innerWidth - 600) / 2;
     var yoff = (window.innerHeight - 420) / 2;
     event.preventDefault();
     document.getElementById("feedback-fade").setAttribute("style", "display: visible;");
     document.getElementById("feedback-window").setAttribute("style", "display: visible;" + "top: " + yoff + "px;" + "left: " + xoff + "px;");
+return false;
     // document.getElementById("feedback-window").setAttribute("style", "top: " + yoff + "px;");
     // document.getElementById("feedback-window").setAttribute("style", "left: " + xoff + "px;");
 }
 
-function hideFeedback() {
+function hideFeedback(event) {
     event.preventDefault();
     document.getElementById("feedback-fade").setAttribute("style", "display: none;");
     document.getElementById("feedback-window").setAttribute("style", "display: none;");
+return false;
 }
 
