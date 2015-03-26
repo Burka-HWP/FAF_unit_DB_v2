@@ -289,6 +289,7 @@ p.menu-item-name:hover {
 }
 
 .home-text-new {
+    font-family: SupCom-Narrow;
     color: #eee;
 }
 .home-menu-new {
@@ -749,6 +750,7 @@ p.blueprint {
     background-color: rgba(255,255,255,0.1);
 }
 .layout-menu-left a:hover {
+    color: #aaa;
     text-decoration: none;
 }
 
@@ -1314,4 +1316,74 @@ p.blueprint {
     background-color: #111;
     padding: 10px;    
     font-size: 16px;
+}
+.welcome {
+    font-size: 16px;
+    padding: 10px;   
+    background-color: rgba(34,34,34,0.5); 
+}
+.welcome a:link {
+    color: #2d78b2;
+    text-decoration: none;
+}
+.welcome a:visited {
+    color: #2d78b2;
+    text-decoration: none;
+}
+.welcome a:hover {
+    color: #4499cc;
+    text-decoration: none;
+}
+.welcome ol li {
+    margin-bottom: 15px;
+    color: #bbb;
+    font-weight: bold;
+    font-size: 18px;
+}
+.welcome ul li {
+    color: #aaa;
+    font-weight: normal;
+    font-size: 16px;
+}
+.welcome h3 {
+    font-family: SupCom-Narrow;
+    color: #bbb;
+}
+
+.box-contributors {
+    width: 1000px;
+    padding: 0px;
+    margin: 0px auto;
+}
+
+table.contributors {
+    width: 100%;
+    margin: 15px 0px;
+    text-align: center;
+    font-size: 18px;
+    /*padding: 5px;*/
+}
+table.contributors th {
+    font-family: SupCom-Narrow;
+    font-size: 24px;
+    width: 25%;
+    text-align: center;
+    color: #bbb;
+}
+table.contributors td {
+    padding: 5px;
+    color: #999;
+    border-right: 1px solid #bbb;
+    
+}
+table.contributors td:last-of-type {
+    /*padding: 5px;*/
+    /*color: #999;*/
+    border-right: 0px;
+}
+#credits-content ol li {
+    margin-bottom: 15px;
+}
+#credits-content ul li {
+    margin-bottom: 0px;
 }

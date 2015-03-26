@@ -85,7 +85,7 @@
 </div>
 <div class="footer-bg {race-bg}">
 <div class="footer">
-<p>Built by Burka for the Forged Alliance Forever community.</p>
+<p>Built by Burka for the Forged Alliance Forever community &copy; 2015</p>
 <!-- <p>Patch 1.5.3634</p> -->
 
 </div>

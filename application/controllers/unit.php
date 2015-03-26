@@ -19,7 +19,7 @@ class Unit extends Application {
         $this->data['pagebody'] = 'welcome';        
         $this->data['race-bg'] = 'welcome-bg';
         $this->data['race-logo'] = 'home_splash.png';
-        $this->data['quick-nav'] = null;
+        $this->data['quick-nav'] = $this->parser->parse('_welcome_nav', $this->data, TRUE);
         $this->render();
     }
     
