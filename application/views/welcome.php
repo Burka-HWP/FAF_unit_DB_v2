@@ -27,7 +27,46 @@
 
     <div class="row-fluid">
     	<div class="span12 welcome center">
-    		<p>status bars will display here showing contribution levels to date</p>    		
+    		<div class="box-contributors">
+		        <table class="db-status">
+		          <tr>
+		            <th width="25%"></th>
+		            <th width="50%">Progress</th>
+		            <th width="25%">Count</th>
+		           
+		          </tr>
+		          <tr>
+		            <td>Screenshots</td>
+		            <td>
+		            	<div class="status-bar">
+			    			<div class="status-bar-comp-low" style="width: 27%;"></div>
+			    		</div>
+		            </td>
+		            <td>3/405</td>
+		          </tr>
+		          <tr>
+		            <td>Descriptions</td>
+		            <td>
+		            	<div class="status-bar">
+			    			<div class="status-bar-comp-mid" style="width: 61%;"></div>
+			    		</div>
+		            </td>
+		            <td>3/405</td>
+		          </tr>
+		          <tr>
+		            <td>Something</td>
+		            <td>
+		            	<div class="status-bar">
+			    			<div class="status-bar-comp-high" style="width: 78%;"></div>
+			    		</div>
+		            </td>
+		            <td>3/405</td>
+		          </tr>
+		          
+		        </table>
+		      </div>
+    		<p>status bars will display here showing contribution levels to date</p>  
+    		  		
     	</div>
     </div>
 
@@ -50,6 +89,9 @@
     			</li>
     			<li>Contribute screenshots! 
     				<ul><li>Use the "Submit a Screenshot" button on a unit's page! Once submitted, your description will be reviewed prior to inclusion on the site.</li></ul>
+    			</li>
+    			<li>Submit corrections! 
+    				<ul><li>Notice something wrong (maybe?) with the data? Use the "Correction" menu on the right-hand side of a unit's page! Once submitted, your correction will be reviewed and perhaps included!</li></ul>
     			</li>
     		</ol>
     		<p>All contributors will have their name put up on our contributors list below. Since all contributions need to be vetted first, please allow a couple days for your name to appear if you recently contritbuted for the first time.</p>
@@ -77,43 +119,43 @@
 		          <tr>
 		            <td>name</td>
 		            <td>name</td>
-		            <td>name</td>
-		            <td>name</td>
-		          </tr>
-		          <tr>
-		            <td>name</td>
-		            <td>name</td>
-		            <td>name</td>
+		            <td>Gyle</td>
 		            <td>name</td>
 		          </tr>
 		          <tr>
 		            <td>name</td>
 		            <td>name</td>
-		            <td>name</td>
-		            <td>name</td>
-		          </tr>
-		          <tr>
-		            <td>name</td>
-		            <td>name</td>
-		            <td>name</td>
+		            <td>Lextoc</td>
 		            <td>name</td>
 		          </tr>
 		          <tr>
 		            <td>name</td>
 		            <td>name</td>
-		            <td>name</td>
-		            <td>name</td>
-		          </tr>
-		          <tr>
-		            <td>name</td>
-		            <td>name</td>
-		            <td>name</td>
+		            <td></td>
 		            <td>name</td>
 		          </tr>
 		          <tr>
 		            <td>name</td>
 		            <td>name</td>
+		            <td></td>
 		            <td>name</td>
+		          </tr>
+		          <tr>
+		            <td>name</td>
+		            <td>name</td>
+		            <td></td>
+		            <td>name</td>
+		          </tr>
+		          <tr>
+		            <td>name</td>
+		            <td>name</td>
+		            <td></td>
+		            <td>name</td>
+		          </tr>
+		          <tr>
+		            <td>name</td>
+		            <td>name</td>
+		            <td></td>
 		            <td>name</td>
 		          </tr>
 		        </table>
@@ -159,8 +201,27 @@
 		          </ul>
 		        </li>
 		      </ol>
+		      
+		    </div>
+    	</div>
+
+    </div>
+
+    <div class="row-fluid category black-bg welcome-category">            
+        <div class="span12">
+            <h3 id="thanks" class="home-text-new" style="font-size: 30px;">thank you!</h3>
+        </div>                       
+    </div>  
+
+    <div class="row-fluid">
+    	<div class="span12 welcome">
+    		<div id="credits-content" class="box">
+
+    			<p>Thanks to everyone who makes FAF possible, and the community for supporting this amazing client and continuing to play a game released in 2007!</p>
+		      
 		      <p>Please please please! If I have forgotten to give you credit <a href="">let me know</a>! It's certainly not intentional!!!</p>
-		      <p><br />Cheers,<br />Burke Lougheed - <span class="cybran-text-new">Burka</span></p>      
+
+		      <p>Cheers,<br />&nbsp;&nbsp;&nbsp;&nbsp;Burke Lougheed<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cybran-text-new">Burka</span></p>      
 		    </div>
     	</div>
 

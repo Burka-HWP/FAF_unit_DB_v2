@@ -9,6 +9,7 @@
   <a href="#contribute"><p>Contribute!</p></a>
   <a href="#contributors"><p>All Contributors</p></a>
   <a href="#credits"><p>Credits</p></a>
+  <a href="#thanks"><p>Thank you!</p></a>
 
 
 </div>

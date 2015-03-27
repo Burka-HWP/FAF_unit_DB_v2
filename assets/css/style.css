@@ -210,7 +210,7 @@ p.menu-item-name:hover {
 .aeon-text-new {
     color: #0a9d2f;
     font-family: Aeon !important;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
 }
 .aeon-menu-new {
     font-family: Aeon;
@@ -231,7 +231,7 @@ p.menu-item-name:hover {
 .cybran-text-new {
     color: #df2d0e;
     font-family: Cybran !important;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
 }
 .cybran-menu-new {
     font-family: Cybran;
@@ -1319,7 +1319,7 @@ p.blueprint {
 }
 .welcome {
     font-size: 16px;
-    padding: 10px;   
+    padding: 20px 20px 60px 20px;   
     background-color: rgba(34,34,34,0.5); 
 }
 .welcome a:link {
@@ -1350,10 +1350,21 @@ p.blueprint {
     color: #bbb;
 }
 
+
 .box-contributors {
     width: 1000px;
     padding: 0px;
     margin: 0px auto;
+}
+
+table.db-status {
+    width: 100%;
+    margin: 15px 0px;
+    text-align: center;
+    font-size: 18px;
+}
+table.db-status td {
+    padding: 10px 10px;
 }
 
 table.contributors {
@@ -1381,9 +1392,40 @@ table.contributors td:last-of-type {
     /*color: #999;*/
     border-right: 0px;
 }
+
 #credits-content ol li {
     margin-bottom: 15px;
 }
 #credits-content ul li {
     margin-bottom: 0px;
+}
+
+.status-bar {
+    background-color: #eee;
+    margin: 15px auto;
+    padding:2px;
+    height: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.status-bar-comp-low {
+    background-color: #a00;
+    /*width: 90%;*/
+    height: 16px;
+    margin: 0px;
+    overflow: hidden;
+}
+.status-bar-comp-mid {
+    background-color: #db0;
+    /*width: 90%;*/
+    height: 16px;
+    margin: 0px;
+    overflow: hidden;
+}
+.status-bar-comp-high {
+    background-color: #0a0;
+    /*width: 90%;*/
+    height: 16px;
+    margin: 0px;
+    overflow: hidden;
 }
