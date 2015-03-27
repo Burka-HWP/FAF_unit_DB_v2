@@ -1401,7 +1401,7 @@ table.contributors td:last-of-type {
 }
 
 .status-bar {
-    background-color: #eee;
+    background-color: #111;
     margin: 15px auto;
     padding:2px;
     height: 20px;
