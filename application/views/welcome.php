@@ -153,7 +153,6 @@
 		        </table>
 		      </div>
     	</div>
-
     </div>
 
     <div class="row-fluid category black-bg">            
@@ -192,8 +191,7 @@
 		            <li><a href="https://www.youtube.com/channel/UCzY7MBSgNLZOMxMIFwtf2bw" target="_blank">https://www.youtube.com/channel/UCzY7MBSgNLZOMxMIFwtf2bw</a></li>
 		          </ul>
 		        </li>
-		      </ol>
-		      
+		      </ol>		      
 		    </div>
     	</div>
 
