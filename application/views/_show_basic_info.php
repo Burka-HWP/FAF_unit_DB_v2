@@ -94,6 +94,10 @@
 			<div class="span11">
 				<h4 class="{race}">Description</h4>
 				<p>{unit_description}</p>
+                <form method="POST" action="/unit/submitDesc/{blueprint_id}" />
+                    <textarea name="description"></textarea>
+                    <input type="submit" value="submit" />
+                </form>
 			</div>
 			<div class="span1"></div>
 

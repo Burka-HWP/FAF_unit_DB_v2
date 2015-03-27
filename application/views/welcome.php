@@ -21,7 +21,7 @@
 
     <div class="row-fluid category black-bg">            
         <div class="span12">
-            <h3 id="status" class="home-text-new" style="font-size: 30px;">database status</h3>
+            <h3 id="status" class="home-text-new" style="font-size: 30px;">contributions status</h3>
         </div>                       
     </div>  
 
@@ -32,41 +32,30 @@
 		          <tr>
 		            <th width="25%"></th>
 		            <th width="50%">Progress</th>
-		            <th width="25%">Count</th>
+		            <th width="25%">Unique unit submissions</th>
 		           
 		          </tr>
 		          <tr>
 		            <td>Screenshots</td>
 		            <td>
 		            	<div class="status-bar">
-			    			<div class="status-bar-comp-low" style="width: 27%;"></div>
+			    			<div class="status-bar-comp-mid" style="width: 49%;"></div>
 			    		</div>
 		            </td>
-		            <td>3/405</td>
+		            <td>202/405</td>
 		          </tr>
 		          <tr>
 		            <td>Descriptions</td>
 		            <td>
 		            	<div class="status-bar">
-			    			<div class="status-bar-comp-mid" style="width: 61%;"></div>
+			    			<div class="status-bar-comp-{descColor}" style="width: {uniqueDescCountPct}%;"></div>
 			    		</div>
 		            </td>
-		            <td>3/405</td>
-		          </tr>
-		          <tr>
-		            <td>Something</td>
-		            <td>
-		            	<div class="status-bar">
-			    			<div class="status-bar-comp-high" style="width: 78%;"></div>
-			    		</div>
-		            </td>
-		            <td>3/405</td>
+		            <td>{uniqueDescCount}/405</td>
 		          </tr>
 		          
 		        </table>
-		      </div>
-    		<p>status bars will display here showing contribution levels to date</p>  
-    		  		
+		      </div>    		  		
     	</div>
     </div>
 
@@ -85,16 +74,22 @@
     				<ul><li>Use the "Feedback" menu on the right-hand side, let us know what you like, what you don't like, what you'd like to see or maybe something you think could be done differently.</li></ul>
     			</li>
     			<li>Contribute unit descriptions! 
-    				<ul><li>Use the "Submit a Description" button on a unit's page! Once submitted, your description will be reviewed prior to inclusion on the site.</li></ul>
+    				<ul>
+    					<li>Use the "Submit a Description" button on a unit's page! Once submitted, your description will be reviewed prior to inclusion on the site.</li>
+    					<li>Multiple submissions are allowed but only one will be approved. Currently, you are encouraged to provide descriptions for units that do not have any submissions yet. Check the big list of <a href="">Units Who Don't Have Descriptions</a> to see who needs contributions! Submitting improved descriptions should be a secondary priority for the time being.</li>
+    				</ul>
     			</li>
     			<li>Contribute screenshots! 
-    				<ul><li>Use the "Submit a Screenshot" button on a unit's page! Once submitted, your description will be reviewed prior to inclusion on the site.</li></ul>
+    				<ul>
+    					<li>Use the "Submit a Screenshot" button on a unit's page! Once submitted, your description will be reviewed prior to inclusion on the site.</li>
+    					<li>Multiple submissions are allowed but please focus on providing content for every unit before we all start submitting photos of how cool the Monkeylord is. All approved screenshots will be available to see in the unit's image carousel. Check the big list of <a href="">Units Who Don't Have Screenshots</a> to see who needs contributions!</li>
+    				</ul>
     			</li>
     			<li>Submit corrections! 
     				<ul><li>Notice something wrong (maybe?) with the data? Use the "Correction" menu on the right-hand side of a unit's page! Once submitted, your correction will be reviewed and perhaps included!</li></ul>
     			</li>
     		</ol>
-    		<p>All contributors will have their name put up on our contributors list below. Since all contributions need to be vetted first, please allow a couple days for your name to appear if you recently contritbuted for the first time.</p>
+    		<p>All contributors will have their name put up on our contributors list below. Since all contributions need to be vetted first, please allow a couple days for your name to appear if you recently contributed for the first time.</p>
     	</div>
     </div>
 
@@ -113,49 +108,46 @@
 		          <tr>
 		            <th>Screenshots</th>
 		            <th>Descriptions</th>
-		            <th>Videos</th>
 		            <th>Corrections</th>
 		          </tr>
 		          <tr>
 		            <td>name</td>
 		            <td>name</td>
-		            <td>Gyle</td>
 		            <td>name</td>
 		          </tr>
 		          <tr>
 		            <td>name</td>
 		            <td>name</td>
-		            <td>Lextoc</td>
 		            <td>name</td>
 		          </tr>
 		          <tr>
 		            <td>name</td>
 		            <td>name</td>
-		            <td></td>
+
 		            <td>name</td>
 		          </tr>
 		          <tr>
 		            <td>name</td>
 		            <td>name</td>
-		            <td></td>
+
 		            <td>name</td>
 		          </tr>
 		          <tr>
 		            <td>name</td>
 		            <td>name</td>
-		            <td></td>
+
 		            <td>name</td>
 		          </tr>
 		          <tr>
 		            <td>name</td>
 		            <td>name</td>
-		            <td></td>
+
 		            <td>name</td>
 		          </tr>
 		          <tr>
 		            <td>name</td>
 		            <td>name</td>
-		            <td></td>
+
 		            <td>name</td>
 		          </tr>
 		        </table>

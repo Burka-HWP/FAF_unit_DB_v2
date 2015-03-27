@@ -20,6 +20,17 @@ class Unit extends Application {
         $this->data['race-bg'] = 'welcome-bg';
         $this->data['race-logo'] = 'home_splash.png';
         $this->data['quick-nav'] = $this->parser->parse('_welcome_nav', $this->data, TRUE);
+
+        $this->data['uniqueDescCount'] = $this->descriptions->uniqueCount();
+        $this->data['uniqueDescCountPct'] = (int) ($this->data['uniqueDescCount'] / 405 * 100);
+        if($this->data['uniqueDescCountPct'] <= 33) {
+            $this->data['descColor'] = 'low';
+        } else if($this->data['uniqueDescCountPct'] <= 66) {
+            $this->data['descColor'] = 'mid';
+        } else {
+            $this->data['descColor'] = 'high';
+        }
+
         $this->render();
     }
     
@@ -141,6 +152,37 @@ class Unit extends Application {
         $this->data['support'] = $this->_buildRaceCategory($support);
         
         $this->render();
+    }
+
+    function submitDesc($bp) {
+        $record = $this->descriptions->create();
+
+        $record['blueprint_id'] = $bp;
+        $record['description'] = $_POST['description'];
+
+        // do some error handling on input
+
+
+
+        // add the record if all ok
+        $result = $this->descriptions->add($record);
+        
+        $route = "";
+        if($result) {
+            // successful insertion
+            $route = '/unit/' . $bp;    
+        } else {
+            // insertion failed
+            $route = '/';
+        }
+
+        redirect($route);
+        // 
+
+        //$this->render();
+        
+        
+        
     }
     
     function show($blueprint_id) {
@@ -274,6 +316,45 @@ class Unit extends Application {
 
         $this->render();
     }
+
+    // private function upload() {
+    //     $this->load->model('card_model');
+
+    //     // get the key and ext of the file
+    //     $key = $this->card_model->generate_key();
+    //     $ext = $this->card_model->get_file_ext($_FILES['file']);
+
+    //     $config['upload_path'] = './uploads';
+    //     $config['allowed_types'] = 'gif|jpg|png';
+    //     $config['max_size'] = '3000';
+    //     $config['file_name'] = $key . '.' . $ext;
+
+
+    //     $this->load->library('upload', $config);
+
+    //     if ( ! $this->upload->do_upload('file'))
+    //     {
+    //         // the file did not upload properly
+
+    //         // $data['data']['errors'] = $this->upload->display_errors('<p class="error">', '</p>');
+
+    //         // $this->load->view('layouts/main', $data);
+
+    //         $this->session->set_flashdata('errors', $this->upload->display_errors('<p class="error">', '</p>'));
+    //         redirect();
+    //     }
+    //     else
+    //     {
+    //         $data['data']['image'] = $this->upload->data();
+    //         $data['view'] = 'pages/adjustor';
+    //         $data['footer_data']['scripts'] = array('script.js');
+    //         $this->load->view('layouts/main', $data);
+            
+    //     }
+    // }
+
+
+
     
     private function _buildVeterancyVariable($veterancy, $base_hp, $base_regen, $race) {
         
