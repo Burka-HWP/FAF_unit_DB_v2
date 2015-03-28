@@ -1348,6 +1348,7 @@ p.blueprint {
 .welcome h3 {
     font-family: SupCom-Narrow;
     color: #bbb;
+    margin-top: 40px;
 }
 
 
@@ -1364,7 +1365,7 @@ table.db-status {
     font-size: 18px;
 }
 table.db-status td {
-    padding: 10px 10px;
+    padding: 5px 10px;
 }
 
 table.contributors {
@@ -1402,30 +1403,30 @@ table.contributors td:last-of-type {
 
 .status-bar {
     background-color: #111;
-    margin: 15px auto;
-    padding:2px;
-    height: 20px;
+    margin: 5px auto;
+    padding:4px;
+    height: 25px;
     width: 100%;
     box-sizing: border-box;
 }
 .status-bar-comp-low {
     background-color: #a00;
     /*width: 90%;*/
-    height: 16px;
+    height: 17px;
     margin: 0px;
     overflow: hidden;
 }
 .status-bar-comp-mid {
-    background-color: #db0;
+    background-color: #b90;
     /*width: 90%;*/
-    height: 16px;
+    height: 17px;
     margin: 0px;
     overflow: hidden;
 }
 .status-bar-comp-high {
     background-color: #0a0;
     /*width: 90%;*/
-    height: 16px;
+    height: 17px;
     margin: 0px;
     overflow: hidden;
 }

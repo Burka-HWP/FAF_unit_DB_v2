@@ -70,6 +70,22 @@
     		<p>Help improve the database by providing content and feedback! Many units still need screenshots and descriptions provided, which is a daunting task for just one person!</p>
     		<h3>How to contribute:</h3>
     		<ol>
+    			<li>Send me a PM!
+    				<ul><li><a href="" target="_blank">Send me a PM</a> on the FAF forums and I'll reply with a unique username/password combo for you to use (eventually).</li>
+    					<li>As a bonus, include your favourite faction in the PM and your username will appear in that faction's font below in the <a href="#contributors">Contributors</a> list.</li></ul>
+  				</li>
+  				<li>Login to the Unit Database!
+  					<ul><li><a href="/login" target="_blank">Login</a> to the Unit Database with the username/password I gave you in the PM. This will allow the database to automatically give you credit for your contributions.</li></ul>
+  				</li>
+  				<li>Start contributing!
+  					<ul><li>Submit some content! Do your best to spell-check your descriptions, and put a *little* effort into your screenshots!</li></ul>
+  				</li>
+  			</ol>
+
+
+
+    		<h3>Ways to contribute:</h3>
+    		<ol>
     			<li>Provide feedback! 
     				<ul><li>Use the "Feedback" menu on the right-hand side, let us know what you like, what you don't like, what you'd like to see or maybe something you think could be done differently.</li></ul>
     			</li>
@@ -89,7 +105,7 @@
     				<ul><li>Notice something wrong (maybe?) with the data? Use the "Correction" menu on the right-hand side of a unit's page! Once submitted, your correction will be reviewed and perhaps included!</li></ul>
     			</li>
     		</ol>
-    		<p>All contributors will have their name put up on our contributors list below. Since all contributions need to be vetted first, please allow a couple days for your name to appear if you recently contributed for the first time.</p>
+    		<p style="margin-top: 30px;">All contributors will have their name put up on our contributors list below. Since all contributions need to be vetted first, please allow a couple days for your name to appear if you recently contributed for the first time.</p>
     	</div>
     </div>
 
