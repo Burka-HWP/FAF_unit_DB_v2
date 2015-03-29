@@ -1205,9 +1205,26 @@ p.blueprint {
     color: #F00;
 }
 
-.feedback-box {
+.logged-in-as {
     position: fixed;
     top: 75px;
+    right: 0px;
+    background-color: #111;
+    color: #aaa;
+    padding: 5px;
+    min-width: 100px;
+}
+.logged-in-as p {
+    margin: 0px;
+}
+
+.logged-in-as a:hover {
+    text-decoration: none;
+}
+
+.feedback-box {
+    position: fixed;
+    top: 190px;
     right: -610px;
     z-index: 90;
     background-color: #008800;
@@ -1219,7 +1236,7 @@ p.blueprint {
 }
 .feedback-box:hover {
     background-color: #00BB00;
-    right: 0px;
+    right: -150px;
 }
 .feedback-box h4 {
   -webkit-transform: rotate(270deg);
@@ -1240,7 +1257,7 @@ p.blueprint {
 }
 .feedback-window {
     z-index: 111;
-    width: 600px;
+    width: 450px;
     height: 280px;
     position: relative;
     top: -40px;
@@ -1262,21 +1279,21 @@ p.blueprint {
 .feedback-button {
     display: block; 
     margin: 10px auto 10px auto; 
-    background-color: #000; 
-    border: 3px solid #666; 
-    color: #666; 
+    background-color: #444; 
+    border: 0px solid #666; 
+    color: #111; 
     font-family: 'Muli'; 
     padding: 5px 10px 5px 10px; 
-    border-radius: 2px; 
+    /*border-radius: 2px; */
     font-weight: bold;
 }
 .feedback-button:hover {
-    background-color: #333;
+    background-color: #666;
 }
 
 .correction-box {
     position: fixed;
-    top: 375px;
+    top: 490px;
     right: -610px;
     z-index: 90;
     background-color: #AA0000;
@@ -1288,7 +1305,7 @@ p.blueprint {
 }
 .correction-box:hover {
     background-color: #CC0000;
-    right: 0px;
+    right: -150px;
 }
 .correction-box h4 {
     -webkit-transform: rotate(270deg);
@@ -1308,7 +1325,7 @@ p.blueprint {
 }
 .correction-window {
     z-index: 110;
-    width: 600px;
+    width: 450px;
     height: 280px;
     position: relative;
     top: -160px;

@@ -159,6 +159,7 @@ class Unit extends Application {
 
         $record['blueprint_id'] = $bp;
         $record['description'] = $_POST['description'];
+        $record['user_id'] = $this->session->all_userdata()['userID'];
 
         // do some error handling on input
 
@@ -179,10 +180,7 @@ class Unit extends Application {
         redirect($route);
         // 
 
-        //$this->render();
-        
-        
-        
+        //$this->render();       
     }
     
     function show($blueprint_id) {
@@ -313,7 +311,9 @@ class Unit extends Application {
             $this->data['enhancements'] = '';
         }
         //$this->data['enhancements'] = $this->_buildPartial('_show_upgrades', $unit);
-
+        $this->data['c_unit_class'] = $unit['unit_class'];
+        $this->data['c_unit_name'] = $unit['unit_name'];
+        $this->data['c_blueprint_id'] = $unit['blueprint_id'];
         $this->render();
     }
 

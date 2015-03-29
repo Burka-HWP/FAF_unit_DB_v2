@@ -68,10 +68,10 @@
         <div class="feedback-box">
           <h4>Feedback</h4>
           <div class="feedback-window">
-            <img src="/assets/images/popups/feedback.png" style="height: 75px; width: auto;" />
-            <p>Let us know what you think of the new site!</p>
-            <form>
-              <textarea name="feedback" class="feedback-textarea" placeholder="Tell us!"></textarea>
+            <img src="/assets/images/popups/feedback.png" />
+            <p style="color: #aaa;">Let us know what you think of the new site! (max 140)</p>
+            <form action="/feedback/submit" method="POST">
+              <textarea name="feedback" class="feedback-textarea" placeholder="Tell us!" maxlength="140"></textarea>
               <input type="submit" value="Submit" class="feedback-button"/>  
             </form> 
           </div> 
@@ -92,7 +92,7 @@
 </div>                
 </div>
 {quick-nav}
-
+{logged-in-as}
 <div class="layout-race-logo-left">
 <img src="/assets/images/layout/{race-logo}" />
 </div>

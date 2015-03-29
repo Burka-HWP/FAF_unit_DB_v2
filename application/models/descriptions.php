@@ -39,7 +39,10 @@ class Descriptions extends _Mymodel {
         // update the DB table appropriately
         // $this->db->insert($this->_tableName, $record);
 
-        $result = $this->db->query("insert into " . $this->_tableName . " (blueprint_id, description) values ('" . $record['blueprint_id'] . "', '" . $record['description'] . "')");
+        $result = $this->db->query("insert into " . $this->_tableName . 
+            " (blueprint_id, description, user_id) values ('" . 
+                $record['blueprint_id'] . "', '" . 
+                $record['description'] . "', '" . $record['user_id'] . "')");
 
         return $result;
        	//redirect('/unit/' + $record['blueprint_id']);	

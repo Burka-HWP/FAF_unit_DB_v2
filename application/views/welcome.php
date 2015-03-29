@@ -2,7 +2,7 @@
 <div class="content-block">   
     <div class="row-fluid">
         <div class="span12 center">
-            <img src="/assets/images/all/cybran_title.png" class="race-title-image" />
+            <img src="/assets/images/layout/faf_welcome.png" class="race-title-image" />
         </div>            
     </div>
 
