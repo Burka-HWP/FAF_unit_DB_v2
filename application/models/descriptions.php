@@ -55,4 +55,15 @@ class Descriptions extends _Mymodel {
 
     	return $result[0]['count'];
     }
+
+    function getDescData($bp) {
+        $apprDesc = $this->db->query(
+            'select * from descriptions where blueprint_id LIKE "' . $bp . '" and approved = 1')->row_array();
+        $descCount = $this->db->query(
+            'select count(*) as "count" from descriptions where blueprint_id LIKE "' . $bp . '"')->row_array();
+        $result['apprDesc'] = $apprDesc;
+        $result['descCount'] = $descCount;
+
+        return $result;
+    }
 }

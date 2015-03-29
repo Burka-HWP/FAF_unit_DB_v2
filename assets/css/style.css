@@ -23,6 +23,10 @@
     src: url('/assets/fonts/xenotron/XENOTRON.TTF');
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 
 /* CSS definition file containing site stylesheet */
 html, body {
@@ -1289,6 +1293,7 @@ p.blueprint {
 }
 .feedback-button:hover {
     background-color: #666;
+    text-decoration: none;
 }
 
 .correction-box {
@@ -1446,4 +1451,14 @@ table.contributors td:last-of-type {
     height: 17px;
     margin: 0px;
     overflow: hidden;
+}
+
+table.login-table {
+    width: 400px;
+    margin: 15px auto;
+}
+table.login-table td {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
 }

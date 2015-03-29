@@ -3,7 +3,7 @@
           <h4>Correction</h4>
           <div class="correction-window">
             <img src="/assets/images/popups/correction.png"/>
-            <p style="color: #aaa;">Notice something wrong? Let us know!</p>
+            <p style="color: #aaa;">Notice something wrong? Let us know! - <span id="correction-ta-counter">Chars: 140</span></p>
             <div class="row-fluid">
             	<div class="span1">
             		<img src="/assets/images/layout/{race}.png" />
@@ -16,7 +16,7 @@
             	</div>
             </div>
             <form action="/correction/submit" method="POST">
-              <textarea name="feedback" class="feedback-textarea" style="height: 50px;" placeholder="Tell us!"></textarea>
+              <textarea id="correction-ta" name="correction" class="feedback-textarea" style="height: 50px;" placeholder="Tell us!" maxlength="140"></textarea>
               <input type="submit" value="Submit" class="feedback-button"/>  
             </form> 
           </div>

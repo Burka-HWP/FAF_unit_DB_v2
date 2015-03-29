@@ -41,18 +41,37 @@ class contribute extends Application {
 
     }
     
-    function description() {
+    function description($blueprint_id) {
+      $this->data['title'] = 'Forged Alliance Forever - Unit Database';
+      $this->data['pagebody'] = 'description';          
+      $this->data['race-bg'] = 'welcome-bg';
+      $this->data['race-logo'] = 'home_splash.png';
+      $this->data['quick-nav'] = null;   
 
+      $unit = $this->units->getOne($blueprint_id);
+        if($unit == null) {
+            redirect('/');
+        }
+
+      $this->data['blueprint_id'] = $unit['blueprint_id'];
+      $race_title = $this->units->getRace($unit['unit_race']);
+      $this->data['race'] = strtolower($race_title);
+
+      $this->render();
+
+
+
+      // redirect('/');
     }
 
     function screenshot() {
-
+      redirect('/');
     }
 
 
-    function submitDesc() {
+    function submitDesc($blueprint_id) {
         $record = $this->descriptions->create();
-        $record['blueprint_id'] = $_POST['blueprint_id'];
+        $record['blueprint_id'] = $blueprint_id;
         $record['description'] = $_POST['description'];
         $record['user_id'] = $this->session->all_userdata()['userID'];
         // do some error handling on input

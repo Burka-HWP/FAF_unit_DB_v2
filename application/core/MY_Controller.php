@@ -51,11 +51,11 @@ class Application extends CI_Controller {
             if(is_array($roleNeeded)) {
                 if(!in_array($userRole, $roleNeeded)) {
                     $this->load->helper('url');
-                    redirect('/asdfas'); exit;
+                    redirect('/login'); exit;
                 }
             } else {
                 if($userRole != $roleNeeded) {
-                    redirect('/asdfas'); exit;
+                    redirect('/login'); exit;
                 }
             }
         }

@@ -69,9 +69,9 @@
           <h4>Feedback</h4>
           <div class="feedback-window">
             <img src="/assets/images/popups/feedback.png" />
-            <p style="color: #aaa;">Let us know what you think of the new site! (max 140)</p>
+            <p style="color: #aaa;">Let us know what you think of the new site! - <span id="feedback-ta-counter">Chars: 140</span></p>
             <form action="/feedback/submit" method="POST">
-              <textarea name="feedback" class="feedback-textarea" placeholder="Tell us!" maxlength="140"></textarea>
+              <textarea id="feedback-ta" name="feedback" class="feedback-textarea" placeholder="Tell us!" maxlength="140"></textarea>
               <input type="submit" value="Submit" class="feedback-button"/>  
             </form> 
           </div> 

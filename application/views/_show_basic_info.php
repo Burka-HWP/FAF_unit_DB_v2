@@ -18,7 +18,7 @@
 </div>
 <div class="menu-block-right">
     <img src="http://placehold.it/450x250"/>
-    <h4 class="{race}">Upload a screenshot!</h4>
+    <a href="/contribute/screenshot/{blueprint_id}"><button class="feedback-button center">Submit a Screenshot!</button></a>
 </div>
 <div class="row-fluid">
 	<div class="span7">
@@ -93,11 +93,13 @@
 			<!-- <div class="span1"></div> -->
 			<div class="span11">
 				<h4 class="{race}">Description</h4>
-				<p>{unit_description}</p>
-                <form method="POST" action="/unit/submitDesc/{blueprint_id}" />
+                <p>{descCount}</p>
+                <p>{apprDesc}</p>
+                <!-- <form method="POST" action="/unit/submitDesc/{blueprint_id}" />
                     <textarea name="description"></textarea>
-                    <input type="submit" value="submit" />
-                </form>
+                    <input type="submit" value="Submit" />
+                </form> -->
+                {button}
 			</div>
 			<div class="span1"></div>
 

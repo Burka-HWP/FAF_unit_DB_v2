@@ -20,28 +20,28 @@ class correction extends Application {
     }
 
     function submit() {
-      redirect('/correction/thanks');
-      // $record['feedback'] = $_POST['feedback'];
-      // $record['user_id'] = 'Guest';
+      // redirect('/correction/thanks');
+      $record['correction'] = $_POST['correction'];
+      $record['user_id'] = 'Guest';
 
-      // $user = $this->session->all_userdata();
+      $user = $this->session->all_userdata();
       
-      // if(array_key_exists('userID', $user)) {
-      //   $record['user_id'] = $user['userID'];
-      // }
+      if(array_key_exists('userID', $user)) {
+        $record['user_id'] = $user['userID'];
+      }
 
-      // $result = $this->feedbacks->add($record);
+      $result = $this->corrections->add($record);
 
-      // if($result) {
-      //   redirect('/feedback/thanks');
-      // } else {
-      //   redirect('/asdfasdfa');
-      // }
+      if($result) {
+        redirect('/correction/thanks');
+      } else {
+        redirect('/asdfasdfa');
+      }
     }
 
     function thanks() {
       $this->data['title'] = 'Forged Alliance Forever - Unit Database';
-      $this->data['pagebody'] = 'fb_thanks';        
+      $this->data['pagebody'] = 'cr_thanks';        
       $this->data['race-bg'] = 'welcome-bg';
       $this->data['race-logo'] = 'home_splash.png';
       $this->data['quick-nav'] = null;      

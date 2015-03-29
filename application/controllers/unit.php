@@ -273,7 +273,18 @@ class Unit extends Application {
         $this->data['title'] = 'Forged Alliance Forever - Unit Database - ' . $race_title;
         $this->data['pagebody'] = 'show';       
     
-       
+        $descData = $this->descriptions->getDescData($blueprint_id);
+        // $unit['descCount'] = $descData['descCount']['count'];
+        if(array_key_exists('description', $descData['apprDesc'])) {
+            $unit['apprDesc'] = $descData['apprDesc']['description'];
+            $unit['descCount'] = null;
+            $unit['button'] = null;
+        } else {
+            $unit['apprDesc'] = null;
+            $unit['descCount'] = 'There are currently ' . $descData['descCount']['count'] . ' descriptions pending review.';
+            $unit['button'] = '<a href="/contribute/description/'.$blueprint_id.'"><button class="feedback-button center">Submit a Description...</button></a>';
+        }
+        
         
         // load the unit basic info    
         $this->data['basic_info'] = $this->_buildPartial('_show_basic_info', $unit);
@@ -314,6 +325,11 @@ class Unit extends Application {
         $this->data['c_unit_class'] = $unit['unit_class'];
         $this->data['c_unit_name'] = $unit['unit_name'];
         $this->data['c_blueprint_id'] = $unit['blueprint_id'];
+
+
+
+
+
         $this->render();
     }
 
