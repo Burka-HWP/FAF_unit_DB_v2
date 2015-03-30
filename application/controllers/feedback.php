@@ -22,7 +22,9 @@ class feedback extends Application {
     function submit() {
      // redirect('/');
       $record['feedback'] = $_POST['feedback'];
+      $record['feedback'] = addslashes($record['feedback']);
       $record['user_id'] = 'Guest';
+      $record = $this->security->xss_clean($record);
 
       $user = $this->session->all_userdata();
       

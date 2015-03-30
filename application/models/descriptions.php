@@ -45,15 +45,34 @@ class Descriptions extends _Mymodel {
                 $record['description'] . "', '" . $record['user_id'] . "')");
 
         return $result;
+
        	//redirect('/unit/' + $record['blueprint_id']);	
         
         
     }
 
     function uniqueCount() {
-    	$result = $this->db->query('select count(distinct blueprint_id) as count from descriptions')->result_array();
+    	$result = $this->db->query('select count(distinct blueprint_id) as count from descriptions')->row_array();
 
-    	return $result[0]['count'];
+    	return $result['count'];
+    }
+
+    function totalCount() {
+        $result = $this->db->query('select count(*) as count from descriptions')->row_array();
+
+        return $result['count'];
+    }
+
+    function approvedCount() {
+        $result = $this->db->query('select count(distinct blueprint_id) as count from descriptions where approved = 1')->row_array();
+
+        return $result['count'];
+    }
+
+    function pendingCount() {
+        $result = $this->db->query('select count(blueprint_id) as count from descriptions where approved is null')->row_array();
+
+        return $result['count'];
     }
 
     function getDescData($bp) {

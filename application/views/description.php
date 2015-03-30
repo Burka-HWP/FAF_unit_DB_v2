@@ -19,13 +19,14 @@
           <div class="span8 center">
             <div class="row-fluid">
               <div class="span2">
-                <img src="/assets/images/layout/{race}.png" />
+                <img src="/assets/images/layout/{race}.png" style="height: 50px; width: auto;"/>
               </div>
               <div class="span8">
-                <p>fesf</p>
+                <h4 class="home-text-new">{tech} {unit_class}</h4>
+                <h4 class="{race}-text-new">{unit_name}</h4>
               </div>
               <div class="span2">
-                <p>{blueprint_id}</p>
+                <h4>{blueprint_id}</h4>
               </div>
             </div>
           </div>

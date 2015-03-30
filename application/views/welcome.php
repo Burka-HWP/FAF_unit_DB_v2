@@ -30,9 +30,17 @@
     		<div class="box-contributors">
 		        <table class="db-status">
 		          <tr>
-		            <th width="25%"></th>
-		            <th width="50%">Progress</th>
-		            <th width="25%">Unique unit submissions</th>
+		            <th width="10%"></th>
+		            <th width="40%">Progress</th>
+		            <th width="50%">
+		            	<!-- Unique units: {unitCount}<br /> -->
+		            	<div class="row-fluid">
+		            		<div class="span3">Unique Unit Submissions</div>
+		            		<div class="span3">Total Submissions</div>		            		
+		            		<div class="span3">Pending</div>
+		            		<div class="span3">Approved</div>
+		            	</div>
+		            </th>
 		           
 		          </tr>
 		          <tr>
@@ -42,7 +50,14 @@
 			    			<div class="status-bar-comp-mid" style="width: 49%;"></div>
 			    		</div>
 		            </td>
-		            <td>202/405</td>
+		            <td>
+		            	<div class="row-fluid">
+		            		<div class="span3">1</div>
+		            		<div class="span3">2</div>
+		            		<div class="span3">3</div>
+		            		<div class="span3">4</div>
+		            	</div>
+		            </td>
 		          </tr>
 		          <tr>
 		            <td>Descriptions</td>
@@ -51,11 +66,19 @@
 			    			<div class="status-bar-comp-{descColor}" style="width: {uniqueDescCountPct}%;"></div>
 			    		</div>
 		            </td>
-		            <td>{uniqueDescCount}/405</td>
+		            <td>
+		            	<div class="row-fluid">
+		            		<div class="span3">{uniqueDescCount}</div>
+		            		<div class="span3">{totalDescCount}</div>
+		            		<div class="span3">{pendingDescCount}</div>
+		            		<div class="span3">{approvedDescCount}</div>
+		            	</div>
+		            </td>
 		          </tr>
 		          
 		        </table>
-		      </div>    		  		
+		      </div>  
+		      <p>Tracking submissions for {unitCount} units</p>  		
     	</div>
     </div>
 
@@ -71,7 +94,7 @@
     		<h3>How to contribute:</h3>
     		<ol>
     			<li>Send me a PM!
-    				<ul><li><a href="" target="_blank">Send me a PM</a> on the FAF forums and I'll reply with a unique username/password combo for you to use (eventually).</li>
+    				<ul><li><a href="" target="_blank">Send me a PM</a> on the FAF forums and I'll reply with a unique username/password combo for you to use.</li>
     					<li>As a bonus, include your favourite faction in the PM and your username will appear in that faction's font below in the <a href="#contributors">Contributors</a> list.</li></ul>
   				</li>
   				<li>Login to the Unit Database!

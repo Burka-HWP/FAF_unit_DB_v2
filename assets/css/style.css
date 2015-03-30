@@ -1215,7 +1215,7 @@ p.blueprint {
     right: 0px;
     background-color: #111;
     color: #aaa;
-    padding: 5px;
+    padding: 5px 10px;
     min-width: 100px;
 }
 .logged-in-as p {
@@ -1384,7 +1384,7 @@ table.db-status {
     width: 100%;
     margin: 15px 0px;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
 }
 table.db-status td {
     padding: 5px 10px;

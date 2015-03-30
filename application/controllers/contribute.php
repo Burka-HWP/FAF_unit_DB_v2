@@ -56,6 +56,9 @@ class contribute extends Application {
       $this->data['blueprint_id'] = $unit['blueprint_id'];
       $race_title = $this->units->getRace($unit['unit_race']);
       $this->data['race'] = strtolower($race_title);
+      $this->data['unit_name'] = $unit['unit_name'];
+      $this->data['unit_class'] = $unit['unit_class'];
+      $this->data['tech'] = $unit['tech'];
 
       $this->render();
 
@@ -73,14 +76,16 @@ class contribute extends Application {
         $record = $this->descriptions->create();
         $record['blueprint_id'] = $blueprint_id;
         $record['description'] = $_POST['description'];
+        $record['description'] = addslashes($record['description']);
         $record['user_id'] = $this->session->all_userdata()['userID'];
+        $record = $this->security->xss_clean($record);
         // do some error handling on input
         // add the record if all ok
         $result = $this->descriptions->add($record);        
         $route = "";
         if($result) {
             // successful insertion
-            $route = '/unit/' . $bp;    
+            $route = '/unit/' . $blueprint_id;    
         } else {
             // insertion failed
             $route = '/';

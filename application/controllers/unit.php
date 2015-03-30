@@ -21,7 +21,15 @@ class Unit extends Application {
         $this->data['race-logo'] = 'home_splash.png';
         $this->data['quick-nav'] = $this->parser->parse('_welcome_nav', $this->data, TRUE);
 
+        $this->data['unitCount'] = $this->units->getCount();
+
+
+        $this->data['totalDescCount'] = $this->descriptions->totalCount();
         $this->data['uniqueDescCount'] = $this->descriptions->uniqueCount();
+        $this->data['pendingDescCount'] = $this->descriptions->pendingCount();
+        $this->data['approvedDescCount'] = $this->descriptions->approvedCount();
+
+
         $this->data['uniqueDescCountPct'] = (int) ($this->data['uniqueDescCount'] / 405 * 100);
         if($this->data['uniqueDescCountPct'] <= 33) {
             $this->data['descColor'] = 'low';

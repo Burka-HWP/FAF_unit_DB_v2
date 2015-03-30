@@ -22,7 +22,9 @@ class correction extends Application {
     function submit() {
       // redirect('/correction/thanks');
       $record['correction'] = $_POST['correction'];
+      $record['correction'] = addslashes($record['correction']);
       $record['user_id'] = 'Guest';
+      $record = $this->security->xss_clean($record);
 
       $user = $this->session->all_userdata();
       

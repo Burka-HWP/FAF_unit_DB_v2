@@ -180,6 +180,14 @@ $('#feedback-ta').keyup(function () {
     $('#feedback-ta-counter').text('Chars: ' + left);
 });
 
+$('#description-ta').keyup(function () {
+    var left = 1000 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#description-ta-counter').text('Chars: ' + left);
+});
+
 $(document).ready(function() {  
   
     $('textarea[maxlength]').keyup(function(){  

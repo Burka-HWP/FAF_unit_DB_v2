@@ -154,4 +154,10 @@ class Units extends _Mymodel {
         }
         return $output;
     }
+
+    function getCount() {
+        $result = $this->db->query('select count(*) as count from units')->row_array();
+
+        return $result['count'];
+    }
 }
