@@ -67,8 +67,46 @@ class contribute extends Application {
       // redirect('/');
     }
 
-    function screenshot() {
-      redirect('/');
+    function screenshot($blueprint_id) {
+      $this->data['title'] = 'Forged Alliance Forever - Unit Database';
+      $this->data['pagebody'] = 'screenshot';          
+      $this->data['race-bg'] = 'welcome-bg';
+      $this->data['race-logo'] = 'home_splash.png';
+      $this->data['quick-nav'] = null;   
+
+      $unit = $this->units->getOne($blueprint_id);
+        if($unit == null) {
+            redirect('/');
+        }
+
+      $this->data['blueprint_id'] = $unit['blueprint_id'];
+      $race_title = $this->units->getRace($unit['unit_race']);
+      $this->data['race'] = strtolower($race_title);
+      $this->data['unit_name'] = $unit['unit_name'];
+      $this->data['unit_class'] = $unit['unit_class'];
+      $this->data['tech'] = $unit['tech'];
+
+      $this->render();
+      
+      
+    }
+
+    function submitScrn($blueprint_id) {
+      $config['upload_path'] ='./assets/images/uploads';
+      $config['allowed_types'] = "gif|jpg|png|jpeg";
+      $config['overwrite'] = TRUE;
+      $config['remove_spaces'] = TRUE;
+      $this->load->helper(array('form', 'url'));        
+      $this->load->library('upload', $config);            
+      
+      if ( ! $this->upload->do_upload())
+      {
+        redirect('/asd');
+      }
+      else
+      {
+        redirect('/unit/'. $blueprint_id);
+      }
     }
 
 
