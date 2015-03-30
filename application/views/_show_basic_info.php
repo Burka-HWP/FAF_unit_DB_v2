@@ -17,7 +17,23 @@
     <div class="clear"></div>
 </div>
 <div class="menu-block-right">
-    <img src="http://placehold.it/450x250"/>
+    <div style="width: 450px; margin: 10px auto;">
+          <div class="slider slider-for" style="margin-bottom: 10px;">
+            <div><img src="http://placehold.it/450x225/ff0000" style="display: block; margin: 0px auto;"/></div>
+            <div><img src="http://placehold.it/450x200/00ff00" style="display: block; margin: 0px auto;"/></div>
+            <div><img src="http://placehold.it/225x225/0000ff" style="display: block; margin: 0px auto;"/></div>
+            <div><img src="http://placehold.it/450x225/333333" style="display: block; margin: 0px auto;"/></div>
+            <div><img src="http://placehold.it/400x225/444444" style="display: block; margin: 0px auto;"/></div>
+          </div>
+          <div class="slider slider-nav">
+            <div><img src="http://placehold.it/450x225/ff0000" style="width: 120px; height: 75px;"/></div>
+            <div><img src="http://placehold.it/450x200/00ff00" style="width: 120px; height: 75px;"/></div>
+            <div><img src="http://placehold.it/225x225/0000ff" style="width: 120px; height: 75px;"/></div>
+            <div><img src="http://placehold.it/450x225/333333" style="width: 120px; height: 75px;"/></div>
+            <div><img src="http://placehold.it/400x225/444444" style="width: 120px; height: 75px;"/></div>
+          </div>
+        </div>
+    <!-- <img src="http://placehold.it/450x250"/> -->
     <a href="/contribute/screenshot/{blueprint_id}"><button class="feedback-button center">Submit a Screenshot!</button></a>
 </div>
 <div class="row-fluid">

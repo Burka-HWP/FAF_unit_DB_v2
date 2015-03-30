@@ -22,7 +22,7 @@ class my404 extends Application {
         $this->data['title'] = 'Forged Alliance Forever - Unit Database';
         $this->data['pagebody'] = 'error_404';        
         $this->data['race-bg'] = 'welcome-bg';
-        $this->data['race-logo'] = 'compare_splash.png';   
+        $this->data['race-logo'] = 'home_splash.png';   
 
         $this->render();
         

@@ -13,6 +13,7 @@
     <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
 
     <link rel="icon" href="/assets/images/favicon/faf_fav2.png" type="image/gif">
   </head>
@@ -102,6 +103,8 @@
 </div>
 <script src="/assets/js/jquery-1.11.1.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
 <script src="/assets/js/faf_unit_db.js"></script>
+
 </body>
 </html>

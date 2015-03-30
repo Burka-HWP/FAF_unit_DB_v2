@@ -30,7 +30,7 @@ class Unit extends Application {
         $this->data['approvedDescCount'] = $this->descriptions->approvedCount();
 
 
-        $this->data['uniqueDescCountPct'] = (int) ($this->data['uniqueDescCount'] / 405 * 100);
+        $this->data['uniqueDescCountPct'] = (int) ($this->data['uniqueDescCount'] / $this->data['unitCount'] * 100);
         if($this->data['uniqueDescCountPct'] <= 33) {
             $this->data['descColor'] = 'low';
         } else if($this->data['uniqueDescCountPct'] <= 66) {
