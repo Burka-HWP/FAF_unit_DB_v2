@@ -29,6 +29,11 @@ class Unit extends Application {
         $this->data['pendingDescCount'] = $this->descriptions->pendingCount();
         $this->data['approvedDescCount'] = $this->descriptions->approvedCount();
 
+        $this->data['totalScrnCount'] = $this->screenshots->totalCount();
+        $this->data['uniqueScrnCount'] = $this->screenshots->uniqueCount();
+        $this->data['pendingScrnCount'] = $this->screenshots->pendingCount();
+        $this->data['approvedScrnCount'] = $this->screenshots->approvedCount();
+
 
         $this->data['uniqueDescCountPct'] = (int) ($this->data['uniqueDescCount'] / $this->data['unitCount'] * 100);
         if($this->data['uniqueDescCountPct'] <= 33) {
@@ -37,6 +42,14 @@ class Unit extends Application {
             $this->data['descColor'] = 'mid';
         } else {
             $this->data['descColor'] = 'high';
+        }
+        $this->data['uniqueScrnCountPct'] = (int) ($this->data['uniqueScrnCount'] / $this->data['unitCount'] * 100);
+        if($this->data['uniqueScrnCountPct'] <= 33) {
+            $this->data['scrnColor'] = 'low';
+        } else if($this->data['uniqueScrnCountPct'] <= 66) {
+            $this->data['scrnColor'] = 'mid';
+        } else {
+            $this->data['scrnColor'] = 'high';
         }
 
         $this->render();

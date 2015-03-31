@@ -47,15 +47,15 @@
 		            <td>Screenshots</td>
 		            <td>
 		            	<div class="status-bar">
-			    			<div class="status-bar-comp-mid" style="width: 49%;"></div>
+			    			<div class="status-bar-comp-{scrnColor}" style="width: {uniqueScrnCountPct}%;"></div>
 			    		</div>
 		            </td>
 		            <td>
 		            	<div class="row-fluid">
-		            		<div class="span3">1</div>
-		            		<div class="span3">2</div>
-		            		<div class="span3">3</div>
-		            		<div class="span3">4</div>
+		            		<div class="span3">{uniqueScrnCount}</div>
+		            		<div class="span3">{totalScrnCount}</div>
+		            		<div class="span3">{pendingScrnCount}</div>
+		            		<div class="span3">{approvedScrnCount}</div>
 		            	</div>
 		            </td>
 		          </tr>
