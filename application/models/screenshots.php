@@ -78,12 +78,11 @@ class Screenshots extends _Mymodel {
 
     function getScrnData($bp) {
         $apprScrn = $this->db->query(
-            'select * from screenshots where blueprint_id LIKE "' . $bp . '" and approved = 1')->row_array();
-        $scrnCount = $this->db->query(
-            'select count(*) as "count" from screenshots where blueprint_id LIKE "' . $bp . '"')->row_array();
-        $result['apprScrn'] = $apprDesc;
-        $result['scrnCount'] = $descCount;
+            'select * from screenshots where blueprint_id LIKE "' . $bp . '" and approved = 1')->result_array();
 
-        return $result;
+
+        
+
+        return $apprScrn;
     }
 }

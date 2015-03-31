@@ -209,6 +209,11 @@ class Unit extends Application {
         } else {
             $unit['economy_info'] = '';
         }
+
+       $screenshots = $this->screenshots->getScrnData($blueprint_id);
+       $unit['screenshots'] = $screenshots;
+       $unit['screenshot-nav'] = $screenshots;
+
         
 //        if($unit['unit_abilities'] != null) {
 //            $unit['abilities_info'] = $this->_buildPartial('_show_abilities', $unit);

@@ -19,18 +19,14 @@
 <div class="menu-block-right">
     <div style="width: 450px; margin: 10px auto;">
           <div class="slider slider-for" style="margin-bottom: 10px;">
-            <div><img src="http://placehold.it/450x225/ff0000" style="display: block; margin: 0px auto;"/></div>
-            <div><img src="http://placehold.it/450x200/00ff00" style="display: block; margin: 0px auto;"/></div>
-            <div><img src="http://placehold.it/225x225/0000ff" style="display: block; margin: 0px auto;"/></div>
-            <div><img src="http://placehold.it/450x225/333333" style="display: block; margin: 0px auto;"/></div>
-            <div><img src="http://placehold.it/400x225/444444" style="display: block; margin: 0px auto;"/></div>
+            {screenshots}
+                <div><img src="/assets/images/uploads/{file_name}" style="width: auto; height: auto; max-width: 450px; max-height: 225px; margin: 0px auto; display: block;"/></div>
+            {/screenshots}
           </div>
           <div class="slider slider-nav">
-            <div><img src="http://placehold.it/450x225/ff0000" style="width: 120px; height: 75px;"/></div>
-            <div><img src="http://placehold.it/450x200/00ff00" style="width: 120px; height: 75px;"/></div>
-            <div><img src="http://placehold.it/225x225/0000ff" style="width: 120px; height: 75px;"/></div>
-            <div><img src="http://placehold.it/450x225/333333" style="width: 120px; height: 75px;"/></div>
-            <div><img src="http://placehold.it/400x225/444444" style="width: 120px; height: 75px;"/></div>
+            {screenshot-nav}
+                <div><img src="/assets/images/uploads/{file_name}" style="width: 120px; height: 75px;"/></div>
+            {/screenshot-nav}
           </div>
         </div>
     <!-- <img src="http://placehold.it/450x250"/> -->
