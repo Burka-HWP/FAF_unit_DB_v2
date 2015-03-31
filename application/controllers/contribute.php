@@ -94,18 +94,37 @@ class contribute extends Application {
     function submitScrn($blueprint_id) {
       $config['upload_path'] ='./assets/images/uploads';
       $config['allowed_types'] = "gif|jpg|png|jpeg";
-      $config['overwrite'] = TRUE;
+      $config['overwrite'] = FALSE;
       $config['remove_spaces'] = TRUE;
+      $config['file_name'] = $blueprint_id . '_' . ((int) rand(100000000,999999999));
+      $config['max_size'] = 200;
+
+
       $this->load->helper(array('form', 'url'));        
       $this->load->library('upload', $config);            
       
       if ( ! $this->upload->do_upload())
       {
+        // upload failed
         redirect('/asd');
       }
       else
       {
-        redirect('/unit/'. $blueprint_id);
+        //success, rename and store to db
+        $file_data = $this->upload->data();
+        $record = $this->screenshots->create();
+        $record['blueprint_id'] = $blueprint_id;
+        $record['file_name'] = $file_data['file_name'];
+        $record['user_id'] = $this->session->all_userdata()['userID'];
+
+        if(!$this->screenshots->add($record)) {
+          //fail to record
+          redirect('/assd');
+        } else {
+          redirect('/unit/'. $blueprint_id);
+        }
+
+        
       }
     }
 

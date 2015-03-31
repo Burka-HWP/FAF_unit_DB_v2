@@ -16,8 +16,11 @@
       <div class="span12 welcome center">
         <div class="row-fluid">
           <div class="span2"></div>
-          <div class="span8 center">
-            <div class="row-fluid">
+          <div class="span8">
+            <p>Uploaded images will be manually checked prior to inclusion. Abuse of the screenshot uploader will result in your account being disabled.</p>
+            <p>Max file size: 200kb</p>
+            <p>Allowed file types: GIF, JPG, JPEG, PNG</p>
+            <div class="row-fluid center">
               <div class="span2">
                 <img src="/assets/images/layout/{race}.png" style="height: 50px; width: auto;"/>
               </div>
@@ -36,8 +39,8 @@
 
 
         <form method="POST" action="/contribute/submitScrn/{blueprint_id}" enctype="multipart/form-data" />
-            <input type="file" name="userfile" class="feedback-button" />
-            <input type="submit" value="Upload" class="feedback-button"/>
+            <input type="file" name="userfile" />
+            <input type="submit" value="Upload" class="feedback-button" />
         </form>
           <p></p>
           
