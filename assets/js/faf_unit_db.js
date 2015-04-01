@@ -80,36 +80,50 @@ function populateSelect($unit) {
 }
 
 function approveScrn($scrn_id) {
+    document.getElementById('s' + $scrn_id).innerHTML = 
+        '<img src="/assets/images/admin/progress.gif" style="height: 25px; width: auto; display: block; margin: 5px auto;" />';
     $.ajax({ url: "/admin/approveScrn/" + $scrn_id })
     .done(function( html ) {
-            //alert('approved');
-            // $("#6").append("<p>Approved</p>");
-            document.getElementById('s' + $scrn_id).innerHTML = "<p>Approved</p>";            
+
+        setTimeout(function(){
+            document.getElementById('s' + $scrn_id).innerHTML = 
+                '<p class="center" style="color: #080; font-weight: bold">Approved</p>';
+        }, 1000);
+                        
     });
 }
 function declineScrn($scrn_id) {
+    document.getElementById('s' + $scrn_id).innerHTML = 
+        '<img src="/assets/images/admin/progress.gif" style="height: 25px; width: auto; display: block; margin: 5px auto;" />';
     $.ajax({ url: "/admin/declineScrn/" + $scrn_id })
     .done(function( html ) {
-            //alert('declined');
-            // $("#6").append("<p>Approved</p>");
-            document.getElementById('s' + $scrn_id).innerHTML = "<p>Declined</p>";            
+        setTimeout(function(){
+            document.getElementById('s' + $scrn_id).innerHTML = 
+                '<p class="center" style="color: #a00; font-weight: bold">Declined</p>';       
+        }, 1000);     
     });
 }
 
 function approveDesc($desc_id) {
+    document.getElementById('d' + $desc_id).innerHTML = 
+        '<img src="/assets/images/admin/progress.gif" style="height: 25px; width: auto; display: block; margin: 5px auto;" />';
     $.ajax({ url: "/admin/approveDesc/" + $desc_id })
     .done(function( html ) {
-            //alert('approved');
-            // $("#6").append("<p>Approved</p>");
-            document.getElementById('d' + $desc_id).innerHTML = "<p>Approved</p>";            
+        setTimeout(function(){
+            document.getElementById('d' + $desc_id).innerHTML = 
+                '<p class="center" style="color: #080; font-weight: bold">Approved</p>';
+        }, 1000);   
     });
 }
 function declineDesc($desc_id) {
+    document.getElementById('d' + $desc_id).innerHTML = 
+        '<img src="/assets/images/admin/progress.gif" style="height: 25px; width: auto; display: block; margin: 5px auto;" />';
     $.ajax({ url: "/admin/declineDesc/" + $desc_id })
     .done(function( html ) {
-            //alert('declined');
-            // $("#6").append("<p>Approved</p>");
-            document.getElementById('d' + $desc_id).innerHTML = "<p>Declined</p>";            
+        setTimeout(function(){
+            document.getElementById('d' + $desc_id).innerHTML = 
+                '<p class="center" style="color: #a00; font-weight: bold">Declined</p>';       
+        }, 1000);             
     });
 }
 

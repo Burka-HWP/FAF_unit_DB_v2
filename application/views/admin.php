@@ -19,16 +19,16 @@
             <h3 id="welcome" class="home-text-new center" style="font-size: 30px;">Screenshots</h3>
 
             {screenshots}
-            <div class="black-bg" style="margin: 10px; padding: 15px;">
+            <div class="black-bg" style="margin-top: 20px; padding: 15px;">
               <div class="row-fluid">
-                <div class="span2">
+                <div class="span1">
                   <img src="/assets/images/layout/{race_name}.png" />
                 </div>
                 <div class="span8">
                   <h4 class="all-text-new">T{unit_tier} {unit_class}</h4>
                   <h4 class="{race_name}-text-new">{unit_name}</h4>
                 </div>
-                <div class="span2">
+                <div class="span3">
                   <h4>{blueprint_id}</h4>
                 </div>
               </div>
@@ -60,16 +60,16 @@
             <h3 id="welcome" class="home-text-new center" style="font-size: 30px;">Descriptions</h3>
 
             {descriptions}
-            <div class="black-bg" style="margin: 10px; padding: 15px;">
+            <div class="black-bg" style="margin-top: 20px; padding: 15px;">
               <div class="row-fluid">
-                <div class="span2">
+                <div class="span1">
                   <img src="/assets/images/layout/{race_name}.png" />
                 </div>
                 <div class="span8">
                   <h4 class="all-text-new">T{unit_tier} {unit_class}</h4>
                   <h4 class="{race_name}-text-new">{unit_name}</h4>
                 </div>
-                <div class="span2">
+                <div class="span3">
                   <h4>{blueprint_id}</h4>
                 </div>
               </div>

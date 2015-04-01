@@ -40,6 +40,15 @@ class Application extends CI_Controller {
             $this->data['logged-in-as'] = $this->parser->parse('_log_in', $this->data, true);    
         }        
         
+        if(array_key_exists('userRole', $this->session->userdata)) {
+            if($this->session->userdata['userRole'] == 'Admin') {
+                $this->data['adminPanel'] = '<div class="admin-link"><a href="/admin">Admin Panel</a></div>';
+            }
+        } else {
+            $this->data['adminPanel'] = null;
+        }
+
+
         // finally, build the browser page!
         $this->data['data'] = &$this->data;
         $this->parser->parse('_template', $this->data);

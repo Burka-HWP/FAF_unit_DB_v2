@@ -23,6 +23,8 @@ class Unit extends Application {
 
         $this->data['unitCount'] = $this->units->getCount();
 
+        
+        
 
         $this->data['totalDescCount'] = $this->descriptions->totalCount();
         $this->data['uniqueDescCount'] = $this->descriptions->uniqueCount();

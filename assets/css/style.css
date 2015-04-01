@@ -1492,3 +1492,27 @@ table.login-table td {
     padding: 10px;
     text-align: center;
 }
+
+.admin-link {
+    background-color: #900;
+    color: #111;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin: 0px;
+    padding: 5px;
+    z-index: 100;
+}
+.admin-link:hover {
+    background-color: #c00;
+}
+
+.admin-link a:link {
+    color: #111;
+}
+.admin-link a:hover {
+    color: #111;
+}
+.admin-link a:visited {
+    color: #111;
+}

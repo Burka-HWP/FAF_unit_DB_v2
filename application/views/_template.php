@@ -77,6 +77,8 @@
             </form> 
           </div> 
         </div> 
+
+        {adminPanel}
         
                     
 <div class="content-wrapper">
