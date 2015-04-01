@@ -83,7 +83,19 @@ class Screenshots extends _Mymodel {
     }
 
     function getTenForAdmin() {
-        $result = $this->db->query('select s.blueprint_id, LOWER(r.race_name) as race_name, u.unit_class, u.unit_tier, u.unit_name, s.user_id, s.submitted_on, s.file_name from screenshots s join units u on s.blueprint_id = u.blueprint_id join races r on u.unit_race = r.race_id where approved is null order by submitted_on asc limit 10')->result_array();
+        $result = $this->db->query('select s.scrn_id, s.blueprint_id, LOWER(r.race_name) as race_name, u.unit_class, u.unit_tier, u.unit_name, s.user_id, s.submitted_on, s.file_name from screenshots s join units u on s.blueprint_id = u.blueprint_id join races r on u.unit_race = r.race_id where approved is null order by submitted_on asc limit 10')->result_array();
+        return $result;
+    }
+
+    function approveScrn($scrn_id) {
+        $result = $this->db->query('update screenshots set approved = 1 where scrn_id = ' . $scrn_id);
+
+        return $result;
+    }
+
+    function declineScrn($scrn_id) {
+        $result = $this->db->query('update screenshots set approved = 0 where scrn_id = ' . $scrn_id);
+
         return $result;
     }
 }

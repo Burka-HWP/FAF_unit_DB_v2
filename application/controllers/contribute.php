@@ -97,7 +97,7 @@ class contribute extends Application {
       $config['overwrite'] = FALSE;
       $config['remove_spaces'] = TRUE;
       $config['file_name'] = $blueprint_id . '_' . ((int) rand(100000000,999999999));
-      $config['max_size'] = 200;
+      $config['max_size'] = 1024;
 
 
       $this->load->helper(array('form', 'url'));        

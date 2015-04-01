@@ -38,9 +38,9 @@
                   <p>User: {user_id}</p>
                   <p>Date: {submitted_on}</p>
                 </div>
-                <div class="span6">
-                  <a href="/admin/approveScrn/{blueprint_id}"><button class="feedback-button center">Approve!</button></a>
-                  <a href="/admin/declineScrn/{blueprint_id}"><button class="feedback-button center">Decline</button></a>
+                <div id="{scrn_id}" class="span6">
+                  <button class="feedback-button center" onclick="approveScrn({scrn_id})">Approve!</button>
+                  <button class="feedback-button center" onclick="declineScrn({scrn_id})">Decline</button>
                 </div>
               </div>
               

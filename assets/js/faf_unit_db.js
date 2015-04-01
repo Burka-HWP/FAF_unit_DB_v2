@@ -79,6 +79,23 @@ function populateSelect($unit) {
     }        
 }
 
+function approveScrn($scrn_id) {
+    $.ajax({ url: "/admin/approveScrn/" + $scrn_id })
+    .done(function( html ) {
+            alert('approved');
+            // $("#6").append("<p>Approved</p>");
+            document.getElementById($scrn_id).innerHTML = "<p>Approved</p>";            
+    });
+}
+function declineScrn($scrn_id) {
+    $.ajax({ url: "/admin/declineScrn/" + $scrn_id })
+    .done(function( html ) {
+            alert('declined');
+            // $("#6").append("<p>Approved</p>");
+            document.getElementById($scrn_id).innerHTML = "<p>Declined</p>";            
+    });
+}
+
 function clearRace($unit) {
     document.getElementById($unit + "_aeon").setAttribute("class", "compare-unselected");
     document.getElementById($unit + "_cybran").setAttribute("class", "compare-unselected");

@@ -32,5 +32,19 @@ class admin extends Application {
       $this->render();
     }
 
+    function approveScrn($scrn_id) {
+      $result = $this->screenshots->approveScrn($scrn_id);
+      if($result) {
+        $this->load->view('_scrn_approve');
+      }          
+    }
+
+    function declineScrn($scrn_id) {
+      $result = $this->screenshots->declineScrn($scrn_id);
+      if($result) {
+        $this->load->view('_scrn_decline');
+      }          
+    }
+
     
 }
