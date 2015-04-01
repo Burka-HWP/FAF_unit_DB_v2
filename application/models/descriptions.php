@@ -85,4 +85,9 @@ class Descriptions extends _Mymodel {
 
         return $result;
     }
+
+    function getTenForAdmin() {
+        $result = $this->db->query('select * from descriptions d join units u on d.blueprint_id = u.blueprint_id join races r on u.unit_race = r.race_id where approved is null order by submitted_on asc limit 10')->result_array();
+        return $result;
+    }
 }
