@@ -1085,36 +1085,36 @@ p.blueprint {
 .compare-unit-wrapper {
     background: rgba(170, 170, 170, .4);
     padding: 10px;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
 .compare-unit {
     background: #000;
     padding: 10px;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
 .compare-unselected {
 /*    background-color: #666;*/
-    border-radius: 10px;
+    /*border-radius: 10px;
     border-size: 3px;
     border-color: #000;
-    border-style: solid; 
+    border-style: solid;*/ 
     padding: 5px;
 }
 .compare-unselected:hover {
-    background-color: #CCC;
+    background-color: #333;
 }
 .compare-selected {
-    background-color: #999;
-    border-radius: 10px;
+    background-color: #222;
+    /*border-radius: 10px;
     border-size: 3px;
     border-color: #FFF;
-    border-style: solid;  
+    border-style: solid;*/  
     padding: 5px;
 }
 .compare-selected:hover {
-    background-color: #CCC;
+    background-color: #333;
 }
 
 .compare-select {
