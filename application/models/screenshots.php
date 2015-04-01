@@ -65,7 +65,7 @@ class Screenshots extends _Mymodel {
     }
 
     function approvedCount() {
-        $result = $this->db->query('select count(distinct blueprint_id) as count from screenshots where approved = 1')->row_array();
+        $result = $this->db->query('select count(blueprint_id) as count from screenshots where approved = 1')->row_array();
 
         return $result['count'];
     }

@@ -82,17 +82,34 @@ function populateSelect($unit) {
 function approveScrn($scrn_id) {
     $.ajax({ url: "/admin/approveScrn/" + $scrn_id })
     .done(function( html ) {
-            alert('approved');
+            //alert('approved');
             // $("#6").append("<p>Approved</p>");
-            document.getElementById($scrn_id).innerHTML = "<p>Approved</p>";            
+            document.getElementById('s' + $scrn_id).innerHTML = "<p>Approved</p>";            
     });
 }
 function declineScrn($scrn_id) {
     $.ajax({ url: "/admin/declineScrn/" + $scrn_id })
     .done(function( html ) {
-            alert('declined');
+            //alert('declined');
             // $("#6").append("<p>Approved</p>");
-            document.getElementById($scrn_id).innerHTML = "<p>Declined</p>";            
+            document.getElementById('s' + $scrn_id).innerHTML = "<p>Declined</p>";            
+    });
+}
+
+function approveDesc($desc_id) {
+    $.ajax({ url: "/admin/approveDesc/" + $desc_id })
+    .done(function( html ) {
+            //alert('approved');
+            // $("#6").append("<p>Approved</p>");
+            document.getElementById('d' + $desc_id).innerHTML = "<p>Approved</p>";            
+    });
+}
+function declineDesc($desc_id) {
+    $.ajax({ url: "/admin/declineDesc/" + $desc_id })
+    .done(function( html ) {
+            //alert('declined');
+            // $("#6").append("<p>Approved</p>");
+            document.getElementById('d' + $desc_id).innerHTML = "<p>Declined</p>";            
     });
 }
 

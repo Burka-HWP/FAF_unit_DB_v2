@@ -35,14 +35,28 @@ class admin extends Application {
     function approveScrn($scrn_id) {
       $result = $this->screenshots->approveScrn($scrn_id);
       if($result) {
-        $this->load->view('_scrn_approve');
+        $this->load->view('_approve');
       }          
     }
 
     function declineScrn($scrn_id) {
       $result = $this->screenshots->declineScrn($scrn_id);
       if($result) {
-        $this->load->view('_scrn_decline');
+        $this->load->view('_decline');
+      }          
+    }
+
+    function approveDesc($desc_id) {
+      $result = $this->descriptions->approveDesc($desc_id);
+      if($result) {
+        $this->load->view('_approve');
+      }          
+    }
+
+    function declineDesc($desc_id) {
+      $result = $this->descriptions->declineDesc($desc_id);
+      if($result) {
+        $this->load->view('_decline');
       }          
     }
 

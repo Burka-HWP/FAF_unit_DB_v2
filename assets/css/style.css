@@ -1296,6 +1296,36 @@ p.blueprint {
     text-decoration: none;
 }
 
+.approve-button {
+    display: block; 
+    margin: 10px auto 10px auto; 
+    background-color: #080; 
+    border: 0px solid #666; 
+    color: #111; 
+    font-family: 'Muli'; 
+    padding: 5px 10px 5px 10px; 
+    /*border-radius: 2px; */
+    font-weight: bold;
+}
+.approve-button:hover {
+    background-color: #0f0;
+}
+
+.decline-button {
+    display: block; 
+    margin: 10px auto 10px auto; 
+    background-color: #900; 
+    border: 0px solid #666; 
+    color: #111; 
+    font-family: 'Muli'; 
+    padding: 5px 10px 5px 10px; 
+    /*border-radius: 2px; */
+    font-weight: bold;
+}
+.decline-button:hover {
+    background-color: #d00;
+}
+
 .correction-box {
     position: fixed;
     top: 490px;
