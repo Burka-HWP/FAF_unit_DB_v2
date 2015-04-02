@@ -13,7 +13,7 @@
     </div>  
 
     <div class="row-fluid">
-      <div class="span12 welcome center">
+      <div class="span12 welcome">
         <form action="/compare/compareUnits" method="post">        
             <div class="row-fluid">
                 <div id="unit1_wrapper" class="span6 compare-unit-wrapper">

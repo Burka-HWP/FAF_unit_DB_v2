@@ -1101,6 +1101,7 @@ p.blueprint {
     border-color: #000;
     border-style: solid;*/ 
     padding: 5px;
+    margin: 5px;
 }
 .compare-unselected:hover {
     background-color: #333;
@@ -1112,6 +1113,7 @@ p.blueprint {
     border-color: #FFF;
     border-style: solid;*/  
     padding: 5px;
+    margin: 5px;
 }
 .compare-selected:hover {
     background-color: #333;
@@ -1142,7 +1144,7 @@ p.blueprint {
     border-color: #AAA;
 }
 .compare-row-spacing {
-    margin: 5px;
+    margin: 10px;
 }
 
 .white {

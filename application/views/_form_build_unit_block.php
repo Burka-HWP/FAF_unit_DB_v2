@@ -1,8 +1,9 @@
 <div id="{unit}_step1" class="compare-row-spacing">
     <!-- <h4><span class="electrolize">Step 1: </span> Choose a race</h4> -->
+    <p>Filters:</p>
     <div class="row-fluid">        
         <div class="span12">
-            <div class="row-fluid">                    
+            <div class="row-fluid" style="background-color: #111;">                    
                 <div class="span3 center">        
                     <img id="{unit}_aeon" class="compare-unselected" src="/assets/images/compare/aeon.png" onclick="changeRace('{unit}','aeon')" />            
                 </div>
@@ -23,7 +24,7 @@
     <!-- <h4><span class="electrolize">Step 2: </span> Choose a tier</h4> -->
     <div class="row-fluid">   
         <div class="span12">
-            <div class="row-fluid"> 
+            <div class="row-fluid" style="background-color: #111;"> 
                 <div class="span3 center">        
                     <img id="{unit}_tier1" class="compare-unselected" src="/assets/images/tiers/1.png" onclick="changeTier('{unit}',1)" />            
                 </div>
@@ -44,41 +45,27 @@
     <!-- <h4><span class="electrolize">Step 3: </span> Choose a type</h4> -->
     <div class="row-fluid">       
         <div class="span12">
-            <div class="row-fluid">        
+            <div class="row-fluid" style="background-color: #111;">        
                 <div class="span3 center">        
-                    <img id="{unit}_type_unit" class="compare-unselected" src="/assets/images/compare/air.png" onclick="changeType('{unit}','unit')" />            
+                    <img id="{unit}_type_air" class="compare-unselected" src="/assets/images/compare/air.png" onclick="changeType('{unit}','air')" />            
                 </div>
                 <div class="span3 center">
-                    <img id="{unit}_type_building" class="compare-unselected" src="/assets/images/compare/land.png" style="width: 48px; height: auto;" onClick="changeType('{unit}','building')" />     
+                    <img id="{unit}_type_land" class="compare-unselected" src="/assets/images/compare/land.png"  onClick="changeType('{unit}','land')" />     
                 </div>  
                 <div class="span3 center">
-                    <img id="{unit}_type_building2" class="compare-unselected" src="/assets/images/compare/navy.png" style="width: 48px; height: auto;" onClick="changeType('{unit}','building')" />     
+                    <img id="{unit}_type_navy" class="compare-unselected" src="/assets/images/compare/navy.png"  onClick="changeType('{unit}','navy')" />     
                 </div>
                 <div class="span3 center">
-                    <img id="{unit}_type_building3" class="compare-unselected" src="/assets/images/compare/building.png" style="width: 48px; height: auto;" onClick="changeType('{unit}','building')" />     
+                    <img id="{unit}_type_building" class="compare-unselected" src="/assets/images/compare/building.png"  onClick="changeType('{unit}','building')" />     
                 </div>           
             </div>
         </div>
 
     </div>
 </div>
-<div id="{unit}_step4" class="compare-row-spacing" style="visibility: hidden;">
+<div id="{unit}_step4" class="compare-row-spacing" style="visibility: visible;">
     <!-- <h4><span class="electrolize">Step 4: </span> Choose a unit</h4> -->
-    <div class="row-fluid">
-        <div class="span2 center">
-            <h4 class="electrolize">Unit:</h4>
-        </div>
-        <div class="span10">
-            <div class="row-fluid">
-                <div class="span12 center">
-                    <select id="{unit}_select" class="compare-select" name="{unit}_bp">
-                        {options}
-                    </select>       
-                </div>
-            </div>
-        </div>
-        
-    </div>
+    <p>Available Units:</p>
 </div>
 
 

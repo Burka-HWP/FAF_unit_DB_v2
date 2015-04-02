@@ -22,13 +22,41 @@ class Compare extends Application {
         $this->data['race-logo'] = 'compare_splash.png';
         $this->data['quick-nav'] = null;
         
-        $units = $this->units->getAll_array();       
+        $units = $this->units->getAll_array();   
+        $unitCount = sizeof($units);
+
+        $races = ['aeon', 'cybran', 'uef', 'seraphim'];
+        $types = ['Aircraft', 'Vehicle', 'Naval', 'building'];
+
+        $data = array();
+
+        // loop through by race:
+        for ($i = 1; $i < 5; $i++) {
+            // loop through by tier:
+            for ($j = 1; $j < 5; $j++) {
+                // loop through by type:
+                for ($k = 0; $k < 4; $k++) {
+                    // go through all units:
+                    for ($a = 0; $a < $unitCount; $a++) {
+                        
+                        $data[] = [];
+
+                    } 
+
+
+                }
+            }
+
+        }
+            
+                
+                    // assign each unit it's variables:    
         
         $unit1['unit'] = 'unit1';
-        $unit1['options'] = $unit2['options'] = $this->_buildAllOptionItems($units);      
+        //$unit1['options'] = $unit2['options'] = $this->_buildAllOptionItems($units);      
         $unit2['unit'] = 'unit2';       
         
-        $this->data['script'] = $this->parser->parse('_script', $unit1, TRUE);
+        //$this->data['script'] = $this->parser->parse('_script', $unit1, TRUE);
         
         $this->data['unit1'] = $this->parser->parse('_form_build_unit_block', $unit1, TRUE);
         $this->data['unit2'] = $this->parser->parse('_form_build_unit_block', $unit2, TRUE);

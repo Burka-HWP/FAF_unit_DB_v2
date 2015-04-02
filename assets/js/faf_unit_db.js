@@ -1,6 +1,22 @@
 
-var $globals = { unit1_race:1, unit1_tier:1, unit2_race:1, unit2_tier:1, unit1_type:'unit', unit2_type:'unit' };
+var unit1 = {
+    race: 1,
+    tier: 1,
+    arena: 1
+};
+var unit2 = {
+    race: 2,
+    tier: 1,
+    arena: 1
+};
+
+
+
+
+
+var $globals = { unit1_race:1, unit1_tier:1, unit2_race:1, unit2_tier:1, unit1_type:'air', unit2_type:'air' };
 var $races = { aeon:1, cybran:2, uef:3, seraphim:4 }; 
+var $arenas = { air:1, land:2, navy:3, building:4 };
 var $chosens = { unit1:false, unit2:false };
 
 
@@ -9,7 +25,7 @@ function changeRace($unit, $race) {
     document.getElementById($unit + "_" + $race).setAttribute("class", "compare-selected");   
     $globals[$unit + "_race"] = $races[$race];             
     showStep2($unit);
-    clearSelect($unit);
+    // clearSelect($unit);
     populateSelect($unit);
     changeBorder($unit, $race);
 }
@@ -19,7 +35,7 @@ function changeTier($unit, $tier) {
     document.getElementById($unit + "_tier" + $tier).setAttribute("class", "compare-selected");
     $globals[$unit + "_tier"] = $tier;
     showStep3($unit);
-    clearSelect($unit);
+    // clearSelect($unit);
     populateSelect($unit);
 }
 
@@ -27,7 +43,7 @@ function changeType($unit, $type) {
     clearType($unit);
     document.getElementById($unit + "_type_" + $type).setAttribute("class", "compare-selected");
     $globals[$unit + "_type"] = $type;
-    clearSelect($unit);
+    // clearSelect($unit);
     showStep4($unit);
     populateSelect($unit);        
 }
@@ -59,7 +75,7 @@ function showStep4($unit) {
 }
 
 function showStep5() {
-    document.getElementById("step5").setAttribute("style", "visibility: visible;");
+    // document.getElementById("step5").setAttribute("style", "visibility: visible;");
 }
 
 function test() {
@@ -70,14 +86,63 @@ function test() {
 }  
 
 function populateSelect($unit) {
-    clearSelect($unit);
-    $.ajax({ url: "compare/getOptions/" + $globals[$unit + "_race"] + "/" + $globals[$unit + "_tier"] + "/" + $globals[$unit + "_type"] })
-    .done(function( html ) { $( "#" + $unit + "_select" ).append( html ); });
+    // clearSelect($unit);
+    // $.ajax({ url: "compare/getOptions/" + $globals[$unit + "_race"] + "/" + $globals[$unit + "_tier"] + "/" + $globals[$unit + "_type"] })
+    // .done(function( html ) { $( "#" + $unit + "_select" ).append( html ); });
 
     if($chosens["unit1"] && $chosens["unit2"]) {
         showStep5();
     }        
 }
+
+
+
+function clearRace($unit) {
+    document.getElementById($unit + "_aeon").setAttribute("class", "compare-unselected");
+    document.getElementById($unit + "_cybran").setAttribute("class", "compare-unselected");
+    document.getElementById($unit + "_uef").setAttribute("class", "compare-unselected");
+    document.getElementById($unit + "_seraphim").setAttribute("class", "compare-unselected");
+}
+
+function clearTier($unit) {
+    document.getElementById($unit + "_tier1").setAttribute("class", "compare-unselected");
+    document.getElementById($unit + "_tier2").setAttribute("class", "compare-unselected");
+    document.getElementById($unit + "_tier3").setAttribute("class", "compare-unselected");
+    document.getElementById($unit + "_tier4").setAttribute("class", "compare-unselected");
+}
+
+function clearType($unit) {
+    document.getElementById($unit + "_type_air").setAttribute("class", "compare-unselected");
+    document.getElementById($unit + "_type_land").setAttribute("class", "compare-unselected");
+    document.getElementById($unit + "_type_navy").setAttribute("class", "compare-unselected");
+    document.getElementById($unit + "_type_building").setAttribute("class", "compare-unselected");
+}
+
+function clearSelect($unit) {
+    document.getElementById($unit + "_select").innerHTML = "";
+}
+
+function hideCompareButton() {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** 
+    ADMIN PANEL AJAX FUNCTIONS FOR APPROVALS AND DECLINES
+*/
 
 function approveScrn($scrn_id) {
     document.getElementById('s' + $scrn_id).innerHTML = 
@@ -103,7 +168,6 @@ function declineScrn($scrn_id) {
         }, 1000);     
     });
 }
-
 function approveDesc($desc_id) {
     document.getElementById('d' + $desc_id).innerHTML = 
         '<img src="/assets/images/admin/progress.gif" style="height: 25px; width: auto; display: block; margin: 5px auto;" />';
@@ -127,72 +191,23 @@ function declineDesc($desc_id) {
     });
 }
 
-function clearRace($unit) {
-    document.getElementById($unit + "_aeon").setAttribute("class", "compare-unselected");
-    document.getElementById($unit + "_cybran").setAttribute("class", "compare-unselected");
-    document.getElementById($unit + "_uef").setAttribute("class", "compare-unselected");
-    document.getElementById($unit + "_seraphim").setAttribute("class", "compare-unselected");
-}
-
-function clearTier($unit) {
-    document.getElementById($unit + "_tier1").setAttribute("class", "compare-unselected");
-    document.getElementById($unit + "_tier2").setAttribute("class", "compare-unselected");
-    document.getElementById($unit + "_tier3").setAttribute("class", "compare-unselected");
-    document.getElementById($unit + "_tier4").setAttribute("class", "compare-unselected");
-}
-
-function clearType($unit) {
-    document.getElementById($unit + "_type_unit").setAttribute("class", "compare-unselected");
-    document.getElementById($unit + "_type_building").setAttribute("class", "compare-unselected");
-}
-
-function clearSelect($unit) {
-    document.getElementById($unit + "_select").innerHTML = "";
-}
-
-function hideCompareButton() {
-    
-}
-
-function collapse($category) {
-    document.getElementById($category + "-btn").innerHTML = "+";
-    var $newfunc = "expand('" + $category + "')";
-    //document.getElementById($category + "-btn").setAttribute("onclick", $newfunc);
-    document.getElementById($category + "-data").setAttribute("style", "display: none;");
-    document.getElementById($category + "-link").setAttribute("onclick", $newfunc);
-    
-}
-
-function expand($category) {
-    document.getElementById($category + "-btn").innerHTML = "-";
-    var $newfunc = "collapse('" + $category + "')";
-    //document.getElementById($category + "-btn").setAttribute("onclick", $newfunc);    
-    document.getElementById($category + "-data").setAttribute("style", " ");
-    document.getElementById($category + "-link").setAttribute("onclick", $newfunc);
-}
 
 
 
-// FEEDBACK BUTTON
-function showFeedback(event) {
-    var xoff = (window.innerWidth - 600) / 2;
-    var yoff = (window.innerHeight - 420) / 2;
-    event.preventDefault();
-    document.getElementById("feedback-fade").setAttribute("style", "display: visible;");
-    document.getElementById("feedback-window").setAttribute("style", "display: visible;" + "top: " + yoff + "px;" + "left: " + xoff + "px;");
-return false;
-    // document.getElementById("feedback-window").setAttribute("style", "top: " + yoff + "px;");
-    // document.getElementById("feedback-window").setAttribute("style", "left: " + xoff + "px;");
-}
-
-function hideFeedback(event) {
-    event.preventDefault();
-    document.getElementById("feedback-fade").setAttribute("style", "display: none;");
-    document.getElementById("feedback-window").setAttribute("style", "display: none;");
-return false;
-}
 
 
+
+
+
+
+
+
+
+
+
+/**
+    SMOOTH SCROLL QUICK NAV
+*/
 
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -211,7 +226,15 @@ $(function() {
 
 
 
-// TEXT AREA LIMITS
+
+
+
+
+
+/**
+    TEXT BOX CHARACTER COUNTERS AND LIMITERS
+*/
+
 $('#correction-ta').keyup(function () {
     var left = 140 - $(this).val().length;
     if (left < 0) {
@@ -219,7 +242,6 @@ $('#correction-ta').keyup(function () {
     }
     $('#correction-ta-counter').text('Chars: ' + left);
 });
-
 $('#feedback-ta').keyup(function () {
     var left = 140 - $(this).val().length;
     if (left < 0) {
@@ -227,7 +249,6 @@ $('#feedback-ta').keyup(function () {
     }
     $('#feedback-ta-counter').text('Chars: ' + left);
 });
-
 $('#description-ta').keyup(function () {
     var left = 1000 - $(this).val().length;
     if (left < 0) {
@@ -235,7 +256,6 @@ $('#description-ta').keyup(function () {
     }
     $('#description-ta-counter').text('Chars: ' + left);
 });
-
 $(document).ready(function() {  
   
     $('textarea[maxlength]').keyup(function(){  
@@ -254,9 +274,18 @@ $(document).ready(function() {
             //and change the current text with the new text  
             $(this).val(new_text);  
         }  
-    });  
-  
+    });    
 });
+
+
+
+
+
+
+
+/**
+    SCREENSHOT SLICK CAROUSEL
+*/
 
 $('.slider-for').slick({
   slidesToShow: 1,
