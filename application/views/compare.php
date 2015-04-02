@@ -14,7 +14,6 @@
 
     <div class="row-fluid">
       <div class="span12 welcome">
-        <form action="/compare/compareUnits" method="post">        
             <div class="row-fluid">
                 <div id="unit1_wrapper" class="span6 compare-unit-wrapper">
                     <div class="row-fluid">
@@ -34,10 +33,11 @@
                 </div>
             </div>
             <br />
-            
-        </form> 
-
-      </div>
+            {test}<br />
+            {allcounts}
+                {index} {count}<br />
+            {/allcounts}
+       </div>
     </div>    
 </div>
 

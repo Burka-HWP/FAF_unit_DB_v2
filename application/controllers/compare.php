@@ -28,26 +28,60 @@ class Compare extends Application {
         $races = ['aeon', 'cybran', 'uef', 'seraphim'];
         $types = ['Aircraft', 'Vehicle', 'Naval', 'building'];
 
-        $data = array();
+        $groups = array();
+        $groupsIndexes = array();
 
+        // BUILDING THE INITIAL UNIT GROUPING ARRAY
         // loop through by race:
         for ($i = 1; $i < 5; $i++) {
             // loop through by tier:
             for ($j = 1; $j < 5; $j++) {
                 // loop through by type:
-                for ($k = 0; $k < 4; $k++) {
-                    // go through all units:
-                    for ($a = 0; $a < $unitCount; $a++) {
-                        
-                        $data[] = [];
-
-                    } 
-
-
+                for ($k = 1; $k < 5; $k++) {
+                    // build up initial array
+                    $index = 'r'.$i.'t'.$j.'a'.$k;
+                    $groups[$index] = array(
+                        'race' => $i,
+                        'tier' => $j,
+                        'type' => $k,
+                        'units' => array()
+                    );
+                    $groupsIndexes[] = $index;
                 }
             }
-
         }
+        // go through units array and determine where to store each one:
+        for($m = 0; $m < $unitCount; $m++) {
+            // some logic needed to do unit type:
+            $curr = $units[$m];
+            $currType = '';            
+            if ($curr['unit_category'] == 'Aircraft') {
+                $currType = 1;
+            } else if ($curr['unit_category'] == 'Vehicle' || $curr['unit_category'] == 'Command') {
+                $currType = 2;
+            } else if ($curr['unit_category'] == 'Naval') {
+                $currType = 3;
+            } else {
+                $currType = 4;
+            }
+            // assign into the grouping array
+            $groups['r'.$curr['unit_race'].'t'.$curr['unit_tier'].'a'.$currType]['units'][] = $curr;
+        }
+
+
+        $this->data['test'] = sizeof($groups);
+
+        $testgroupcount = array();
+        $groupsCount = sizeof($groups);
+
+        for($n = 0; $n < $groupsCount; $n++) {
+            $testgroupcount[] = array(
+                'index' => $groupsIndexes[$n],
+                'count' => sizeof($groups[$groupsIndexes[$n]]['units'])
+            );
+        }
+
+        $this->data['allcounts'] = $testgroupcount;
             
                 
                     // assign each unit it's variables:    
