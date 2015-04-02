@@ -9,7 +9,16 @@ var unit2 = {
     tier: 1,
     arena: 1
 };
-
+var unit3 = {
+    race: 3,
+    tier: 1,
+    arena: 1
+};
+var unit4 = {
+    race: 4,
+    tier: 1,
+    arena: 1
+};
 
 
 
