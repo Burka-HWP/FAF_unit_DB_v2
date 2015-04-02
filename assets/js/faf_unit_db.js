@@ -23,7 +23,13 @@ var unit4 = {
 
 
 
-var $globals = { unit1_race:1, unit1_tier:1, unit2_race:1, unit2_tier:1, unit1_type:'air', unit2_type:'air' };
+var $globals = { 
+    unit1_race:1, 
+    unit1_tier:1, 
+    unit2_race:1, 
+    unit2_tier:1, 
+    unit1_type:'air', 
+    unit2_type:'air' };
 var $races = { aeon:1, cybran:2, uef:3, seraphim:4 }; 
 var $arenas = { air:1, land:2, navy:3, building:4 };
 var $chosens = { unit1:false, unit2:false };

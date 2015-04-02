@@ -88,12 +88,16 @@ class Compare extends Application {
         
         $unit1['unit'] = 'unit1';
         //$unit1['options'] = $unit2['options'] = $this->_buildAllOptionItems($units);      
-        $unit2['unit'] = 'unit2';       
+        $unit2['unit'] = 'unit2';     
+        $unit3['unit'] = 'unit3';
+        $unit4['unit'] = 'unit4';  
         
         //$this->data['script'] = $this->parser->parse('_script', $unit1, TRUE);
         
         $this->data['unit1'] = $this->parser->parse('_form_build_unit_block', $unit1, TRUE);
         $this->data['unit2'] = $this->parser->parse('_form_build_unit_block', $unit2, TRUE);
+        $this->data['unit3'] = $this->parser->parse('_form_build_unit_block', $unit3, TRUE);
+        $this->data['unit4'] = $this->parser->parse('_form_build_unit_block', $unit4, TRUE);
         
         $this->render();
     }
