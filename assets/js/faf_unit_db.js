@@ -1,66 +1,100 @@
 
-var unit1 = {
-    race: 1,
-    tier: 1,
-    arena: 1
-};
-var unit2 = {
-    race: 2,
-    tier: 1,
-    arena: 1
-};
-var unit3 = {
-    race: 3,
-    tier: 1,
-    arena: 1
-};
-var unit4 = {
-    race: 4,
-    tier: 1,
-    arena: 1
-};
-
-
-
-
 var $globals = { 
     unit1_race:1, 
-    unit1_tier:1, 
+    unit1_tier:1,
+    unit1_type:1,
+
     unit2_race:1, 
     unit2_tier:1, 
-    unit1_type:'air', 
-    unit2_type:'air' };
+    unit2_type:1,
+
+    unit3_race: 3,
+    unit3_tier: 1,
+    unit3_type:1,
+
+    unit4_race: 4,
+    unit4_tier: 1,
+    unit4_type: 1
+};
 var $races = { aeon:1, cybran:2, uef:3, seraphim:4 }; 
 var $arenas = { air:1, land:2, navy:3, building:4 };
 var $chosens = { unit1:false, unit2:false };
 
+function notice() {
+    alert(
+        'unit1: ' + $globals['unit1_race'] + ' ' + $globals['unit1_tier'] + ' ' + $globals['unit1_type'] + '\n' +
+        'unit2: ' + $globals['unit2_race'] + ' ' + $globals['unit2_tier'] + ' ' + $globals['unit2_type'] + '\n' +
+        'unit3: ' + $globals['unit3_race'] + ' ' + $globals['unit3_tier'] + ' ' + $globals['unit3_type'] + '\n' +
+        'unit4: ' + $globals['unit4_race'] + ' ' + $globals['unit4_tier'] + ' ' + $globals['unit4_type'] + '\n'
+    );
+}
+
+window.onload = function() {
+    changeBorder('unit1', 'aeon');
+    changeRace('unit1', 'aeon');
+    changeTier('unit1', 1);
+    changeType('unit1', 'air');
+
+    changeBorder('unit2', 'cybran');
+    changeRace('unit2', 'cybran');
+    changeTier('unit2', 1);
+    changeType('unit2', 'air');
+
+    changeBorder('unit3', 'uef');
+    changeRace('unit3', 'uef');
+    changeTier('unit3', 1);
+    changeType('unit3', 'air');
+
+    changeBorder('unit4', 'seraphim');
+    changeRace('unit4', 'seraphim');
+    changeTier('unit4', 1);
+    changeType('unit4', 'air');
+
+    showGroups('unit1');
+    showGroups('unit2');
+    showGroups('unit3');
+    showGroups('unit4');
+    //notice();
+}
+
+function showGroups($unit) {
+    var $groups = document.getElementsByClassName('compare-group');
+    var $count = $groups.length;
+    //alert($groups[0].id.substr(0,5));
+    for($i = 0; $i < $count; $i++) {
+
+        if($groups[$i].id.substr(0,5) == $unit) {
+            $groups[$i].setAttribute("style", "display: none;");
+        }        
+    }
+    $index = $unit + 'r' + $globals['unit1_race'] + 't' + $globals['unit1_tier'] + 'a' + $globals['unit1_type'];
+    //alert($index);
+    document.getElementById($index).setAttribute("style", "display: visible;");
+}
 
 function changeRace($unit, $race) {
     clearRace($unit);        
     document.getElementById($unit + "_" + $race).setAttribute("class", "compare-selected");   
     $globals[$unit + "_race"] = $races[$race];             
-    showStep2($unit);
-    // clearSelect($unit);
-    populateSelect($unit);
+
     changeBorder($unit, $race);
+    //notice();
 }
     
 function changeTier($unit, $tier) {
     clearTier($unit);        
     document.getElementById($unit + "_tier" + $tier).setAttribute("class", "compare-selected");
     $globals[$unit + "_tier"] = $tier;
-    showStep3($unit);
-    // clearSelect($unit);
-    populateSelect($unit);
+    //notice();
+    showGroups($unit);
 }
 
 function changeType($unit, $type) {
     clearType($unit);
     document.getElementById($unit + "_type_" + $type).setAttribute("class", "compare-selected");
-    $globals[$unit + "_type"] = $type;
-    // clearSelect($unit);
-    showStep4($unit);
-    populateSelect($unit);        
+    $globals[$unit + "_type"] = $arenas[$type];
+    //notice(); 
+    showGroups($unit); 
 }
 
 function changeBorder($unit, $race) {       
@@ -73,32 +107,13 @@ function changeBorder($unit, $race) {
     } else if ($race == 'seraphim') {
         document.getElementById($unit + "_wrapper").setAttribute("style", "background: rgba(241, 194, 64, .30);");
     }
+   showGroups($unit);
 
 }
 
-function showStep2($unit) {
-    document.getElementById($unit + "_step2").setAttribute("style", "visibility: visible;");
-}
 
-function showStep3($unit) {
-    document.getElementById($unit + "_step3").setAttribute("style", "visibility: visible;");
-}
 
-function showStep4($unit) {
-    document.getElementById($unit + "_step4").setAttribute("style", "visibility: visible;");
-    $chosens[$unit] = true;
-}
 
-function showStep5() {
-    // document.getElementById("step5").setAttribute("style", "visibility: visible;");
-}
-
-function test() {
-    alert("unit 1 race: " + $globals["unit1_race"]
-            + "\nunit 1 tier: " + $globals["unit1_tier"]
-            + "\nunit 2 race: " + $globals["unit2_race"]
-            + "\nunit 2 tier: " + $globals["unit2_tier"]);
-}  
 
 function populateSelect($unit) {
     // clearSelect($unit);

@@ -85,12 +85,16 @@ class Compare extends Application {
             
                 
                     // assign each unit it's variables:    
-        
         $unit1['unit'] = 'unit1';
+        $unit1['allcounts'] = $testgroupcount;
+        
         //$unit1['options'] = $unit2['options'] = $this->_buildAllOptionItems($units);      
-        $unit2['unit'] = 'unit2';     
+        $unit2['unit'] = 'unit2'; 
+        $unit2['allcounts'] = $testgroupcount;    
         $unit3['unit'] = 'unit3';
+        $unit3['allcounts'] = $testgroupcount;
         $unit4['unit'] = 'unit4';  
+        $unit4['allcounts'] = $testgroupcount;
         
         //$this->data['script'] = $this->parser->parse('_script', $unit1, TRUE);
         

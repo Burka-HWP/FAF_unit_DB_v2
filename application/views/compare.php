@@ -13,9 +13,9 @@
     </div>  
 
     <div class="row-fluid">
-      <div class="span12 welcome">
+      <div class="span12">
             <div class="row-fluid">
-                <div id="unit1_wrapper" class="span3 compare-unit-wrapper">
+                <div id="unit1_wrapper" class="race-block">
                     <div class="row-fluid">
                         <div class="span12 compare-unit">
                             <h2 class="all-text-new center">Unit 1</h2>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="unit2_wrapper" class="span3 compare-unit-wrapper">
+                <div id="unit2_wrapper" class="race-block">
                     <div class="row-fluid">
                         <div class="span12 compare-unit">
                             <h2 class="all-text-new center">Unit 2</h2>
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="unit3_wrapper" class="span3 compare-unit-wrapper">
+                <div id="unit3_wrapper" class="race-block">
                     <div class="row-fluid">
                         <div class="span12 compare-unit">
                             <h2 class="all-text-new center">Unit 3</h2>
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="unit4_wrapper" class="span3 compare-unit-wrapper">
+                <div id="unit4_wrapper" class="race-block">
                     <div class="row-fluid">
                         <div class="span12 compare-unit">
                             <h2 class="all-text-new center">Unit 4</h2>
@@ -49,10 +49,8 @@
                 </div>
             </div>
             <br />
-            {test}<br />
-            {allcounts}
-                {index} {count}<br />
-            {/allcounts}
+            <p id="testy">{test}</p>               
+            
        </div>
     </div>    
 </div>

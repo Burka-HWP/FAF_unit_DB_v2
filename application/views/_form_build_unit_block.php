@@ -3,7 +3,7 @@
     <p>Filters:</p>
     <div class="row-fluid">        
         <div class="span12">
-            <div class="row-fluid" style="background-color: #111;">                    
+            <div class="row-fluid" style="background-color: #111; box-sizing: border-box;">                    
                 <div class="span3 center">        
                     <img id="{unit}_aeon" class="compare-unselected" src="/assets/images/compare/aeon.png" onclick="changeRace('{unit}','aeon')" />            
                 </div>
@@ -66,6 +66,11 @@
 <div id="{unit}_step4" class="compare-row-spacing" style="visibility: visible;">
     <!-- <h4><span class="electrolize">Step 4: </span> Choose a unit</h4> -->
     <p>Available Units:</p>
+    {allcounts}
+        <div id="{unit}{index}" class="compare-group" style="display: visible;">
+            {unit}{index} {count}
+        </div>
+    {/allcounts}
 </div>
 
 

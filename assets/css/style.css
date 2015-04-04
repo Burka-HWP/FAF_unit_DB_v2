@@ -1089,9 +1089,15 @@ p.blueprint {
 }
 
 .compare-unit {
-    background: #000;
-    padding: 10px;
+    /*background: #000;*/
+    padding: 0px;
     /*border-radius: 10px;*/
+}
+
+.compare-group {
+    background-color: #111;
+    padding: 5px;
+    
 }
 
 .compare-unselected {
@@ -1100,8 +1106,9 @@ p.blueprint {
     border-size: 3px;
     border-color: #000;
     border-style: solid;*/ 
-    padding: 5px;
-    margin: 5px;
+    display: block;
+    padding: 2px 4px;
+    margin: 5px auto;
 }
 .compare-unselected:hover {
     background-color: #333;
@@ -1111,9 +1118,10 @@ p.blueprint {
     /*border-radius: 10px;
     border-size: 3px;
     border-color: #FFF;
-    border-style: solid;*/  
-    padding: 5px;
-    margin: 5px;
+    border-style: solid;*/ 
+    display: block; 
+    padding: 2px 4px;
+    margin: 5px auto;
 }
 .compare-selected:hover {
     background-color: #333;
@@ -1144,7 +1152,7 @@ p.blueprint {
     border-color: #AAA;
 }
 .compare-row-spacing {
-    margin: 10px;
+    margin: 5px 5px;
 }
 
 .white {
