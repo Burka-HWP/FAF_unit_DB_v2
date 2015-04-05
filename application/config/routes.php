@@ -48,8 +48,8 @@ $route['uef'] = 'unit/oneRace/3';
 $route['seraphim'] = 'unit/oneRace/4';
 $route['unit/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})'] = 'unit/show/$1';
 $route['compare/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})'] = 'compare/twoUnits/$1/$2';
-
-
+$route['compare/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})'] = 'compare/threeUnits/$1/$2/$3';
+$route['compare/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})/([A-Z]{3}[A-Z,0-9]{1}[0-9]{3})'] = 'compare/fourUnits/$1/$2/$3/$4';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

@@ -49,7 +49,11 @@
                 </div>
             </div>
             <br />
-            <p id="testy">{test}</p>               
+            <p id="loading" class="center">
+                Unit Comparison Loading...
+                <img src="/assets/images/admin/progress.gif" style="height: 25px; width: auto; display: inline-block; margin: 5px;" />
+            </p>
+            <p class="center"><a id="compare-link" href=""></a></p>               
             
        </div>
     </div>    

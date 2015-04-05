@@ -1,6 +1,6 @@
 <div id="{unit}_step1" class="compare-row-spacing">
     <!-- <h4><span class="electrolize">Step 1: </span> Choose a race</h4> -->
-    <p>Filters:</p>
+    <!-- <p>Filters:</p> -->
     <div class="row-fluid">        
         <div class="span12">
             <div class="row-fluid" style="background-color: #111; box-sizing: border-box;">                    
@@ -65,12 +65,35 @@
 </div>
 <div id="{unit}_step4" class="compare-row-spacing" style="visibility: visible;">
     <!-- <h4><span class="electrolize">Step 4: </span> Choose a unit</h4> -->
-    <p>Available Units:</p>
+    <!-- <p>Available Units:</p> -->
     {allcounts}
-        <div id="{unit}{index}" class="compare-group" style="display: visible;">
-            {unit}{index} {count}
+        <div id="{unit}{index}" class="compare-group" style="display: none;">
+            {units}
+            <div id="{unit}{blueprint_id}" unit="{unit}" class="compare-unit-unselected" onclick="changeChoice('{unit}', '{blueprint_id}')">
+                <div class="row-fluid">
+                    <div class="span4">
+                        <div class="info-avatar {unit_arena}">
+                            <img src="../assets/images/units/{blueprint_id}.png" />
+                            <img src="../assets/images/strategic/{unit_icon}" class="strat_icon" />
+                        </div> 
+                        <div class="clear"></div>
+                    </div>
+                    <div class="span8" style="padding-top: 10px;">
+                        <p class="white">{unit_class}</p>
+                        <p class="{unit_race}-text-new">{unit_name}</p> 
+                    </div>
+                </div>         
+            </div>
+            
+            {/units}
+            
         </div>
     {/allcounts}
 </div>
+<p class="compare-choice">Current Choice: 
+    <span id="{unit}_choice">
+    <img src="/assets/images/admin/progress.gif" style="height: 15px; width: auto; display: inline-block; margin: 5px;" />
+    </span>
+</p>
 
 

@@ -57,7 +57,9 @@ class Compare extends Application {
             $currType = '';            
             if ($curr['unit_category'] == 'Aircraft') {
                 $currType = 1;
-            } else if ($curr['unit_category'] == 'Vehicle' || $curr['unit_category'] == 'Command') {
+            } else if ($curr['unit_category'] == 'Vehicle' || 
+                        $curr['unit_category'] == 'Command' ||
+                        $curr['unit_category'] == 'Engineering') {
                 $currType = 2;
             } else if ($curr['unit_category'] == 'Naval') {
                 $currType = 3;
@@ -65,7 +67,26 @@ class Compare extends Application {
                 $currType = 4;
             }
             // assign into the grouping array
-            $groups['r'.$curr['unit_race'].'t'.$curr['unit_tier'].'a'.$currType]['units'][] = $curr;
+
+            $dupl = $curr;
+            switch ($curr['unit_race']) {
+                case 1:
+                    $dupl['unit_race'] = 'aeon';
+                    break;
+                case 2:
+                    $dupl['unit_race'] = 'cybran';
+                    break;
+                case 3:
+                    $dupl['unit_race'] = 'uef';
+                    break;
+                case 4:
+                    $dupl['unit_race'] = 'seraphim';
+                    break;
+            }           
+
+            $groups['r'.$curr['unit_race'].'t'.$curr['unit_tier'].'a'.$currType]['units'][] = $dupl;
+
+            
         }
 
 
@@ -77,7 +98,8 @@ class Compare extends Application {
         for($n = 0; $n < $groupsCount; $n++) {
             $testgroupcount[] = array(
                 'index' => $groupsIndexes[$n],
-                'count' => sizeof($groups[$groupsIndexes[$n]]['units'])
+                'count' => sizeof($groups[$groupsIndexes[$n]]['units']),
+                'units' => $groups[$groupsIndexes[$n]]['units']
             );
         }
 
@@ -132,17 +154,55 @@ class Compare extends Application {
         
         $root_dir = "fafunitdb.local/";
         $hard_link = $root_dir . "compare/" . $bp1 . "/" . $bp2;
-        $this->data['hard_link'] = $hard_link;
-        
-        $unit1_data = $this->_buildUnitData($unit1);
-        $unit2_data = $this->_buildUnitData($unit2);
-        
-        
-        $this->data['unit1_data'] = $this->parser->parse('_compare_single_unit', $unit1_data, TRUE);
-        $this->data['unit2_data'] = $this->parser->parse('_compare_single_unit', $unit2_data, TRUE);
-        
-        
+        $this->data['hard_link'] = $hard_link;   
+        $this->data['compare_title'] = 'Comparing 2 Units';     
+              
         $this->data['title'] = 'Forged Alliance Forever - Unit Database - Compare 2 Units';
+        $this->data['pagebody'] = 'compare_display';
+        $this->data['race-bg'] = 'welcome-bg';
+        $this->data['race-logo'] = 'compare_splash.png';
+        $this->data['quick-nav'] = null;
+        $this->render();
+    }
+
+    function threeUnits($bp1, $bp2, $bp3) {
+        $unit1 = $this->units->getOne($bp1);
+        $unit2 = $this->units->getOne($bp2);
+        $unit3 = $this->units->getOne($bp3);
+        
+        if($unit1 == null || $unit2 == null || $unit3 == null) {
+            redirect('/compare');
+        }
+        
+        $root_dir = "fafunitdb.local/";
+        $hard_link = $root_dir . "compare/" . $bp1 . "/" . $bp2 . "/" . $bp3;
+        $this->data['hard_link'] = $hard_link;
+        $this->data['compare_title'] = 'Comparing 3 Units';
+        
+        $this->data['title'] = 'Forged Alliance Forever - Unit Database - Compare 3 Units';
+        $this->data['pagebody'] = 'compare_display';
+        $this->data['race-bg'] = 'welcome-bg';
+        $this->data['race-logo'] = 'compare_splash.png';
+        $this->data['quick-nav'] = null;
+        $this->render();
+    }
+
+    function fourUnits($bp1, $bp2, $bp3, $bp4) {
+        $unit1 = $this->units->getOne($bp1);
+        $unit2 = $this->units->getOne($bp2);
+        $unit3 = $this->units->getOne($bp3);
+        $unit4 = $this->units->getOne($bp4);
+        
+        if($unit1 == null || $unit2 == null || $unit3 == null || $unit4 == null) {
+            redirect('/compare');
+        }
+        
+        $root_dir = "fafunitdb.local/";
+        $hard_link = $root_dir . "compare/" . $bp1 . "/" . $bp2 . "/" . $bp3 . "/" . $bp4;
+        $this->data['hard_link'] = $hard_link;
+        $this->data['compare_title'] = 'Comparing 4 Units';
+        
+        $this->data['title'] = 'Forged Alliance Forever - Unit Database - Compare 4 Units';
         $this->data['pagebody'] = 'compare_display';
         $this->data['race-bg'] = 'welcome-bg';
         $this->data['race-logo'] = 'compare_splash.png';

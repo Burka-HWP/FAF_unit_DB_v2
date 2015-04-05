@@ -1,37 +1,28 @@
-<div class="content-wrapper-inner compare-gap-top">
-    <div class="content-block welcome-block credits">
-        <div class="row-fluid">
-            <div class="span5">
-                <h2 class="electrolize">Comparing 2 units!</h2>
-                <p>Priority information only for purpose of easy comparison.</p>
-            </div>
-            <div class="span7">
-                <h4>Share this comparison:</h4>
-                <h3 class="white right-align">{hard_link}</h3>
-            </div>
-        </div>
+<div class="content-block">   
+    <div class="row-fluid">
+        <div class="span12 center">
+            <img src="/assets/images/layout/faf_welcome.png" class="race-title-image" />
+        </div>            
     </div>
-</div>
+
+    <div class="row-fluid category black-bg">            
+        <div class="span12">
+            <h3 id="welcome" class="home-text-new" style="font-size: 30px;">{compare_title}</h3>
+        </div>                       
+    </div>  
 
     <div class="row-fluid">
-        <div class="span6">
-            {unit1_data}
-        </div>
-        <div class="span6">
-            {unit2_data}
-        </div>
-    </div>
+      <div class="span12">
+            
+            <h4>Share this comparison:</h4>
+            <h4 class="white">{hard_link}</h4>         
+            
+       </div>
+    </div>    
+</div>
+
+    <div style="margin-bottom: 20px;"></div>
+      
+
+
         
-        
-<div class="content-wrapper-inner">
-    <div class="content-block welcome-block credits">
-        <div class="row-fluid">
-            <div class="span12 center">
-                <a href="/compare">
-                    <button class="compare-button">Compare Again!</button>
-                </a>
-                <!--<h2 class="electrolize">Compare Again!</h2>-->
-            </div>
-        </div>
-    </div>
-</div>     

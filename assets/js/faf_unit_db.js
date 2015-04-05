@@ -3,18 +3,22 @@ var $globals = {
     unit1_race:1, 
     unit1_tier:1,
     unit1_type:1,
+    unit1_choice: 'UAA0101',
 
     unit2_race:1, 
     unit2_tier:1, 
     unit2_type:1,
+    unit2_choice: 'UAA0101',
 
-    unit3_race: 3,
+    unit3_race: 1,
     unit3_tier: 1,
     unit3_type:1,
+    unit3_choice: 'UAA0101',
 
-    unit4_race: 4,
+    unit4_race: 1,
     unit4_tier: 1,
-    unit4_type: 1
+    unit4_type: 1,
+    unit4_choice: 'UAA0101'
 };
 var $races = { aeon:1, cybran:2, uef:3, seraphim:4 }; 
 var $arenas = { air:1, land:2, navy:3, building:4 };
@@ -34,42 +38,79 @@ window.onload = function() {
     changeRace('unit1', 'aeon');
     changeTier('unit1', 1);
     changeType('unit1', 'air');
+    changeChoice('unit1', 'UAA0101');
 
     changeBorder('unit2', 'cybran');
     changeRace('unit2', 'cybran');
     changeTier('unit2', 1);
     changeType('unit2', 'air');
+    changeChoice('unit2', 'URA0101');
 
     changeBorder('unit3', 'uef');
     changeRace('unit3', 'uef');
     changeTier('unit3', 1);
     changeType('unit3', 'air');
+    changeChoice('unit3', 'UEA0101');
 
     changeBorder('unit4', 'seraphim');
     changeRace('unit4', 'seraphim');
     changeTier('unit4', 1);
     changeType('unit4', 'air');
+    changeChoice('unit4', 'XSA0101');
 
     showGroups('unit1');
     showGroups('unit2');
     showGroups('unit3');
     showGroups('unit4');
+
+    document.getElementById('loading').innerHTML = "";
+    document.getElementById('compare-link').innerHTML = '<button class="feedback-button center">Compare These Units!</button>';
+    updateLink();
     //notice();
 }
 
 function showGroups($unit) {
     var $groups = document.getElementsByClassName('compare-group');
     var $count = $groups.length;
-    //alert($groups[0].id.substr(0,5));
+    
     for($i = 0; $i < $count; $i++) {
 
         if($groups[$i].id.substr(0,5) == $unit) {
             $groups[$i].setAttribute("style", "display: none;");
         }        
     }
-    $index = $unit + 'r' + $globals['unit1_race'] + 't' + $globals['unit1_tier'] + 'a' + $globals['unit1_type'];
+    $index = $unit + 'r' + $globals[$unit + '_race'] + 't' + $globals[$unit + '_tier'] + 'a' + $globals[$unit + '_type'];
     //alert($index);
     document.getElementById($index).setAttribute("style", "display: visible;");
+}
+
+function updateLink() {
+    var $link = "/compare/" + $globals['unit1_choice'] + '/' + $globals['unit2_choice'] + '/' + $globals['unit3_choice'] + '/' + $globals['unit4_choice'];
+    document.getElementById('compare-link').setAttribute("href", $link);
+    
+}
+
+function clearChoices($unit) {
+    var $units = getAllElementsWithAttribute('unit');
+    for ($i = 0; $i < $units.length; $i++) {
+        if($units[$i].getAttribute('unit') == $unit) {
+            $units[$i].setAttribute("class", "compare-unit-unselected");
+        }
+    }
+    //alert($units.length);
+}
+function updateChoice($unit) {
+    document.getElementById($unit + "_choice").innerHTML = $globals[$unit + "_choice"];
+}
+
+function changeChoice($unit, $choice) {
+    clearChoices($unit);
+    //alert($unit + ' ' + $choice);
+    document.getElementById($unit + $choice).setAttribute("class", "compare-unit-selected");
+    $globals[$unit + "_choice"] = $choice;
+    updateChoice($unit);
+    updateLink();
+    
 }
 
 function changeRace($unit, $race) {
@@ -109,6 +150,21 @@ function changeBorder($unit, $race) {
     }
    showGroups($unit);
 
+}
+
+function getAllElementsWithAttribute(attribute)
+{
+  var matchingElements = [];
+  var allElements = document.getElementsByTagName('*');
+  for (var i = 0, n = allElements.length; i < n; i++)
+  {
+    if (allElements[i].getAttribute(attribute) !== null)
+    {
+      // Element exists with attribute. Add to array.
+      matchingElements.push(allElements[i]);
+    }
+  }
+  return matchingElements;
 }
 
 
