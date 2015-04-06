@@ -11,11 +11,20 @@
             <h3 id="welcome" class="home-text-new" style="font-size: 30px;">Unit Comparison</h3>
         </div>                       
     </div>  
+    <!-- <div class="row-fluid">
+        <div class="span12 center">
+            <p>Number of units to compare: 
+                <img src="/assets/images/compare/2.png" onclick="setCompareCount(2)" />
+                <img src="/assets/images/compare/3.png" onclick="setCompareCount(3)" />
+                <img src="/assets/images/compare/4.png" onclick="setCompareCount(4)" />
+            </p>
+        </div>
+    </div> -->
 
     <div class="row-fluid">
       <div class="span12">
             <div class="row-fluid">
-                <div id="unit1_wrapper" class="race-block">
+                <div id="unit1_wrapper" class="race-block" style="display: visible;">
                     <div class="row-fluid">
                         <div class="span12 compare-unit">
                             <h2 class="all-text-new center">Unit 1</h2>
@@ -23,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="unit2_wrapper" class="race-block">
+                <div id="unit2_wrapper" class="race-block" style="display: visible;">
                     <div class="row-fluid">
                         <div class="span12 compare-unit">
                             <h2 class="all-text-new center">Unit 2</h2>
@@ -31,7 +40,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="unit3_wrapper" class="race-block">
+                <div id="unit3_wrapper" class="race-block" style="display: visible;">
+                    <!-- <div class="blockout"></div> -->
                     <div class="row-fluid">
                         <div class="span12 compare-unit">
                             <h2 class="all-text-new center">Unit 3</h2>
@@ -39,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="unit4_wrapper" class="race-block">
+                <div id="unit4_wrapper" class="race-block" style="display: visible;">
                     <div class="row-fluid">
                         <div class="span12 compare-unit">
                             <h2 class="all-text-new center">Unit 4</h2>

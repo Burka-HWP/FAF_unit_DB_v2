@@ -22,7 +22,8 @@ var $globals = {
 };
 var $races = { aeon:1, cybran:2, uef:3, seraphim:4 }; 
 var $arenas = { air:1, land:2, navy:3, building:4 };
-var $chosens = { unit1:false, unit2:false };
+var $chosens = { unit1:false, unit2:false }; 
+var $compareCount = 4;
 
 function notice() {
     alert(
@@ -69,6 +70,21 @@ window.onload = function() {
     //notice();
 }
 
+function setCompareCount($count) {
+    if($count == 2) {
+        document.getElementById("unit3_wrapper").setAttribute("display", "none");
+        document.getElementById("unit4_wrapper").setAttribute("display", "none");
+    } else if($count == 3) {
+        document.getElementById("unit4_wrapper").setAttribute("display", "none");
+        document.getElementById("unit3_wrapper").setAttribute("display", "visible");
+    } else if($count == 4) {
+        document.getElementById("unit3_wrapper").setAttribute("display", "visible");
+        document.getElementById("unit4_wrapper").setAttribute("display", "visible");
+    }
+    $compareCount = $count;
+    updateLink();
+}
+
 function showGroups($unit) {
     var $groups = document.getElementsByClassName('compare-group');
     var $count = $groups.length;
@@ -85,7 +101,15 @@ function showGroups($unit) {
 }
 
 function updateLink() {
-    var $link = "/compare/" + $globals['unit1_choice'] + '/' + $globals['unit2_choice'] + '/' + $globals['unit3_choice'] + '/' + $globals['unit4_choice'];
+
+    if($compareCount == 2) {
+        var $link = "/compare/" + $globals['unit1_choice'] + '/' + $globals['unit2_choice'];
+    } else if($compareCount == 3) {
+        var $link = "/compare/" + $globals['unit1_choice'] + '/' + $globals['unit2_choice'] + '/' + $globals['unit3_choice'];
+    } else if($compareCount == 4) {
+        var $link = "/compare/" + $globals['unit1_choice'] + '/' + $globals['unit2_choice'] + '/' + $globals['unit3_choice'] + '/' + $globals['unit4_choice'];
+    }
+    
     document.getElementById('compare-link').setAttribute("href", $link);
     
 }
