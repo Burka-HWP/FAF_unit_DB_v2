@@ -150,45 +150,22 @@
 		            <th>Corrections</th>
 		          </tr>
 		          <tr>
-		            <td>name</td>
-		            <td>name</td>
-		            <td>name</td>
-		          </tr>
-		          <tr>
-		            <td>name</td>
-		            <td>name</td>
-		            <td>name</td>
-		          </tr>
-		          <tr>
-		            <td>name</td>
-		            <td>name</td>
-
-		            <td>name</td>
-		          </tr>
-		          <tr>
-		            <td>name</td>
-		            <td>name</td>
-
-		            <td>name</td>
-		          </tr>
-		          <tr>
-		            <td>name</td>
-		            <td>name</td>
-
-		            <td>name</td>
-		          </tr>
-		          <tr>
-		            <td>name</td>
-		            <td>name</td>
-
-		            <td>name</td>
-		          </tr>
-		          <tr>
-		            <td>name</td>
-		            <td>name</td>
-
-		            <td>name</td>
-		          </tr>
+		            <td valign="top">
+		            	{scrnContributors}
+		            		<p class="{user_faction}-text-new">{user_id}</p>
+		            	{/scrnContributors}
+		            </td>
+		            <td valign="top">
+		            	{descContributors}
+		            		<p class="{user_faction}-text-new">{user_id}</p>
+		            	{/descContributors}
+		            </td>
+		            <td valign="top">
+		            	{corrContributors}
+		            		<p class="{user_faction}-text-new">{user_id}</p>
+		            	{/corrContributors}
+		            </td>
+		          </tr>		          
 		        </table>
 		      </div>
     	</div>
@@ -248,7 +225,7 @@
 
     			<p>Thanks to everyone who makes FAF possible, and the community for supporting this amazing client and continuing to play a game released in 2007!</p>
 		      
-		      <p>Please please please! If I have forgotten to give you credit <a href="">let me know</a>! It's certainly not intentional!!!</p>
+		      <p>Please please please! If I have forgotten to give you credit let me know in the Feedback tab! It's certainly not intentional!!!</p>
 
 		      <p>Cheers,<br />&nbsp;&nbsp;&nbsp;&nbsp;Burke Lougheed<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cybran-text-new">Burka</span></p>      
 		    </div>

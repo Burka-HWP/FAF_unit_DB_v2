@@ -54,6 +54,12 @@ class Unit extends Application {
             $this->data['scrnColor'] = 'high';
         }
 
+        // grab the lists of contributors for each group:
+        $this->data['corrContributors'] = $this->corrections->getContributors();
+        $this->data['descContributors'] = $this->descriptions->getContributors();
+        $this->data['scrnContributors'] = $this->screenshots->getContributors();
+
+
         $this->render();
     }
     

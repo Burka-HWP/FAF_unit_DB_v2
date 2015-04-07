@@ -102,4 +102,10 @@ class Descriptions extends _Mymodel {
 
         return $result;
     }
+
+    function getContributors() {
+        $result = $this->db->query("select c.user_id, u.user_faction, count(c.user_id) as 'count' from users u join descriptions c on u.user_id = c.user_id group by user_id order by count desc");
+
+        return $result->result_array();
+    }
 }

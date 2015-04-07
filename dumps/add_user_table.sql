@@ -7,7 +7,10 @@ CREATE TABLE IF NOT EXISTS `users` (
     PRIMARY KEY (user_id)
 );
 
-insert into users (user_id, user_faction, password, role) values ('Burka', 'cybran', md5('meow'), 'Admin');
+insert into users (user_id, user_faction, password, role) values 
+	('Burka', 'cybran', md5('meow'), 'Admin'),
+	('Luxy', 'seraphim', md5('meow'), 'User'),
+	('BRNK', 'uef', md5('meow'), 'User');
 
 
 

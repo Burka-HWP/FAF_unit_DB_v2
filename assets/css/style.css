@@ -1072,9 +1072,9 @@ p.blueprint {
 .enhancement-item {
     padding: 5px;
     background-color: #000;
-    border: 1px;    
+    /*border: 1px;    
     border-color: #222;
-    border-style: solid;
+    border-style: solid;*/
     margin-bottom: 20px;
 }
 
@@ -1114,8 +1114,10 @@ p.blueprint {
 .compare-unit-unselected {
     float:left; 
     margin: 0px;
+    margin-bottom: 3px;
     padding: 0px;
     width: 100%;
+    transition: background-color 0.25s ease-in-out;
 }
 .compare-unit-unselected p {
     margin: 0px;
@@ -1127,9 +1129,11 @@ p.blueprint {
 .compare-unit-selected {
     float:left; 
     margin: 0px;
+    margin-bottom: 3px;
     padding: 0px;
     width: 100%;
     background-color: #222;
+    transition: background-color 0.25s ease-in-out;
 }
 .compare-unit-selected p {
     margin: 0px;
@@ -1157,6 +1161,7 @@ p.blueprint {
     display: block;
     padding: 2px 4px;
     margin: 5px auto;
+    transition: background-color 0.25s ease-in-out;
 }
 .compare-unselected:hover {
     background-color: #333;
@@ -1170,6 +1175,7 @@ p.blueprint {
     display: block; 
     padding: 2px 4px;
     margin: 5px auto;
+    transition: background-color 0.25s ease-in-out;
 }
 .compare-selected:hover {
     background-color: #333;
