@@ -207,6 +207,12 @@
 		            <li><a href="https://www.youtube.com/channel/UCzY7MBSgNLZOMxMIFwtf2bw" target="_blank">https://www.youtube.com/channel/UCzY7MBSgNLZOMxMIFwtf2bw</a></li>
 		          </ul>
 		        </li>
+		        <li>GitHub user kenwheeler
+		          <ul>
+		            <li>Usage of his Slick image carousel javascript library for the unit screenshots.</li>
+		            <li><a href="http://kenwheeler.github.io/slick/" target="_blank">http://kenwheeler.github.io/slick/</a></li>
+		          </ul>
+		        </li>
 		      </ol>		      
 		    </div>
     	</div>
