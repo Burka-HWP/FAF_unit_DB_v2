@@ -86,8 +86,8 @@ class Descriptions extends _Mymodel {
         return $result;
     }
 
-    function getTenForAdmin() {
-        $result = $this->db->query('select d.desc_id, d.blueprint_id, LOWER(r.race_name) as race_name, u.unit_class, u.unit_tier, u.unit_name, d.user_id, d.submitted_on, d.description from descriptions d join units u on d.blueprint_id = u.blueprint_id join races r on u.unit_race = r.race_id where approved is null order by submitted_on asc limit 10')->result_array();
+    function getTenForAdmin($user) {
+        $result = $this->db->query('select d.desc_id, d.blueprint_id, LOWER(r.race_name) as race_name, u.unit_class, u.unit_tier, u.unit_name, d.user_id, d.submitted_on, d.description from descriptions d join units u on d.blueprint_id = u.blueprint_id join races r on u.unit_race = r.race_id where approved is null and d.user_id not like \'' . $user . '\' order by submitted_on asc limit 10')->result_array();
         return $result;
     }
 

@@ -26,8 +26,11 @@ class admin extends Application {
       $this->data['race-logo'] = 'home_splash.png';
       $this->data['quick-nav'] = null;
 
-      $this->data['screenshots'] = $this->screenshots->getTenForAdmin();
-      $this->data['descriptions'] = $this->descriptions->getTenForAdmin();
+      $user = $this->session->userdata('userID');
+      $this->data['user'] = $user;
+
+      $this->data['screenshots'] = $this->screenshots->getTenForAdmin($user);
+      $this->data['descriptions'] = $this->descriptions->getTenForAdmin($user);
 
       $this->render();
     }

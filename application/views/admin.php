@@ -8,12 +8,13 @@
 
     <div class="row-fluid category cybran-bg">            
         <div class="span12">
-            <h3 id="welcome" class="home-text-new" style="font-size: 30px;">admin panel</h3>
+            <h3 id="welcome" class="home-text-new" style="font-size: 30px;">admin panel - {user}</h3>
         </div>                       
     </div>  
 
     <div class="row-fluid">
       <div class="span12 welcome">
+        <p>No, you can't approve your own submissions.... 
         <div class="row-fluid">
           <div class="span6">
             <h3 id="welcome" class="home-text-new center" style="font-size: 30px;">Screenshots</h3>
