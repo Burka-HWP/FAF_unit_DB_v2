@@ -12,13 +12,14 @@
     </div>  
 
     <div class="row-fluid">
-      <div class="span12">
-            
-            <h4>Share this comparison:</h4>
+      <div class="span12 welcome center">            
+            <h4 class="all-text-new">Share this comparison:</h4>
             <h4 class="white">{hard_link}</h4>         
-            
+            <br />
+            <p>Comparison display is still in development...<br />Have an idea for it? Use the Feedback tab on the right, or join the discussion on the <a href="" target="_blank">FAF forums</a></p>      
        </div>
-    </div>    
+    </div>  
+     
 </div>
 
     <div style="margin-bottom: 20px;"></div>

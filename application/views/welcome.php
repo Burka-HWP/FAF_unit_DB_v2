@@ -15,7 +15,9 @@
     <div class="row-fluid">
     	<div class="span12 welcome center">
     		<p>The database is always growing and changing... be sure to check back often!</p>
-    		<p>Database is up to date with version 1.5.3634 of the FAF mod.</p>
+    		<p style="color: #cc0000; font-weight: bold;">Attacks data is still in progress! Weapon categories are being added as I get the calculations and displays done.<br />Please only submit attack-related corrections on stuff that is WRONG, not MISSING!</p>
+    		<p>Database is (attempting to be) up to date with the latest version of the FAF mod.</p>
+    		<p>The database is best viewed at a minimum 1600x900 resolution. I haven't done any optimization for smaller resolutions yet, and SMD if you're viewing this on a mobile device. :-)</p>
     	</div>
     </div>
 
@@ -120,7 +122,7 @@
     			</li>
     			<li>Contribute screenshots! 
     				<ul>
-    					<li>Use the "Submit a Screenshot" button on a unit's page! Once submitted, your description will be reviewed prior to inclusion on the site.</li>
+    					<li>Use the "Submit a Screenshot" button on a unit's page! Once submitted, your screenshot will be reviewed prior to inclusion on the site.</li>
     					<li>Multiple submissions are allowed but please focus on providing content for every unit before we all start submitting photos of how cool the Monkeylord is. All approved screenshots will be available to see in the unit's image carousel. Check the big list of <a href="">Units Who Don't Have Screenshots</a> to see who needs contributions!</li>
     				</ul>
     			</li>
@@ -192,6 +194,7 @@
 		        <li>GitHub user Spooky
 		          <ul>
 		            <li>Usage of his unitdb repository to get all the unit avatars, strategic icons, attribute icons, font decisions, colour choices, and others I'm sure! I know it's all open-source on GitHub yadda-yadda but a big thank you! The effort to collect all the avatars, icons, etc. is just enormous, there's over 400 units!</li>
+		            <li>Also the units.json file that I scraped in order to populate the database.</li>
 		            <li><a href="https://github/com/spooky/unitdb" target="_blank">https://github.com/spooky/unitdb</a></li>
 		          </ul>
 		        </li>
