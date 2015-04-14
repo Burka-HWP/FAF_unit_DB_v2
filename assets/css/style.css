@@ -524,6 +524,7 @@ p.menu-item-name:hover {
     background: rgba(0, 0, 0, .25);
     padding: 5px;    
     margin: 5px;
+    transition: background 0.25s ease-in-out;
 }
 .line-item-all:hover {
     background: rgba(255, 255, 255, .10);
@@ -533,6 +534,7 @@ p.menu-item-name:hover {
     background: rgba(0, 0, 0, .25);
     padding: 0px;    
     margin: 5px;
+    transition: background 0.25s ease-in-out;
 }
 .line-item-race:hover {
     background: rgba(255, 255, 255, .10);
@@ -753,6 +755,7 @@ p.blueprint {
     width: 225px;
     margin: 0px;
     padding: 5px 0px;
+    transition: background 0.25s ease-in-out;
 }
 .layout-menu-left p:hover {
     background-color: rgba(255,255,255,0.1);
