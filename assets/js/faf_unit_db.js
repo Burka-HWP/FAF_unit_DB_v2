@@ -75,18 +75,30 @@ function setCompareCount($count) {
     if($count == 2) {
         document.getElementById("unit3_wrapper").setAttribute("style", "display: none;");
         document.getElementById("unit4_wrapper").setAttribute("style", "display: none;");
+        countSelect(2);
+
     } else if($count == 3) {
         document.getElementById("unit3_wrapper").setAttribute("style", "display: visible;");
         document.getElementById("unit4_wrapper").setAttribute("style", "display: none;");
         changeRace('unit3', $racesAlt[$globals['unit3_race'] - 1]);
+        countSelect(3);
+
     } else if($count == 4) {
         document.getElementById("unit3_wrapper").setAttribute("style", "display: visible;");
         document.getElementById("unit4_wrapper").setAttribute("style", "display: visible;");
         changeRace('unit3', $racesAlt[$globals['unit3_race'] - 1]);
         changeRace('unit4', $racesAlt[$globals['unit4_race'] - 1]);
+        countSelect(4);
     }
     $compareCount = $count;
     updateLink();
+}
+
+function countSelect($choose) {
+    document.getElementById("choose2").setAttribute("class", "choose-unselected");
+    document.getElementById("choose3").setAttribute("class", "choose-unselected");
+    document.getElementById("choose4").setAttribute("class", "choose-unselected");
+    document.getElementById("choose" + $choose).setAttribute("class", "choose-selected");
 }
 
 function showGroups($unit) {

@@ -1,5 +1,20 @@
 
-<div class="content-block">   
+<div class="content-block" style="position: relative;">   
+    <div style="display: block; position: absolute; top: 0px; right: 0px; width: 300px;">
+        <h3 id="welcome" class="all-text-new center" style="font-size: 20px;">units to compare:</h3>
+        <div class="row-fluid">
+            <div class="span4">
+                <img id="choose2" class="choose-unselected" src="/assets/images/compare/2.png" onclick="setCompareCount(2)" />
+            </div>
+            <div class="span4">
+                <img id="choose3" class="choose-unselected" src="/assets/images/compare/3.png" onclick="setCompareCount(3)" />
+            </div>
+            <div class="span4">
+                <img id="choose4" class="choose-selected" src="/assets/images/compare/4.png" onclick="setCompareCount(4)" />
+            </div>
+        </div>
+       
+    </div>
     <div class="row-fluid">
         <div class="span12 center">
             <img src="/assets/images/layout/faf_welcome.png" class="race-title-image" />
@@ -11,15 +26,7 @@
             <h3 id="welcome" class="home-text-new" style="font-size: 30px;">Unit Comparison</h3>
         </div>                       
     </div>  
-    <div class="row-fluid">
-        <div class="span12 center">
-            <p>Number of units to compare: 
-                <img src="/assets/images/compare/2.png" onclick="setCompareCount(2)" />
-                <img src="/assets/images/compare/3.png" onclick="setCompareCount(3)" />
-                <img src="/assets/images/compare/4.png" onclick="setCompareCount(4)" />
-            </p>
-        </div>
-    </div>
+    
 
     <div class="row-fluid">
       <div class="span12">

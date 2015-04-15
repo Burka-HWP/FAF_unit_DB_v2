@@ -1583,3 +1583,25 @@ table.login-table td {
 .admin-link a:visited {
     color: #111;
 }
+
+.choose-unselected {
+    display: block;
+    margin: 5px auto;
+    padding: 5px;
+    transition: background-color 0.25s ease-in-out;
+}
+.choose-unselected:hover {
+    background-color: #333;
+}
+.choose-selected {
+    display: block;
+    margin: 5px auto;
+    padding: 5px;
+    background-color: #222;
+    transition: background-color 0.25s ease-in-out;
+}
+.choose-selected:hover {
+    background-color: #333;
+}
+
+
