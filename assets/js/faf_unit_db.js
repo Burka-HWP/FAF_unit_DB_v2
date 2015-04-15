@@ -21,6 +21,7 @@ var $globals = {
     unit4_choice: 'UAA0101'
 };
 var $races = { aeon:1, cybran:2, uef:3, seraphim:4 }; 
+var $racesAlt = ['aeon', 'cybran', 'uef', 'seraphim'];
 var $arenas = { air:1, land:2, navy:3, building:4 };
 var $chosens = { unit1:false, unit2:false }; 
 var $compareCount = 4;
@@ -72,14 +73,17 @@ window.onload = function() {
 
 function setCompareCount($count) {
     if($count == 2) {
-        document.getElementById("unit3_wrapper").setAttribute("display", "none");
-        document.getElementById("unit4_wrapper").setAttribute("display", "none");
+        document.getElementById("unit3_wrapper").setAttribute("style", "display: none;");
+        document.getElementById("unit4_wrapper").setAttribute("style", "display: none;");
     } else if($count == 3) {
-        document.getElementById("unit4_wrapper").setAttribute("display", "none");
-        document.getElementById("unit3_wrapper").setAttribute("display", "visible");
+        document.getElementById("unit3_wrapper").setAttribute("style", "display: visible;");
+        document.getElementById("unit4_wrapper").setAttribute("style", "display: none;");
+        changeRace('unit3', $racesAlt[$globals['unit3_race'] - 1]);
     } else if($count == 4) {
-        document.getElementById("unit3_wrapper").setAttribute("display", "visible");
-        document.getElementById("unit4_wrapper").setAttribute("display", "visible");
+        document.getElementById("unit3_wrapper").setAttribute("style", "display: visible;");
+        document.getElementById("unit4_wrapper").setAttribute("style", "display: visible;");
+        changeRace('unit3', $racesAlt[$globals['unit3_race'] - 1]);
+        changeRace('unit4', $racesAlt[$globals['unit4_race'] - 1]);
     }
     $compareCount = $count;
     updateLink();
