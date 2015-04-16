@@ -640,6 +640,25 @@ p.blueprint {
     padding-top: 10px;
     height: 100%;
 }
+.race-block-show2 {
+    width: 50%;
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    height: 100%;
+}
+.race-block-show3 {
+    width: 33.3333333333%;
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    height: 100%;
+}
+
 .race-title-image {
 
     padding-bottom: 10px;

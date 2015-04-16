@@ -75,12 +75,17 @@ function setCompareCount($count) {
     if($count == 2) {
         document.getElementById("unit3_wrapper").setAttribute("style", "display: none;");
         document.getElementById("unit4_wrapper").setAttribute("style", "display: none;");
+        document.getElementById("unit1_wrapper").setAttribute("class", "race-block-show2");
+        document.getElementById("unit2_wrapper").setAttribute("class", "race-block-show2");
         countSelect(2);
 
     } else if($count == 3) {
         document.getElementById("unit3_wrapper").setAttribute("style", "display: visible;");
         document.getElementById("unit4_wrapper").setAttribute("style", "display: none;");
         changeRace('unit3', $racesAlt[$globals['unit3_race'] - 1]);
+        document.getElementById("unit1_wrapper").setAttribute("class", "race-block-show3");
+        document.getElementById("unit2_wrapper").setAttribute("class", "race-block-show3");
+        document.getElementById("unit3_wrapper").setAttribute("class", "race-block-show3");
         countSelect(3);
 
     } else if($count == 4) {
@@ -88,6 +93,11 @@ function setCompareCount($count) {
         document.getElementById("unit4_wrapper").setAttribute("style", "display: visible;");
         changeRace('unit3', $racesAlt[$globals['unit3_race'] - 1]);
         changeRace('unit4', $racesAlt[$globals['unit4_race'] - 1]);
+        document.getElementById("unit1_wrapper").setAttribute("class", "race-block");
+        document.getElementById("unit2_wrapper").setAttribute("class", "race-block");
+        document.getElementById("unit3_wrapper").setAttribute("class", "race-block");
+        document.getElementById("unit4_wrapper").setAttribute("class", "race-block");
+
         countSelect(4);
     }
     $compareCount = $count;
