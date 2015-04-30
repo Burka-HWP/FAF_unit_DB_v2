@@ -97,7 +97,6 @@ function setCompareCount($count) {
         document.getElementById("unit2_wrapper").setAttribute("class", "race-block");
         document.getElementById("unit3_wrapper").setAttribute("class", "race-block");
         document.getElementById("unit4_wrapper").setAttribute("class", "race-block");
-
         countSelect(4);
     }
     $compareCount = $count;
