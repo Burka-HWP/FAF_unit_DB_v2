@@ -1,6 +1,8 @@
 FAF_unit_DB_v2
 ==============
 
+**Update 2016-10-16** - Has been abandoned at this point, I'm not even sure if the latest status of the repo is any good. Will eventually start working on a version 3 but lol at having time for that.
+
 Version 2 of the FAF Unit Database project.
 
 This is a unit database for the game Supreme Commander: Forged Alliance, running the mod/client Forged Alliance Forever.
